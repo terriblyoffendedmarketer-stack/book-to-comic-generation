@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200">
+<!--
+  character-templates.svg — Reusable SVG character building blocks
+  Usage: Copy a character group, adjust transform="translate(X,Y) scale(S)",
+         modify arm/leg endpoints for pose, swap expression elements.
+
+  Each character is wrapped in a <g> with id for easy reference.
+  Default pose: standing front-facing, arms at sides.
+
+  To modify pose:
+    Arms: change x2,y2 on arm <line> elements
+    Legs: change x2,y2 on leg <line> elements
+    Expression: swap eye/mouth elements (templates at bottom)
+    Scale: adjust scale() in transform — 0.5-1.0 for panels
+-->
+<style>
+  text { font-family: sans-serif; font-size: 12px; text-anchor: middle; fill: #666; }
+  .label { font-weight: bold; font-size: 14px; fill: #222; }
+</style>
+
+<!-- ============================================================ -->
+<!-- CHARACTER: MALE STOCKY (e.g., Red Schuhart, tough guys)      -->
+<!-- Body: wide, short. Good for: workers, fighters, brawlers     -->
+<!-- ============================================================ -->
+<g id="male-stocky" transform="translate(50, 30)">
+  <!-- Body -->
+  <rect x="15" y="55" width="50" height="60" rx="5" fill="#3a5a3a" stroke="#222" stroke-width="2"/>
+  <!-- Arms — ADJUST x2,y2 FOR POSE -->
+  <line x1="15" y1="70" x2="-5" y2="95" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+  <line x1="65" y1="70" x2="85" y2="95" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+  <!-- Hands -->
+  <circle cx="-5" cy="97" r="5" fill="#e8b88a" stroke="#222" stroke-width="1.5"/>
+  <circle cx="85" cy="97" r="5" fill="#e8b88a" stroke="#222" stroke-width="1.5"/>
+  <!-- Legs — ADJUST x2,y2 FOR POSE -->
+  <line x1="30" y1="115" x2="25" y2="150" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+  <line x1="50" y1="115" x2="55" y2="150" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+  <!-- Boots -->
+  <ellipse cx="22" cy="153" rx="10" ry="5" fill="#333" stroke="#222" stroke-width="1.5"/>
+  <ellipse cx="58" cy="153" rx="10" ry="5" fill="#333" stroke="#222" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+  <!-- HAIR — swap fill for character -->
+  <path d="M15,22 Q20,5 30,8 Q35,2 42,6 Q50,0 55,8 Q62,5 65,20" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+  <!-- Eyes: squint style -->
+  <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="34" cy="28" r="1.5" fill="#222"/>
+  <circle cx="48" cy="28" r="1.5" fill="#222"/>
+  <!-- Nose -->
+  <path d="M38,30 L40,36 L43,36" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Mouth: smirk -->
+  <path d="M33,40 Q40,45 50,40" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="40" y="175" class="label">MALE STOCKY</text>
+  <text x="40" y="190">Body: 50w×60h, Head: r25</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CHARACTER: MALE THIN (e.g., Kirill, scientists, nerds)       -->
+<!-- Body: narrow, taller. Good for: academics, young men         -->
+<!-- ============================================================ -->
+<g id="male-thin" transform="translate(230, 30)">
+  <rect x="20" y="55" width="40" height="60" rx="3" fill="#ddd" stroke="#222" stroke-width="2"/>
+  <line x1="20" y1="70" x2="5" y2="95" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="60" y1="70" x2="75" y2="95" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="5" cy="97" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+  <circle cx="75" cy="97" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+  <line x1="32" y1="115" x2="28" y2="150" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="48" y1="115" x2="52" y2="150" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+  <ellipse cx="26" cy="153" rx="8" ry="4" fill="#555" stroke="#222" stroke-width="1.5"/>
+  <ellipse cx="54" cy="153" rx="8" ry="4" fill="#555" stroke="#222" stroke-width="1.5"/>
+  <!-- Head: slightly oval/narrow -->
+  <ellipse cx="40" cy="28" rx="20" ry="23" fill="#e0c8a8" stroke="#222" stroke-width="2"/>
+  <!-- Neat dark hair -->
+  <path d="M20,20 Q25,5 35,8 Q40,4 45,8 Q55,5 60,20" fill="#443322" stroke="#332211" stroke-width="1.5"/>
+  <!-- Glasses -->
+  <circle cx="32" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+  <circle cx="50" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+  <line x1="39" y1="26" x2="43" y2="26" stroke="#444" stroke-width="1.5"/>
+  <!-- Eyes through glasses -->
+  <circle cx="32" cy="26" r="2" fill="#222"/>
+  <circle cx="50" cy="26" r="2" fill="#222"/>
+  <path d="M39,28 L40,34 L43,34" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M35,38 Q40,42 47,38" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="40" y="175" class="label">MALE THIN</text>
+  <text x="40" y="190">Body: 40w×60h, Head: 20×23</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CHARACTER: MALE HEAVY (e.g., Tender, older men, big guys)    -->
+<!-- Body: widest, round. Good for: heavyset, nervous characters  -->
+<!-- ============================================================ -->
+<g id="male-heavy" transform="translate(410, 30)">
+  <rect x="10" y="50" width="60" height="65" rx="8" fill="#5577aa" stroke="#222" stroke-width="2"/>
+  <line x1="10" y1="68" x2="-8" y2="95" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <line x1="70" y1="68" x2="88" y2="95" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="-8" cy="97" r="6" fill="#ddb899" stroke="#222" stroke-width="1.5"/>
+  <circle cx="88" cy="97" r="6" fill="#ddb899" stroke="#222" stroke-width="1.5"/>
+  <line x1="28" y1="115" x2="24" y2="148" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <line x1="52" y1="115" x2="56" y2="148" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="22" cy="151" rx="11" ry="5" fill="#443" stroke="#222" stroke-width="1.5"/>
+  <ellipse cx="58" cy="151" rx="11" ry="5" fill="#443" stroke="#222" stroke-width="1.5"/>
+  <!-- Head: bigger, rounder -->
+  <circle cx="40" cy="27" r="26" fill="#ddb899" stroke="#222" stroke-width="2"/>
+  <!-- Balding -->
+  <path d="M16,18 Q18,8 24,12 Q38,-2 56,12 Q62,8 64,18" fill="#887766" stroke="#776655" stroke-width="1.5"/>
+  <!-- Wide worried eyes -->
+  <ellipse cx="31" cy="26" rx="4" ry="5" fill="white" stroke="#222" stroke-width="1.5"/>
+  <ellipse cx="49" cy="26" rx="4" ry="5" fill="white" stroke="#222" stroke-width="1.5"/>
+  <circle cx="31" cy="27" r="2.5" fill="#222"/>
+  <circle cx="49" cy="27" r="2.5" fill="#222"/>
+  <!-- Raised eyebrows -->
+  <path d="M25,18 Q30,14 37,18" fill="none" stroke="#887766" stroke-width="2" stroke-linecap="round"/>
+  <path d="M43,18 Q50,14 55,18" fill="none" stroke="#887766" stroke-width="2" stroke-linecap="round"/>
+  <path d="M37,29 Q40,35 43,29" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Nervous O mouth -->
+  <ellipse cx="40" cy="40" rx="5" ry="4" fill="none" stroke="#222" stroke-width="1.5"/>
+  <!-- Sweat drop -->
+  <path d="M60,15 Q62,18 60,21" fill="#8cf" stroke="#6af" stroke-width="1"/>
+  <text x="40" y="175" class="label">MALE HEAVY</text>
+  <text x="40" y="190">Body: 60w×65h, Head: r26</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CHARACTER: MALE ROUND (e.g., Dick Noonan, friendly, short)   -->
+<!-- Body: round/elliptical. Good for: affable, jolly types       -->
+<!-- ============================================================ -->
+<g id="male-round" transform="translate(590, 45)">
+  <ellipse cx="40" cy="80" rx="28" ry="30" fill="#446688" stroke="#222" stroke-width="2"/>
+  <!-- Tie -->
+  <polygon points="40,55 36,68 40,72 44,68" fill="#c44" stroke="#222" stroke-width="1"/>
+  <line x1="12" y1="75" x2="0" y2="95" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+  <line x1="68" y1="75" x2="80" y2="95" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="0" cy="97" r="5" fill="#f0c0b0" stroke="#222" stroke-width="1.5"/>
+  <circle cx="80" cy="97" r="5" fill="#f0c0b0" stroke="#222" stroke-width="1.5"/>
+  <line x1="30" y1="108" x2="27" y2="135" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+  <line x1="50" y1="108" x2="53" y2="135" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="25" cy="138" rx="9" ry="4" fill="#333" stroke="#222" stroke-width="1.5"/>
+  <ellipse cx="55" cy="138" rx="9" ry="4" fill="#333" stroke="#222" stroke-width="1.5"/>
+  <!-- Pink round head -->
+  <circle cx="40" cy="28" r="22" fill="#f0c0b0" stroke="#222" stroke-width="2"/>
+  <path d="M20,18 Q25,10 35,14 Q40,10 45,14 Q55,10 60,18" fill="#aa8866" stroke="#997755" stroke-width="1"/>
+  <!-- Friendly crinkled eyes -->
+  <path d="M30,26 Q34,23 38,26" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+  <path d="M44,26 Q48,23 52,26" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="34" cy="25" r="1.5" fill="#222"/>
+  <circle cx="48" cy="25" r="1.5" fill="#222"/>
+  <!-- Round nose -->
+  <circle cx="40" cy="32" r="3" fill="#e8b0a0" stroke="#222" stroke-width="1"/>
+  <!-- Friendly smile -->
+  <path d="M32,38 Q40,44 48,38" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+  <!-- Rosy cheeks -->
+  <circle cx="26" cy="34" r="4" fill="#e8a0a0" opacity="0.4"/>
+  <circle cx="54" cy="34" r="4" fill="#e8a0a0" opacity="0.4"/>
+  <text x="40" y="162" class="label">MALE ROUND</text>
+  <text x="40" y="177">Body: ellipse 28×30</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CHARACTER: MALE HUGE (e.g., Gutalin, bodyguards, giants)     -->
+<!-- Body: tallest, widest arms. Good for: intimidating presence  -->
+<!-- ============================================================ -->
+<g id="male-huge" transform="translate(780, 10)">
+  <rect x="5" y="65" width="70" height="75" rx="5" fill="#555" stroke="#222" stroke-width="2"/>
+  <!-- Long arms to knees -->
+  <line x1="5" y1="80" x2="-18" y2="130" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <line x1="75" y1="80" x2="98" y2="130" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="-18" cy="133" r="7" fill="#6b4423" stroke="#222" stroke-width="1.5"/>
+  <circle cx="98" cy="133" r="7" fill="#6b4423" stroke="#222" stroke-width="1.5"/>
+  <line x1="25" y1="140" x2="20" y2="175" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <line x1="55" y1="140" x2="60" y2="175" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="18" cy="178" rx="12" ry="5" fill="#333" stroke="#222" stroke-width="1.5"/>
+  <ellipse cx="62" cy="178" rx="12" ry="5" fill="#333" stroke="#222" stroke-width="1.5"/>
+  <!-- Big head -->
+  <circle cx="40" cy="35" r="28" fill="#6b4423" stroke="#222" stroke-width="2"/>
+  <!-- Intense eyes -->
+  <ellipse cx="30" cy="33" rx="5" ry="4" fill="white" stroke="#222" stroke-width="1.5"/>
+  <ellipse cx="50" cy="33" rx="5" ry="4" fill="white" stroke="#222" stroke-width="1.5"/>
+  <circle cx="30" cy="33" r="2.5" fill="#222"/>
+  <circle cx="50" cy="33" r="2.5" fill="#222"/>
+  <!-- Heavy brow -->
+  <path d="M22,26 L38,28" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42,28 L58,26" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+  <path d="M37,36 Q40,42 43,36" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="48" x2="50" y2="48" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M12,22 Q15,10 25,12 Q35,5 45,12 Q55,10 60,15 Q68,20 68,28" fill="#4a2f13" stroke="#3a1f03" stroke-width="1"/>
+  <text x="40" y="200" class="label">MALE HUGE</text>
+  <text x="40" y="215">Body: 70w×75h, Head: r28</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EXPRESSION SWAPS — copy these into character head area       -->
+<!-- ============================================================ -->
+<g transform="translate(50, 350)">
+  <text x="200" y="0" class="label" font-size="16">EXPRESSION LIBRARY</text>
+
+  <!-- Neutral -->
+  <g transform="translate(0, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="34" cy="28" r="1.5" fill="#222"/>
+    <circle cx="48" cy="28" r="1.5" fill="#222"/>
+    <line x1="34" y1="42" x2="48" y2="42" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="40" y="70">Neutral</text>
+  </g>
+
+  <!-- Happy -->
+  <g transform="translate(100, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="34" cy="28" r="1.5" fill="#222"/>
+    <circle cx="48" cy="28" r="1.5" fill="#222"/>
+    <path d="M33,40 Q40,48 50,40" fill="white" stroke="#222" stroke-width="1.5"/>
+    <text x="40" y="70">Happy</text>
+  </g>
+
+  <!-- Talking -->
+  <g transform="translate(200, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="34" cy="28" r="1.5" fill="#222"/>
+    <circle cx="48" cy="28" r="1.5" fill="#222"/>
+    <ellipse cx="41" cy="42" rx="7" ry="4" fill="#333" stroke="#222" stroke-width="1.5"/>
+    <text x="40" y="70">Talking</text>
+  </g>
+
+  <!-- Sad -->
+  <g transform="translate(300, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <line x1="28" y1="26" x2="38" y2="29" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="44" y1="29" x2="54" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="34" cy="28" r="1.5" fill="#222"/>
+    <circle cx="48" cy="28" r="1.5" fill="#222"/>
+    <path d="M34,44 Q40,40 47,44" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M50,30 Q51,34 50,37" fill="#8cf" stroke="#6af" stroke-width="1"/>
+    <text x="40" y="70">Sad</text>
+  </g>
+
+  <!-- Angry -->
+  <g transform="translate(400, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <!-- V-shaped angry eyebrows -->
+    <line x1="26" y1="24" x2="37" y2="27" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="45" y1="27" x2="56" y2="24" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="34" cy="29" r="2" fill="#222"/>
+    <circle cx="48" cy="29" r="2" fill="#222"/>
+    <path d="M33,42 L48,42" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="40" y="70">Angry</text>
+  </g>
+
+  <!-- Shocked -->
+  <g transform="translate(500, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <!-- Raised eyebrows, wide eyes -->
+    <path d="M26,20 Q32,16 38,20" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+    <path d="M44,20 Q50,16 56,20" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="33" cy="27" r="4" fill="white" stroke="#222" stroke-width="1.5"/>
+    <circle cx="49" cy="27" r="4" fill="white" stroke="#222" stroke-width="1.5"/>
+    <circle cx="33" cy="27" r="2" fill="#222"/>
+    <circle cx="49" cy="27" r="2" fill="#222"/>
+    <ellipse cx="41" cy="43" rx="5" ry="5" fill="none" stroke="#222" stroke-width="1.5"/>
+    <text x="40" y="70">Shocked</text>
+  </g>
+
+  <!-- Smirk -->
+  <g transform="translate(600, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="34" cy="28" r="1.5" fill="#222"/>
+    <circle cx="48" cy="28" r="1.5" fill="#222"/>
+    <path d="M34,40 Q40,44 50,40" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="40" y="70">Smirk</text>
+  </g>
+</g>
+
+<!-- ============================================================ -->
+<!-- ACCESSORIES — add to any character                           -->
+<!-- ============================================================ -->
+<g transform="translate(50, 500)">
+  <text x="200" y="0" class="label" font-size="16">ACCESSORIES</text>
+
+  <!-- Cigarette (add near mouth) -->
+  <g transform="translate(0, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <line x1="50" y1="41" x2="65" y2="38" stroke="#eee" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="66" cy="37" r="2" fill="#f80" opacity="0.8"/>
+    <path d="M68,35 Q72,28 68,22" fill="none" stroke="#999" stroke-width="0.8" opacity="0.6"/>
+    <text x="40" y="70">Cigarette</text>
+  </g>
+
+  <!-- Glasses (replace eyes) -->
+  <g transform="translate(100, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <circle cx="32" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+    <circle cx="50" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+    <line x1="39" y1="26" x2="43" y2="26" stroke="#444" stroke-width="1.5"/>
+    <circle cx="32" cy="26" r="2" fill="#222"/>
+    <circle cx="50" cy="26" r="2" fill="#222"/>
+    <text x="40" y="70">Glasses</text>
+  </g>
+
+  <!-- Military cap -->
+  <g transform="translate(200, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <path d="M15,22 Q20,10 40,8 Q60,10 65,22" fill="#556b2f" stroke="#222" stroke-width="1.5"/>
+    <rect x="15" y="20" width="50" height="5" fill="#556b2f" stroke="#222" stroke-width="1"/>
+    <text x="40" y="70">Military cap</text>
+  </g>
+
+  <!-- Pipe -->
+  <g transform="translate(300, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <line x1="48" y1="39" x2="62" y2="34" stroke="#654" stroke-width="3" stroke-linecap="round"/>
+    <rect x="60" y="28" width="8" height="10" rx="2" fill="#654" stroke="#543" stroke-width="1"/>
+    <path d="M63,28 Q66,20 63,14" fill="none" stroke="#999" stroke-width="0.8" opacity="0.5"/>
+    <text x="40" y="70">Pipe</text>
+  </g>
+
+  <!-- Mustache -->
+  <g transform="translate(400, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <path d="M30,36 Q35,40 40,36 Q45,40 50,36" fill="#554" stroke="#443" stroke-width="1.5"/>
+    <text x="40" y="70">Mustache</text>
+  </g>
+
+  <!-- Sweat drops (anxiety) -->
+  <g transform="translate(500, 20)">
+    <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+    <path d="M58,18 Q60,22 58,25" fill="#8cf" stroke="#6af" stroke-width="1"/>
+    <path d="M62,24 Q64,27 62,29" fill="#8cf" stroke="#6af" stroke-width="0.8"/>
+    <text x="40" y="70">Sweat</text>
+  </g>
+</g>
+
+</svg>

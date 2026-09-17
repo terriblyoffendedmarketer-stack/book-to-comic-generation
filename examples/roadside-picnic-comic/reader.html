@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadside Picnic — Comic Reader</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    font-family: 'Patrick Hand', cursive;
+    min-height: 100vh;
+  }
+
+  .reader-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #222;
+    border-bottom: 2px solid #444;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .reader-header h1 {
+    font-family: 'Bangers', cursive;
+    color: #c44;
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+  .reader-header .nav {
+    display: flex;
+    gap: 8px;
+  }
+  .reader-header .nav a {
+    color: #aaa;
+    text-decoration: none;
+    padding: 4px 12px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: all 0.2s;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .reader-header .nav a:hover {
+    color: #fff;
+    border-color: #c44;
+    background: #333;
+  }
+  .reader-header .nav a.active {
+    color: #fff;
+    border-color: #c44;
+    background: #c44;
+  }
+
+  .pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .page-marker {
+    font-family: 'Bangers', cursive;
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 0;
+  }
+
+  iframe {
+    border: none;
+    width: 730px;
+    background: #f5f0e8;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+
+  .page-break {
+    width: 200px;
+    border: none;
+    border-top: 1px solid #333;
+  }
+
+  .footer {
+    text-align: center;
+    color: #555;
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+  .footer a {
+    color: #c44;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="reader-header">
+  <h1>ROADSIDE PICNIC</h1>
+  <div class="nav">
+    <a href="#prologue" class="active">Prologue</a>
+    <a href="#page1">Page 1</a>
+    <a href="#page2">Page 2</a>
+    <a href="#page3">Page 3</a>
+  </div>
+</div>
+
+<div class="pages">
+
+  <div id="prologue" class="page-marker">PROLOGUE — THE INTERVIEW</div>
+  <iframe src="pages/page-00-prologue.html" id="frame-0"></iframe>
+
+  <hr class="page-break">
+
+  <div id="page1" class="page-marker">CHAPTER 1 — PAGE 1</div>
+  <iframe src="pages/page-01.html" id="frame-1"></iframe>
+
+  <hr class="page-break">
+
+  <div id="page2" class="page-marker">CHAPTER 1 — PAGE 2</div>
+  <iframe src="pages/page-02.html" id="frame-2"></iframe>
+
+  <hr class="page-break">
+
+  <div id="page3" class="page-marker">CHAPTER 1 — PAGE 3</div>
+  <iframe src="pages/page-03.html" id="frame-3"></iframe>
+
+</div>
+
+<div class="footer">
+  <p>Based on <em>Roadside Picnic</em> by Arkady &amp; Boris Strugatsky</p>
+  <p style="margin-top:8px;font-size:12px;color:#444;">Proof of concept — Chapter 1 in progress</p>
+</div>
+
+<script>
+  // Auto-resize iframes to fit content
+  function resizeFrames() {
+    document.querySelectorAll('iframe').forEach(frame => {
+      try {
+        const h = frame.contentDocument.body.scrollHeight;
+        if (h > 0) frame.style.height = (h + 40) + 'px';
+      } catch(e) {
+        frame.style.height = '900px';
+      }
+    });
+  }
+
+  document.querySelectorAll('iframe').forEach(frame => {
+    frame.addEventListener('load', resizeFrames);
+  });
+
+  // Highlight active nav based on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        document.querySelectorAll('.nav a').forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.page-marker').forEach(m => observer.observe(m));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadside Picnic — Page 2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Patrick Hand', cursive;
+  }
+
+  .page {
+    width: 700px;
+    background: white;
+    border: 3px solid #222;
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+  }
+
+  .panel-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .panel {
+    border: 2.5px solid #222;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+  }
+
+  .panel-wide { flex: 2; }
+  .panel-narrow { flex: 1; }
+  .panel-full { flex: 1; }
+
+  .panel-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .bubble {
+    position: absolute;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 180px;
+    z-index: 10;
+  }
+
+  .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 25px;
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid white;
+  }
+  .bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 24px;
+    width: 0; height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 14px solid #222;
+  }
+
+  .bubble.right::after { left: auto; right: 25px; }
+  .bubble.right::before { left: auto; right: 24px; }
+
+  .bubble.thought { border-radius: 20px; }
+  .bubble.thought::after {
+    border: none; width: 8px; height: 8px;
+    background: white; border-radius: 50%;
+    bottom: -10px; border: 2px solid #222;
+  }
+  .bubble.thought::before {
+    border: none; width: 5px; height: 5px;
+    background: white; border-radius: 50%;
+    bottom: -18px; left: 30px; border: 2px solid #222;
+  }
+
+  .narrator {
+    position: absolute;
+    background: #f8f0d0;
+    border: 2px solid #222;
+    padding: 5px 8px;
+    font-size: 12px;
+    line-height: 1.3;
+    z-index: 10;
+    max-width: 200px;
+  }
+
+  .caption {
+    font-family: 'Bangers', cursive;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #666;
+    text-align: center;
+    padding: 2px 0;
+  }
+
+  .bold { font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="caption">THE NEXT MORNING. THE INSTITUTE.</div>
+
+  <!-- ROW 1: Red arrives, gets called to Herzog -->
+  <div class="panel-row" style="height: 180px;">
+
+    <!-- Panel 1: Gate / sergeant -->
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble right" style="top: 5px; right: 6px; max-width: 140px; font-size: 11px;">
+          Fine thing. They're looking for you all over the institute, Red.
+        </div>
+        <svg viewBox="0 0 220 180">
+          <!-- Institute entrance -->
+          <rect x="0" y="0" width="220" height="180" fill="#8899aa"/>
+          <rect x="0" y="130" width="220" height="50" fill="#667788"/>
+          <!-- Gate/barrier -->
+          <rect x="90" y="80" width="8" height="60" fill="#555" stroke="#222" stroke-width="1"/>
+          <rect x="60" y="78" width="70" height="8" fill="#c44" stroke="#222" stroke-width="1"/>
+          <!-- Tall sergeant -->
+          <g transform="translate(130, 20) scale(0.6)">
+            <!-- Taller body -->
+            <rect x="15" y="55" width="45" height="70" rx="3" fill="#556b2f" stroke="#222" stroke-width="2"/>
+            <line x1="15" y1="70" x2="0" y2="95" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="60" y1="70" x2="75" y2="95" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="0" cy="97" r="4" fill="#f0c8b0" stroke="#222" stroke-width="1.5"/>
+            <circle cx="75" cy="97" r="4" fill="#f0c8b0" stroke="#222" stroke-width="1.5"/>
+            <line x1="28" y1="125" x2="25" y2="165" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="47" y1="125" x2="50" y2="165" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <ellipse cx="23" cy="168" rx="9" ry="4" fill="#333" stroke="#222" stroke-width="1"/>
+            <ellipse cx="52" cy="168" rx="9" ry="4" fill="#333" stroke="#222" stroke-width="1"/>
+            <!-- Head -->
+            <circle cx="37" cy="28" r="20" fill="#f0c8b0" stroke="#222" stroke-width="2"/>
+            <!-- Military cap -->
+            <path d="M17,20 Q20,10 37,8 Q54,10 57,20" fill="#556b2f" stroke="#222" stroke-width="1.5"/>
+            <rect x="17" y="18" width="40" height="5" fill="#556b2f" stroke="#222" stroke-width="1"/>
+            <!-- Simple face -->
+            <circle cx="30" cy="26" r="2" fill="#222"/>
+            <circle cx="44" cy="26" r="2" fill="#222"/>
+            <path d="M32,34 Q37,38 42,34" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+          <!-- Red - small, walking past -->
+          <g transform="translate(20, 55) scale(0.55)">
+            <rect x="15" y="55" width="50" height="60" rx="5" fill="#3a5a3a" stroke="#222" stroke-width="2"/>
+            <line x1="15" y1="75" x2="0" y2="95" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="65" y1="75" x2="80" y2="95" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="0" cy="97" r="5" fill="#e8b88a" stroke="#222" stroke-width="1.5"/>
+            <circle cx="80" cy="97" r="5" fill="#e8b88a" stroke="#222" stroke-width="1.5"/>
+            <line x1="30" y1="115" x2="20" y2="148" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="50" y1="115" x2="60" y2="148" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+            <path d="M15,22 Q20,5 30,8 Q35,2 42,6 Q50,0 55,8 Q62,5 65,20" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+            <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="34" cy="28" r="1.5" fill="#222"/>
+            <circle cx="48" cy="28" r="1.5" fill="#222"/>
+            <path d="M38,30 L40,36 L43,36" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M35,41 Q40,43 47,41" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 2: Herzog's office -->
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="narrator" style="top: 5px; left: 5px; max-width: 140px; font-size: 11px;">
+          His office was on the third floor. Bars on the windows, just like a police station.
+        </div>
+        <div class="bubble right" style="top: 5px; right: 6px; max-width: 150px; font-size: 12px;">
+          Up to your old tricks again? There's new material on you here.
+        </div>
+        <svg viewBox="0 0 440 180">
+          <!-- Office -->
+          <rect x="0" y="0" width="440" height="180" fill="#c8b898"/>
+          <rect x="0" y="130" width="440" height="50" fill="#a09070"/>
+          <!-- Window with bars -->
+          <rect x="300" y="15" width="80" height="60" fill="#aaccee" stroke="#222" stroke-width="2"/>
+          <line x1="320" y1="15" x2="320" y2="75" stroke="#555" stroke-width="2"/>
+          <line x1="340" y1="15" x2="340" y2="75" stroke="#555" stroke-width="2"/>
+          <line x1="360" y1="15" x2="360" y2="75" stroke="#555" stroke-width="2"/>
+          <!-- Desk -->
+          <rect x="120" y="90" width="200" height="12" fill="#8a6a3a" stroke="#222" stroke-width="1.5"/>
+          <rect x="130" y="102" width="15" height="35" fill="#7a5a2a" stroke="#222" stroke-width="1"/>
+          <rect x="295" y="102" width="15" height="35" fill="#7a5a2a" stroke="#222" stroke-width="1"/>
+          <!-- File on desk -->
+          <rect x="200" y="80" width="40" height="12" fill="#f5e8c0" stroke="#222" stroke-width="1" transform="rotate(-5 220 86)"/>
+
+          <!-- Herzog behind desk - pipe, military -->
+          <g transform="translate(185, 20) scale(0.6)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#556b2f" stroke="#222" stroke-width="2"/>
+            <!-- Epaulets -->
+            <rect x="12" y="54" width="12" height="6" fill="#886" stroke="#222" stroke-width="1" rx="1"/>
+            <rect x="56" y="54" width="12" height="6" fill="#886" stroke="#222" stroke-width="1" rx="1"/>
+            <line x1="15" y1="70" x2="5" y2="88" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="65" y1="70" x2="75" y2="88" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="5" cy="90" r="5" fill="#ddb899" stroke="#222" stroke-width="1.5"/>
+            <circle cx="75" cy="90" r="5" fill="#ddb899" stroke="#222" stroke-width="1.5"/>
+            <!-- Head -->
+            <circle cx="40" cy="28" r="23" fill="#ddb899" stroke="#222" stroke-width="2"/>
+            <!-- Military-short hair -->
+            <path d="M17,18 Q22,6 40,4 Q58,6 63,18" fill="#776655" stroke="#665544" stroke-width="1"/>
+            <!-- Stern eyes -->
+            <line x1="28" y1="26" x2="36" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="44" y1="26" x2="52" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="32" cy="26" r="1.5" fill="#222"/>
+            <circle cx="48" cy="26" r="1.5" fill="#222"/>
+            <!-- Frowning eyebrows -->
+            <line x1="26" y1="21" x2="37" y2="23" stroke="#665544" stroke-width="2" stroke-linecap="round"/>
+            <line x1="43" y1="23" x2="54" y2="21" stroke="#665544" stroke-width="2" stroke-linecap="round"/>
+            <path d="M37,30 L40,35 L43,35" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Frown -->
+            <path d="M33,40 Q40,37 48,40" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+            <!-- Pipe -->
+            <line x1="48" y1="39" x2="62" y2="34" stroke="#654" stroke-width="3" stroke-linecap="round"/>
+            <rect x="60" y="28" width="8" height="10" rx="2" fill="#654" stroke="#543" stroke-width="1"/>
+            <path d="M63,28 Q66,20 63,14" fill="none" stroke="#999" stroke-width="0.8" opacity="0.5"/>
+          </g>
+
+          <!-- Red standing, hands in pockets -->
+          <g transform="translate(40, 30) scale(0.6)">
+            <rect x="15" y="55" width="50" height="60" rx="5" fill="#3a5a3a" stroke="#222" stroke-width="2"/>
+            <line x1="25" y1="75" x2="25" y2="100" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="55" y1="75" x2="55" y2="100" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="30" y1="115" x2="25" y2="150" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="50" y1="115" x2="55" y2="150" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="23" cy="153" rx="10" ry="5" fill="#333" stroke="#222" stroke-width="1"/>
+            <ellipse cx="57" cy="153" rx="10" ry="5" fill="#333" stroke="#222" stroke-width="1"/>
+            <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+            <path d="M15,22 Q20,5 30,8 Q35,2 42,6 Q50,0 55,8 Q62,5 65,20" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+            <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="34" cy="28" r="1.5" fill="#222"/>
+            <circle cx="48" cy="28" r="1.5" fill="#222"/>
+            <path d="M38,30 L40,36 L43,36" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="34" y1="42" x2="48" y2="42" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Red tells Kirill he can't go -->
+  <div class="panel-row" style="height: 170px;">
+
+    <!-- Panel 3: Red breaks the news -->
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble" style="top: 5px; left: 8px; max-width: 150px;">
+          I'm not going into the Zone. Herzog just had me up in his office.
+        </div>
+        <svg viewBox="0 0 220 170">
+          <rect x="0" y="0" width="220" height="170" fill="#c4b890"/>
+          <!-- Kirill's small office -->
+          <rect x="0" y="120" width="220" height="50" fill="#a09070"/>
+          <!-- Red - tense, standing -->
+          <g transform="translate(55, 40) scale(0.7)">
+            <rect x="15" y="55" width="50" height="60" rx="5" fill="#3a5a3a" stroke="#222" stroke-width="2"/>
+            <line x1="15" y1="70" x2="0" y2="90" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="65" y1="70" x2="80" y2="90" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="0" cy="92" r="5" fill="#e8b88a" stroke="#222" stroke-width="1.5"/>
+            <circle cx="80" cy="92" r="5" fill="#e8b88a" stroke="#222" stroke-width="1.5"/>
+            <line x1="30" y1="115" x2="25" y2="145" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="50" y1="115" x2="55" y2="145" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+            <path d="M15,22 Q20,5 30,8 Q35,2 42,6 Q50,0 55,8 Q62,5 65,20" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+            <!-- Eyes tight - stressed -->
+            <line x1="28" y1="27" x2="38" y2="29" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="44" y1="29" x2="54" y2="27" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="34" cy="28" r="1.5" fill="#222"/>
+            <circle cx="48" cy="28" r="1.5" fill="#222"/>
+            <path d="M38,30 L40,36 L43,36" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Clenched mouth -->
+            <line x1="34" y1="42" x2="48" y2="42" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 4: Kirill deflates -->
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="narrator" style="top: 5px; right: 5px; max-width: 140px; font-size: 11px;">
+          He went limp. He got that pathetic look again. His eyes were like a sick poodle's.
+        </div>
+        <svg viewBox="0 0 220 170">
+          <rect x="0" y="0" width="220" height="170" fill="#b8a87a"/>
+          <!-- Kirill on windowsill, deflated -->
+          <rect x="0" y="120" width="220" height="50" fill="#a09070"/>
+          <!-- Window -->
+          <rect x="50" y="10" width="120" height="80" fill="#aaccee" stroke="#222" stroke-width="2"/>
+          <!-- Windowsill -->
+          <rect x="40" y="88" width="140" height="8" fill="#999" stroke="#222" stroke-width="1"/>
+
+          <g transform="translate(65, 35) scale(0.75)">
+            <!-- Kirill sitting, slumped -->
+            <rect x="20" y="55" width="40" height="50" rx="3" fill="#ddd" stroke="#222" stroke-width="2"/>
+            <!-- Arms hanging -->
+            <line x1="20" y1="70" x2="5" y2="100" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="60" y1="70" x2="75" y2="100" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="5" cy="102" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+            <circle cx="75" cy="102" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+            <!-- Legs dangling from sill -->
+            <line x1="30" y1="105" x2="25" y2="140" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="50" y1="105" x2="55" y2="140" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <!-- Head drooping -->
+            <ellipse cx="40" cy="32" rx="20" ry="23" fill="#e0c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M20,24 Q25,9 35,12 Q40,8 45,12 Q55,9 60,24" fill="#443322" stroke="#332211" stroke-width="1.5"/>
+            <circle cx="32" cy="30" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <circle cx="50" cy="30" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <line x1="39" y1="30" x2="43" y2="30" stroke="#444" stroke-width="1.5"/>
+            <!-- Sad droopy eyes -->
+            <circle cx="32" cy="31" r="2" fill="#222"/>
+            <circle cx="50" cy="31" r="2" fill="#222"/>
+            <!-- Eyebrows tilted sad -->
+            <line x1="25" y1="24" x2="36" y2="26" stroke="#443322" stroke-width="2" stroke-linecap="round"/>
+            <line x1="46" y1="26" x2="57" y2="24" stroke="#443322" stroke-width="2" stroke-linecap="round"/>
+            <path d="M39,33 L40,38 L43,38" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Sad mouth -->
+            <path d="M34,44 Q40,40 47,44" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Tear -->
+            <path d="M54,33 Q55,37 54,40" fill="#8cf" stroke="#6af" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 5: Kirill rallies -->
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble right" style="top: 5px; right: 6px; max-width: 155px; font-size: 11.5px;">
+          Well, if you can't, you can't. I'll go alone. Maybe it'll go fine.
+        </div>
+        <svg viewBox="0 0 220 170">
+          <rect x="0" y="0" width="220" height="170" fill="#c4b890"/>
+          <rect x="0" y="120" width="220" height="50" fill="#a09070"/>
+          <!-- Kirill forcing brightness, leaning over map -->
+          <g transform="translate(55, 30) scale(0.7)">
+            <rect x="20" y="55" width="40" height="60" rx="3" fill="#ddd" stroke="#222" stroke-width="2"/>
+            <line x1="20" y1="70" x2="0" y2="80" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="60" y1="70" x2="80" y2="80" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="0" cy="82" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+            <circle cx="80" cy="82" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+            <line x1="32" y1="115" x2="28" y2="145" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="48" y1="115" x2="52" y2="145" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <ellipse cx="40" cy="28" rx="20" ry="23" fill="#e0c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M20,20 Q25,5 35,8 Q40,4 45,8 Q55,5 60,20" fill="#443322" stroke="#332211" stroke-width="1.5"/>
+            <circle cx="32" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <circle cx="50" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <line x1="39" y1="26" x2="43" y2="26" stroke="#444" stroke-width="1.5"/>
+            <circle cx="32" cy="26" r="2" fill="#222"/>
+            <circle cx="50" cy="26" r="2" fill="#222"/>
+            <path d="M39,28 L40,34 L43,34" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Forced brave smile -->
+            <path d="M34,39 Q40,43 47,39" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+          <!-- Map under his hands -->
+          <rect x="65" y="102" width="90" height="50" fill="#f5f0d0" stroke="#222" stroke-width="1" rx="1"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: The look that changes Red's mind -->
+  <div class="panel-row" style="height: 200px;">
+
+    <!-- Panel 6: Red looks at Kirill - the window to the Zone -->
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="narrator" style="top: 5px; left: 5px; max-width: 200px;">
+          I looked at Kirill and saw that he was secretly watching me. And the look on his face made me change my mind. The hell with them all.
+        </div>
+        <svg viewBox="0 0 440 200">
+          <!-- View through thick leaded glass window -->
+          <rect x="0" y="0" width="440" height="200" fill="#b8a87a"/>
+          <!-- Big window to the Zone -->
+          <rect x="80" y="30" width="280" height="140" fill="#889977" stroke="#222" stroke-width="3"/>
+          <!-- Thick glass cross-hatching -->
+          <line x1="80" y1="100" x2="360" y2="100" stroke="#999" stroke-width="2" opacity="0.3"/>
+          <line x1="220" y1="30" x2="220" y2="170" stroke="#999" stroke-width="2" opacity="0.3"/>
+          <!-- Zone through window - industrial silhouette -->
+          <rect x="100" y="80" width="20" height="70" fill="#667766" stroke="#556655" stroke-width="1"/>
+          <rect x="95" y="70" width="30" height="12" fill="#667766"/>
+          <!-- Smokestack (still) -->
+          <rect x="108" y="40" width="6" height="40" fill="#667766"/>
+          <!-- Railroad tracks -->
+          <line x1="90" y1="140" x2="350" y2="140" stroke="#556655" stroke-width="1"/>
+          <line x1="90" y1="145" x2="350" y2="145" stroke="#556655" stroke-width="1"/>
+          <!-- Cone-shaped ore mounds -->
+          <polygon points="180,150 200,100 220,150" fill="#aa9966" stroke="#998855" stroke-width="1"/>
+          <polygon points="240,150 255,115 270,150" fill="#aa9966" stroke="#998855" stroke-width="1"/>
+          <!-- Trucks -->
+          <rect x="290" y="125" width="25" height="15" fill="#778877" stroke="#556655" stroke-width="1"/>
+          <rect x="320" y="128" width="25" height="12" fill="#778877" stroke="#556655" stroke-width="1"/>
+          <!-- Eerie yellowish haze over Zone -->
+          <rect x="80" y="30" width="280" height="140" fill="#ccbb66" opacity="0.1"/>
+
+          <!-- Red and Kirill silhouettes looking out -->
+          <!-- Red -->
+          <g transform="translate(15, 60) scale(0.55)">
+            <rect x="15" y="55" width="50" height="60" rx="5" fill="#3a5a3a" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+            <path d="M15,22 Q20,5 30,8 Q35,2 42,6 Q50,0 55,8 Q62,5 65,20" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+            <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="36" cy="28" r="1.5" fill="#222"/>
+            <circle cx="50" cy="28" r="1.5" fill="#222"/>
+            <path d="M38,30 L40,36 L43,36" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="34" y1="42" x2="48" y2="42" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+          <!-- Kirill - at far right of window, looking back at Red -->
+          <g transform="translate(370, 60) scale(0.55)">
+            <rect x="20" y="55" width="40" height="60" rx="3" fill="#ddd" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="28" rx="20" ry="23" fill="#e0c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M20,20 Q25,5 35,8 Q40,4 45,8 Q55,5 60,20" fill="#443322" stroke="#332211" stroke-width="1.5"/>
+            <circle cx="32" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <circle cx="50" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <line x1="39" y1="26" x2="43" y2="26" stroke="#444" stroke-width="1.5"/>
+            <!-- Eyes looking left at Red -->
+            <circle cx="29" cy="26" r="2" fill="#222"/>
+            <circle cx="47" cy="26" r="2" fill="#222"/>
+            <path d="M39,28 L40,34 L43,34" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="35" y1="40" x2="47" y2="40" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 7: Kirill's official speech -->
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble right" style="top: 5px; right: 6px; max-width: 165px; font-size: 11px;">
+          Laboratory Assistant Schuhart! Official sources have led me to believe that an inspection of the garage could be of great scientific value. I <span class="bold">guarantee</span> a bonus.
+        </div>
+        <svg viewBox="0 0 220 200">
+          <rect x="0" y="0" width="220" height="200" fill="#d4c8a0"/>
+          <!-- Kirill - beaming, transformed -->
+          <g transform="translate(50, 75) scale(0.85)">
+            <rect x="20" y="55" width="40" height="60" rx="3" fill="#ddd" stroke="#222" stroke-width="2"/>
+            <line x1="20" y1="70" x2="0" y2="80" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="60" y1="70" x2="80" y2="80" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="0" cy="82" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+            <circle cx="80" cy="82" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+            <ellipse cx="40" cy="28" rx="20" ry="23" fill="#e0c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M20,20 Q25,5 35,8 Q40,4 45,8 Q55,5 60,20" fill="#443322" stroke="#332211" stroke-width="1.5"/>
+            <circle cx="32" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <circle cx="50" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <line x1="39" y1="26" x2="43" y2="26" stroke="#444" stroke-width="1.5"/>
+            <!-- Beaming eyes -->
+            <circle cx="32" cy="26" r="3" fill="#222"/>
+            <circle cx="50" cy="26" r="3" fill="#222"/>
+            <circle cx="33" cy="25" r="1.2" fill="white"/>
+            <circle cx="51" cy="25" r="1.2" fill="white"/>
+            <path d="M39,28 L40,34 L43,34" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Huge grin -->
+            <path d="M30,38 Q40,50 52,38" fill="white" stroke="#222" stroke-width="1.5"/>
+          </g>
+          <!-- Sun-like radiating lines around him -->
+          <line x1="60" y1="85" x2="40" y2="75" stroke="#fa0" stroke-width="1.5" opacity="0.4"/>
+          <line x1="155" y1="85" x2="175" y2="75" stroke="#fa0" stroke-width="1.5" opacity="0.4"/>
+          <line x1="108" y1="70" x2="108" y2="50" stroke="#fa0" stroke-width="1.5" opacity="0.4"/>
+          <line x1="75" y1="75" x2="60" y2="60" stroke="#fa0" stroke-width="1" opacity="0.3"/>
+          <line x1="140" y1="75" x2="155" y2="60" stroke="#fa0" stroke-width="1" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 4: Red agrees -->
+  <div class="panel-row" style="height: 120px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="bubble" style="top: 8px; left: 15px; max-width: 200px; font-size: 13px;">
+          All right. Where's your Tender? How long do we have to wait for him?
+        </div>
+        <div class="narrator" style="bottom: 8px; right: 8px; max-width: 250px;">
+          And he beamed like the June sun. And I smiled like a fool myself. We were going into the Zone.
+        </div>
+        <svg viewBox="0 0 680 120">
+          <rect x="0" y="0" width="680" height="120" fill="#c4b890"/>
+          <rect x="0" y="90" width="680" height="30" fill="#a09070"/>
+
+          <!-- Red - smiling, resigned but warm -->
+          <g transform="translate(170, 10) scale(0.65)">
+            <rect x="15" y="55" width="50" height="60" rx="5" fill="#3a5a3a" stroke="#222" stroke-width="2"/>
+            <line x1="15" y1="70" x2="0" y2="90" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="65" y1="70" x2="80" y2="90" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="0" cy="92" r="5" fill="#e8b88a" stroke="#222" stroke-width="1.5"/>
+            <circle cx="80" cy="92" r="5" fill="#e8b88a" stroke="#222" stroke-width="1.5"/>
+            <circle cx="40" cy="30" r="25" fill="#e8b88a" stroke="#222" stroke-width="2"/>
+            <path d="M15,22 Q20,5 30,8 Q35,2 42,6 Q50,0 55,8 Q62,5 65,20" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+            <line x1="30" y1="28" x2="38" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="44" y1="28" x2="52" y2="28" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="34" cy="28" r="1.5" fill="#222"/>
+            <circle cx="48" cy="28" r="1.5" fill="#222"/>
+            <path d="M38,30 L40,36 L43,36" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Warm smile -->
+            <path d="M33,40 Q40,46 50,40" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+          </g>
+
+          <!-- Kirill - patting Red's back -->
+          <g transform="translate(280, 10) scale(0.65)">
+            <rect x="20" y="55" width="40" height="60" rx="3" fill="#ddd" stroke="#222" stroke-width="2"/>
+            <!-- Arm reaching to pat Red -->
+            <line x1="20" y1="70" x2="-15" y2="65" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="60" y1="70" x2="75" y2="90" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="-15" cy="63" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+            <circle cx="75" cy="92" r="4.5" fill="#e0c8a8" stroke="#222" stroke-width="1.5"/>
+            <line x1="32" y1="115" x2="28" y2="145" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="48" y1="115" x2="52" y2="145" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <ellipse cx="40" cy="28" rx="20" ry="23" fill="#e0c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M20,20 Q25,5 35,8 Q40,4 45,8 Q55,5 60,20" fill="#443322" stroke="#332211" stroke-width="1.5"/>
+            <circle cx="32" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <circle cx="50" cy="26" r="7" fill="none" stroke="#444" stroke-width="1.5"/>
+            <line x1="39" y1="26" x2="43" y2="26" stroke="#444" stroke-width="1.5"/>
+            <circle cx="32" cy="26" r="2.5" fill="#222"/>
+            <circle cx="50" cy="26" r="2.5" fill="#222"/>
+            <circle cx="33" cy="25" r="1" fill="white"/>
+            <circle cx="51" cy="25" r="1" fill="white"/>
+            <path d="M39,28 L40,34 L43,34" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M34,38 Q40,44 47,38" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; font-family: 'Bangers', cursive; font-size: 14px; color: #666; padding: 4px;">
+    PAGE 2 &bull; CONTINUED...
+  </div>
+
+</div>
+</body>
+</html>

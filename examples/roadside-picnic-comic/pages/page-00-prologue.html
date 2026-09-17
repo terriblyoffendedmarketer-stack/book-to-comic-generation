@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadside Picnic — Prologue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .page {
+    width: 700px;
+    background: white;
+    border: 3px solid #222;
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+  }
+  .title-row {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 2px solid #222;
+    margin-bottom: 4px;
+  }
+  .title-row h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 42px;
+    letter-spacing: 4px;
+    color: #222;
+    text-shadow: 2px 2px 0 #c44, 4px 4px 0 rgba(0,0,0,0.1);
+  }
+  .title-row .subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-top: 4px;
+  }
+  .title-row .authors {
+    font-size: 13px;
+    color: #888;
+    margin-top: 2px;
+  }
+  .panel-row { display: flex; gap: 8px; }
+  .panel {
+    border: 2.5px solid #222;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+  }
+  .panel-wide { flex: 2; }
+  .panel-narrow { flex: 1; }
+  .panel-full { flex: 1; }
+  .panel-inner { width: 100%; height: 100%; position: relative; }
+  .bubble {
+    position: absolute;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 180px;
+    z-index: 10;
+  }
+  .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; left: 25px;
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid white;
+  }
+  .bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; left: 24px;
+    width: 0; height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 14px solid #222;
+  }
+  .bubble.right::after { left: auto; right: 25px; }
+  .bubble.right::before { left: auto; right: 24px; }
+  .bubble.no-tail::after, .bubble.no-tail::before { display: none; }
+  .narrator {
+    position: absolute;
+    background: #f8f0d0;
+    border: 2px solid #222;
+    padding: 5px 8px;
+    font-size: 12px;
+    line-height: 1.3;
+    z-index: 10;
+    max-width: 200px;
+  }
+  .caption {
+    font-family: 'Bangers', cursive;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #666;
+    text-align: center;
+    padding: 2px 0;
+  }
+  .bold { font-weight: bold; }
+  .italic { font-style: italic; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- COVER / TITLE -->
+  <div class="title-row">
+    <h1>ROADSIDE PICNIC</h1>
+    <div class="subtitle">A Comic Adaptation</div>
+    <div class="authors">Based on the novel by Arkady &amp; Boris Strugatsky</div>
+  </div>
+
+  <div class="caption">FROM AN INTERVIEW WITH DOCTOR VALENTINE PILMAN, RECIPIENT OF THE NOBEL PRIZE IN PHYSICS — HARMONT RADIO</div>
+
+  <!-- ROW 1: Radio studio establishing shot -->
+  <div class="panel-row" style="height: 170px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <svg viewBox="0 0 680 170">
+          <!-- Radio studio background -->
+          <rect x="0" y="0" width="680" height="170" fill="#2a3a4a"/>
+          <rect x="0" y="130" width="680" height="40" fill="#1a2a3a"/>
+          <!-- ON AIR sign -->
+          <rect x="280" y="8" width="120" height="28" rx="4" fill="#c44" stroke="#a22" stroke-width="2"/>
+          <text x="340" y="27" text-anchor="middle" font-family="Bangers, cursive" font-size="16" fill="white" letter-spacing="3">ON AIR</text>
+          <!-- Glow around sign -->
+          <rect x="280" y="8" width="120" height="28" rx="4" fill="#f44" opacity="0.15"/>
+
+          <!-- Desk/console -->
+          <rect x="150" y="95" width="380" height="15" fill="#445566" stroke="#222" stroke-width="1.5"/>
+          <!-- Microphone -->
+          <line x1="260" y1="95" x2="260" y2="70" stroke="#666" stroke-width="2"/>
+          <circle cx="260" cy="65" r="8" fill="#555" stroke="#222" stroke-width="1.5"/>
+          <!-- Mic mesh -->
+          <line x1="255" y1="63" x2="265" y2="63" stroke="#777" stroke-width="0.5"/>
+          <line x1="255" y1="66" x2="265" y2="66" stroke="#777" stroke-width="0.5"/>
+          <!-- Second mic -->
+          <line x1="420" y1="95" x2="420" y2="72" stroke="#666" stroke-width="2"/>
+          <circle cx="420" cy="67" r="7" fill="#555" stroke="#222" stroke-width="1.5"/>
+
+          <!-- INTERVIEWER - left, small, eager -->
+          <g transform="translate(190,40) scale(0.5)">
+            <!-- Body - suit -->
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#334455" stroke="#222" stroke-width="2"/>
+            <!-- Tie -->
+            <polygon points="40,55 37,65 40,68 43,65" fill="#c44" stroke="#222" stroke-width="0.5"/>
+            <line x1="15" y1="68" x2="0" y2="85" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="65" y1="68" x2="80" y2="85" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="0" cy="87" r="4" fill="#e8c8a8" stroke="#222" stroke-width="1"/>
+            <circle cx="80" cy="87" r="4" fill="#e8c8a8" stroke="#222" stroke-width="1"/>
+            <!-- Head -->
+            <circle cx="40" cy="28" r="20" fill="#e8c8a8" stroke="#222" stroke-width="2"/>
+            <!-- Neat combed hair -->
+            <path d="M20,20 Q25,10 40,8 Q55,10 60,20" fill="#554433" stroke="#443322" stroke-width="1"/>
+            <!-- Eager eyes -->
+            <circle cx="33" cy="26" r="2" fill="#222"/>
+            <circle cx="47" cy="26" r="2" fill="#222"/>
+            <path d="M38,30 L40,34" fill="none" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+            <path d="M33,36 Q40,40 47,36" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+
+          <!-- DR. PILMAN - right, distinguished, calm -->
+          <g transform="translate(370,35) scale(0.55)">
+            <!-- Body - casual jacket -->
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#556655" stroke="#222" stroke-width="2"/>
+            <line x1="15" y1="68" x2="0" y2="85" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="65" y1="68" x2="80" y2="85" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="0" cy="87" r="4" fill="#e0c0a0" stroke="#222" stroke-width="1"/>
+            <circle cx="80" cy="87" r="4" fill="#e0c0a0" stroke="#222" stroke-width="1"/>
+            <!-- Head - older, distinguished -->
+            <circle cx="40" cy="28" r="22" fill="#e0c0a0" stroke="#222" stroke-width="2"/>
+            <!-- Grey/white hair, receding -->
+            <path d="M20,18 Q25,6 40,4 Q55,6 60,18" fill="#aaa" stroke="#999" stroke-width="1"/>
+            <!-- Lines around eyes - older -->
+            <line x1="24" y1="26" x2="27" y2="25" stroke="#bba090" stroke-width="0.5"/>
+            <line x1="53" y1="25" x2="56" y2="26" stroke="#bba090" stroke-width="0.5"/>
+            <!-- Calm, knowing eyes -->
+            <circle cx="33" cy="26" r="2" fill="#222"/>
+            <circle cx="47" cy="26" r="2" fill="#222"/>
+            <!-- Slight wrinkle lines -->
+            <path d="M38,30 L40,35 L42,35" fill="none" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+            <!-- Composed, slight smile -->
+            <path d="M34,40 Q40,43 46,40" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+
+          <!-- Soundproofing foam on walls -->
+          <g fill="#3a4a5a" stroke="#2a3a4a" stroke-width="0.5">
+            <rect x="10" y="15" width="20" height="20" rx="2"/>
+            <rect x="10" y="40" width="20" height="20" rx="2"/>
+            <rect x="10" y="65" width="20" height="20" rx="2"/>
+            <rect x="650" y="15" width="20" height="20" rx="2"/>
+            <rect x="650" y="40" width="20" height="20" rx="2"/>
+            <rect x="650" y="65" width="20" height="20" rx="2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: The Pilman Radiant explanation -->
+  <div class="panel-row" style="height: 180px;">
+    <!-- The globe diagram -->
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble right" style="top:5px;right:6px;max-width:165px;font-size:11px;">
+          Imagine you spin a huge globe and start firing bullets into it. The holes would lie in a smooth curve.
+        </div>
+        <svg viewBox="0 0 220 180">
+          <rect x="0" y="0" width="220" height="180" fill="#2a3a4a"/>
+          <!-- Globe -->
+          <circle cx="110" cy="110" r="55" fill="#446688" stroke="#222" stroke-width="2"/>
+          <!-- Globe lines -->
+          <ellipse cx="110" cy="110" rx="55" ry="20" fill="none" stroke="#557799" stroke-width="1"/>
+          <ellipse cx="110" cy="110" rx="40" ry="55" fill="none" stroke="#557799" stroke-width="1"/>
+          <!-- Impact points (Visitation Zones) -->
+          <circle cx="85" cy="95" r="4" fill="#ff4444" stroke="#ff6666" stroke-width="1"/>
+          <circle cx="130" cy="88" r="4" fill="#ff4444" stroke="#ff6666" stroke-width="1"/>
+          <circle cx="100" cy="120" r="4" fill="#ff4444" stroke="#ff6666" stroke-width="1"/>
+          <circle cx="145" cy="105" r="4" fill="#ff4444" stroke="#ff6666" stroke-width="1"/>
+          <circle cx="75" cy="115" r="4" fill="#ff4444" stroke="#ff6666" stroke-width="1"/>
+          <circle cx="120" cy="130" r="4" fill="#ff4444" stroke="#ff6666" stroke-width="1"/>
+          <!-- Dotted line showing the curve -->
+          <path d="M75,115 Q95,85 130,88 Q150,95 145,105 Q135,125 120,130" fill="none" stroke="#ffaa44" stroke-width="1.5" stroke-dasharray="4"/>
+          <!-- Arrow from Deneb -->
+          <line x1="40" y1="30" x2="80" y2="90" stroke="#ffaa44" stroke-width="1.5" stroke-dasharray="3"/>
+          <text x="25" y="25" font-family="Patrick Hand, cursive" font-size="10" fill="#ffaa44">Deneb ★</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Pilman's key statement -->
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="bubble" style="top:5px;left:8px;max-width:180px;font-size:12px;">
+          And what has been the most important discovery in thirty years?
+        </div>
+        <div class="bubble right" style="top:55px;right:8px;max-width:240px;font-size:13px;">
+          The fact of the Visitation itself. It's not so important to know <span class="italic">who</span> they were. The important thing is that humanity now knows: <span class="bold">we are not alone.</span>
+        </div>
+        <svg viewBox="0 0 440 180">
+          <rect x="0" y="0" width="440" height="180" fill="#2a3a4a"/>
+          <!-- Pilman close-up, large, thoughtful -->
+          <g transform="translate(120,65) scale(1.5)">
+            <circle cx="40" cy="28" r="22" fill="#e0c0a0" stroke="#222" stroke-width="2"/>
+            <path d="M20,18 Q25,6 40,4 Q55,6 60,18" fill="#aaa" stroke="#999" stroke-width="1"/>
+            <circle cx="33" cy="26" r="2" fill="#222"/>
+            <circle cx="47" cy="26" r="2" fill="#222"/>
+            <path d="M38,30 L40,35 L42,35" fill="none" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+            <path d="M34,40 Q40,43 46,40" fill="none" stroke="#222" stroke-width="1.5"/>
+            <!-- Hand on chin - thoughtful -->
+            <line x1="15" y1="55" x2="28" y2="42" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="28" cy="41" r="3.5" fill="#e0c0a0" stroke="#222" stroke-width="1"/>
+          </g>
+          <!-- Stars in background -->
+          <circle cx="30" cy="30" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="80" cy="60" r="1" fill="#fff" opacity="0.3"/>
+          <circle cx="400" cy="25" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="350" cy="50" r="1" fill="#fff" opacity="0.4"/>
+          <circle cx="420" cy="70" r="1" fill="#fff" opacity="0.3"/>
+          <circle cx="50" cy="140" r="1" fill="#fff" opacity="0.4"/>
+          <circle cx="380" cy="150" r="1" fill="#fff" opacity="0.3"/>
+          <circle cx="410" cy="120" r="1.5" fill="#fff" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: Stalkers and the Zone -->
+  <div class="panel-row" style="height: 150px;">
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble" style="top:5px;left:6px;max-width:155px;font-size:11px;">
+          Is there anyone else after these treasures?
+        </div>
+        <div class="bubble right" style="top:50px;right:6px;max-width:90px;font-size:13px;">
+          Yes.
+        </div>
+        <div class="bubble" style="bottom:12px;left:6px;max-width:155px;font-size:11px;">
+          You probably mean <span class="bold">stalkers!</span>
+        </div>
+        <svg viewBox="0 0 220 150">
+          <rect x="0" y="0" width="220" height="150" fill="#2a3a4a"/>
+          <!-- Interviewer leaning forward excitedly -->
+          <g transform="translate(25,35) scale(0.55)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#334455" stroke="#222" stroke-width="2"/>
+            <polygon points="40,55 37,65 40,68 43,65" fill="#c44" stroke="#222" stroke-width="0.5"/>
+            <circle cx="40" cy="28" r="20" fill="#e8c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M20,20 Q25,10 40,8 Q55,10 60,20" fill="#554433" stroke="#443322" stroke-width="1"/>
+            <circle cx="33" cy="26" r="2.5" fill="#222"/>
+            <circle cx="47" cy="26" r="2.5" fill="#222"/>
+            <circle cx="34" cy="25" r="0.8" fill="white"/>
+            <circle cx="48" cy="25" r="0.8" fill="white"/>
+            <path d="M33,36 Q40,41 47,36" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+          <!-- Pilman - cool, detached -->
+          <g transform="translate(130,40) scale(0.5)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#556655" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="28" r="22" fill="#e0c0a0" stroke="#222" stroke-width="2"/>
+            <path d="M20,18 Q25,6 40,4 Q55,6 60,18" fill="#aaa" stroke="#999" stroke-width="1"/>
+            <circle cx="33" cy="26" r="2" fill="#222"/>
+            <circle cx="47" cy="26" r="2" fill="#222"/>
+            <path d="M38,30 L40,35 L42,35" fill="none" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+            <line x1="34" y1="40" x2="46" y2="40" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- The "roadside picnic" metaphor - visual -->
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="narrator" style="top:5px;left:5px;max-width:200px;font-size:11px;">
+          That's what they call the thieves who risk their lives in the Zone to grab everything they can lay their hands on. It's become a whole new profession.
+        </div>
+        <svg viewBox="0 0 440 150">
+          <!-- Night scene - Zone edge -->
+          <rect x="0" y="0" width="440" height="150" fill="#1a2a1a"/>
+          <rect x="0" y="110" width="440" height="40" fill="#0a1a0a"/>
+          <!-- Fence/barbed wire -->
+          <line x1="0" y1="90" x2="440" y2="90" stroke="#555" stroke-width="1.5"/>
+          <g stroke="#555" stroke-width="1" fill="none">
+            <path d="M20,88 L25,85 L30,92 L35,85 L40,92"/>
+            <path d="M100,88 L105,85 L110,92 L115,85 L120,92"/>
+            <path d="M200,88 L205,85 L210,92 L215,85 L220,92"/>
+            <path d="M300,88 L305,85 L310,92 L315,85 L320,92"/>
+          </g>
+          <!-- Warning sign -->
+          <g transform="translate(350,60)">
+            <rect x="0" y="0" width="50" height="30" fill="#cc4" stroke="#222" stroke-width="1.5" rx="2"/>
+            <text x="25" y="13" text-anchor="middle" font-family="Bangers, cursive" font-size="7" fill="#222">DANGER</text>
+            <text x="25" y="23" text-anchor="middle" font-family="Bangers, cursive" font-size="6" fill="#c44">ZONE</text>
+          </g>
+          <!-- Silhouette of a stalker crawling under fence -->
+          <g transform="translate(150,75)">
+            <!-- Crawling figure - dark silhouette -->
+            <ellipse cx="25" cy="18" rx="20" ry="8" fill="#111" stroke="#222" stroke-width="1"/>
+            <circle cx="10" cy="12" r="8" fill="#111" stroke="#222" stroke-width="1"/>
+            <!-- Backpack -->
+            <rect x="20" y="6" width="15" height="12" rx="2" fill="#222" stroke="#333" stroke-width="1"/>
+            <!-- Arms reaching forward -->
+            <line x1="5" y1="18" x2="-8" y2="22" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <!-- Eerie glow from Zone beyond fence -->
+          <ellipse cx="220" cy="50" rx="180" ry="40" fill="#446644" opacity="0.15"/>
+          <!-- Stars -->
+          <circle cx="50" cy="15" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="150" cy="20" r="1" fill="#fff" opacity="0.4"/>
+          <circle cx="280" cy="10" r="1" fill="#fff" opacity="0.6"/>
+          <circle cx="400" cy="25" r="1" fill="#fff" opacity="0.4"/>
+          <circle cx="100" cy="35" r="1" fill="#fff" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 4: Final transition panel -->
+  <div class="panel-row" style="height: 100px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="narrator" style="top:10px;left:10px;max-width:300px;font-size:13px;">
+          Thirty years after the Visitation, the Zones remain. Alien artifacts litter the landscape like trash after a picnic. And the stalkers keep going back.
+        </div>
+        <div class="narrator" style="bottom:8px;right:10px;max-width:200px;font-size:12px;background:#e0d8b0;">
+          HARMONT. Present day. &#9658;
+        </div>
+        <svg viewBox="0 0 680 100">
+          <!-- Panoramic shot of Harmont from above -->
+          <rect x="0" y="0" width="680" height="100" fill="#7a8a6a"/>
+          <!-- Town rooftops -->
+          <g fill="#8a7a6a" stroke="#222" stroke-width="1">
+            <rect x="20" y="50" width="30" height="25"/>
+            <rect x="55" y="45" width="25" height="30"/>
+            <rect x="85" y="55" width="35" height="20"/>
+            <rect x="130" y="40" width="20" height="35"/>
+            <rect x="500" y="50" width="30" height="25"/>
+            <rect x="540" y="42" width="25" height="33"/>
+            <rect x="575" y="52" width="35" height="23"/>
+            <rect x="620" y="48" width="30" height="27"/>
+          </g>
+          <!-- THE ZONE in the middle - distinct area -->
+          <rect x="200" y="20" width="280" height="80" fill="#6a7a5a" stroke="#884" stroke-width="2" stroke-dasharray="6" rx="3"/>
+          <!-- Zone contents - miniature industrial -->
+          <rect x="230" y="40" width="15" height="30" fill="#556" stroke="#222" stroke-width="0.5"/>
+          <rect x="228" y="37" width="19" height="5" fill="#556"/>
+          <rect x="235" y="20" width="4" height="20" fill="#556"/>
+          <!-- Ore mounds -->
+          <polygon points="280,70 290,45 300,70" fill="#998" stroke="#887" stroke-width="0.5"/>
+          <polygon points="320,70 328,50 336,70" fill="#998" stroke="#887" stroke-width="0.5"/>
+          <!-- Trucks -->
+          <rect x="360" y="55" width="15" height="10" fill="#667" stroke="#222" stroke-width="0.5"/>
+          <rect x="380" y="58" width="15" height="7" fill="#667" stroke="#222" stroke-width="0.5"/>
+          <!-- Patrol cars -->
+          <rect x="440" y="62" width="12" height="6" fill="#cc4" stroke="#222" stroke-width="0.5"/>
+          <rect x="456" y="62" width="12" height="6" fill="#cc4" stroke="#222" stroke-width="0.5"/>
+          <!-- Eerie haze -->
+          <rect x="200" y="20" width="280" height="80" fill="#aaaa44" opacity="0.08"/>
+          <text x="340" y="90" text-anchor="middle" font-family="Bangers, cursive" font-size="10" fill="#666" letter-spacing="5">THE ZONE</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-family:'Bangers',cursive;font-size:14px;color:#666;padding:4px;">
+    PROLOGUE &bull; CONTINUED IN CHAPTER 1...
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadside Picnic — Page 3</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .page {
+    width: 700px;
+    background: white;
+    border: 3px solid #222;
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+  }
+  .panel-row { display: flex; gap: 8px; }
+  .panel {
+    border: 2.5px solid #222;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+  }
+  .panel-wide { flex: 2; }
+  .panel-narrow { flex: 1; }
+  .panel-full { flex: 1; }
+  .panel-inner { width: 100%; height: 100%; position: relative; }
+  .bubble {
+    position: absolute;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 180px;
+    z-index: 10;
+  }
+  .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; left: 25px;
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid white;
+  }
+  .bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; left: 24px;
+    width: 0; height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 14px solid #222;
+  }
+  .bubble.right::after { left: auto; right: 25px; }
+  .bubble.right::before { left: auto; right: 24px; }
+  .bubble.thought { border-radius: 20px; }
+  .bubble.thought::after {
+    border: none; width: 8px; height: 8px;
+    background: white; border-radius: 50%;
+    bottom: -10px; border: 2px solid #222;
+  }
+  .bubble.thought::before {
+    border: none; width: 5px; height: 5px;
+    background: white; border-radius: 50%;
+    bottom: -18px; left: 30px; border: 2px solid #222;
+  }
+  .narrator {
+    position: absolute;
+    background: #f8f0d0;
+    border: 2px solid #222;
+    padding: 5px 8px;
+    font-size: 12px;
+    line-height: 1.3;
+    z-index: 10;
+    max-width: 200px;
+  }
+  .caption {
+    font-family: 'Bangers', cursive;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #666;
+    text-align: center;
+    padding: 2px 0;
+  }
+  .bold { font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="caption">SUITING UP. ENTERING THE ZONE.</div>
+
+  <!-- ROW 1: The boudoir — special suits -->
+  <div class="panel-row" style="height: 190px;">
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="narrator" style="top:5px;left:5px;max-width:170px;font-size:11px;">
+          They handed us special outfits. Light, comfortable. Fire, gas, even bullets can't get through. But the Zone has its own tricks.
+        </div>
+        <svg viewBox="0 0 440 190">
+          <!-- Locker room -->
+          <rect x="0" y="0" width="440" height="190" fill="#99aabb"/>
+          <rect x="0" y="145" width="440" height="45" fill="#778899"/>
+          <!-- Lockers background -->
+          <g fill="#6688aa" stroke="#557799" stroke-width="1">
+            <rect x="10" y="10" width="35" height="90" rx="2"/>
+            <rect x="50" y="10" width="35" height="90" rx="2"/>
+            <rect x="90" y="10" width="35" height="90" rx="2"/>
+          </g>
+          <!-- Locker handles -->
+          <circle cx="40" cy="55" r="2" fill="#aaa"/>
+          <circle cx="80" cy="55" r="2" fill="#aaa"/>
+          <circle cx="120" cy="55" r="2" fill="#aaa"/>
+
+          <!-- Red in suit (red suit!) -->
+          <g transform="translate(180,30) scale(0.7)">
+            <!-- Suit body -->
+            <rect x="12" y="52" width="56" height="65" rx="6" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <!-- Suit lines/seams -->
+            <line x1="40" y1="52" x2="40" y2="117" stroke="#aa2222" stroke-width="1" opacity="0.5"/>
+            <line x1="12" y1="80" x2="68" y2="80" stroke="#aa2222" stroke-width="1" opacity="0.5"/>
+            <!-- Arms in suit -->
+            <line x1="12" y1="68" x2="-5" y2="92" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="68" y1="68" x2="85" y2="92" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="-5" cy="94" r="5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <circle cx="85" cy="94" r="5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <!-- Legs in suit -->
+            <line x1="28" y1="117" x2="23" y2="150" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="52" y1="117" x2="57" y2="150" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="21" cy="153" rx="10" ry="5" fill="#aa2222" stroke="#222" stroke-width="1.5"/>
+            <ellipse cx="59" cy="153" rx="10" ry="5" fill="#aa2222" stroke="#222" stroke-width="1.5"/>
+            <!-- Helmet - bubble top -->
+            <circle cx="40" cy="26" r="27" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <!-- Visor -->
+            <ellipse cx="40" cy="26" rx="20" ry="18" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <!-- Face through visor -->
+            <path d="M20,18 Q25,5 35,8 Q42,2 48,8 Q58,5 60,18" fill="#c44" stroke="none"/>
+            <line x1="32" y1="24" x2="38" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+            <line x1="43" y1="24" x2="49" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="35" cy="24" r="1" fill="#222"/>
+            <circle cx="46" cy="24" r="1" fill="#222"/>
+            <path d="M36,32 Q40,35 45,32" fill="none" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+          </g>
+
+          <!-- Kirill in suit -->
+          <g transform="translate(290,35) scale(0.65)">
+            <rect x="17" y="52" width="46" height="65" rx="5" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="17" y1="68" x2="2" y2="90" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="63" y1="68" x2="78" y2="90" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="2" cy="92" r="4.5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <circle cx="78" cy="92" r="4.5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <line x1="30" y1="117" x2="26" y2="148" stroke="#cc3333" stroke-width="4.5" stroke-linecap="round"/>
+            <line x1="50" y1="117" x2="54" y2="148" stroke="#cc3333" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="40" cy="26" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="26" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <!-- Glasses visible through visor -->
+            <circle cx="34" cy="24" r="5" fill="none" stroke="#444" stroke-width="1"/>
+            <circle cx="48" cy="24" r="5" fill="none" stroke="#444" stroke-width="1"/>
+            <line x1="39" y1="24" x2="43" y2="24" stroke="#444" stroke-width="1"/>
+            <circle cx="34" cy="24" r="1.5" fill="#222"/>
+            <circle cx="48" cy="24" r="1.5" fill="#222"/>
+          </g>
+
+          <!-- Tender in suit - bigger -->
+          <g transform="translate(370,25) scale(0.65)">
+            <rect x="8" y="52" width="64" height="70" rx="8" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="8" y1="68" x2="-10" y2="90" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="72" y1="68" x2="90" y2="90" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="-10" cy="92" r="5.5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <circle cx="90" cy="92" r="5.5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <line x1="26" y1="122" x2="22" y2="155" stroke="#cc3333" stroke-width="5.5" stroke-linecap="round"/>
+            <line x1="54" y1="122" x2="58" y2="155" stroke="#cc3333" stroke-width="5.5" stroke-linecap="round"/>
+            <circle cx="40" cy="24" r="28" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="24" rx="20" ry="18" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <!-- Worried eyes through visor -->
+            <ellipse cx="32" cy="23" rx="3" ry="4" fill="white" stroke="#222" stroke-width="1"/>
+            <ellipse cx="48" cy="23" rx="3" ry="4" fill="white" stroke="#222" stroke-width="1"/>
+            <circle cx="32" cy="24" r="2" fill="#222"/>
+            <circle cx="48" cy="24" r="2" fill="#222"/>
+            <!-- Sweat drop on visor -->
+            <path d="M60,15 Q62,19 60,22" fill="#8cf" stroke="#6af" stroke-width="0.8"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel: Red's briefing -->
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble" style="top:5px;left:6px;max-width:160px;font-size:11px;">
+          Anything I say, you do immediately. If I order you to walk on your hands, you hoist your fat ass into the air. Got it?
+        </div>
+        <div class="bubble right" style="bottom:15px;right:6px;max-width:140px;font-size:11px;">
+          I'll walk on my teeth if I have to.
+        </div>
+        <svg viewBox="0 0 220 190">
+          <rect x="0" y="0" width="220" height="190" fill="#99aabb"/>
+          <rect x="0" y="145" width="220" height="45" fill="#778899"/>
+          <!-- Red pointing finger, commanding -->
+          <g transform="translate(20,55) scale(0.6)">
+            <rect x="12" y="52" width="56" height="65" rx="6" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="68" y1="65" x2="95" y2="50" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="12" y1="68" x2="-5" y2="88" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <!-- Pointing hand -->
+            <circle cx="97" cy="48" r="5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <line x1="100" y1="46" x2="112" y2="42" stroke="#cc3333" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="40" cy="26" r="27" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="26" rx="20" ry="18" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <path d="M20,18 Q28,5 40,6 Q52,5 60,18" fill="#c44" stroke="none"/>
+            <line x1="32" y1="24" x2="38" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+            <line x1="43" y1="24" x2="49" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="35" cy="24" r="1" fill="#222"/>
+            <circle cx="46" cy="24" r="1" fill="#222"/>
+            <!-- Mouth open - commanding -->
+            <ellipse cx="40" cy="34" rx="5" ry="3" fill="#333" stroke="#222" stroke-width="1"/>
+          </g>
+          <!-- Tender - nodding, nervous -->
+          <g transform="translate(130,50) scale(0.55)">
+            <rect x="8" y="52" width="64" height="70" rx="8" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="24" r="28" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="24" rx="20" ry="18" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <ellipse cx="32" cy="23" rx="3" ry="4" fill="white" stroke="#222" stroke-width="1"/>
+            <ellipse cx="48" cy="23" rx="3" ry="4" fill="white" stroke="#222" stroke-width="1"/>
+            <circle cx="32" cy="24" r="2" fill="#222"/>
+            <circle cx="48" cy="24" r="2" fill="#222"/>
+            <!-- Bruised nose! From the punch -->
+            <circle cx="40" cy="30" r="4" fill="#9966aa" stroke="#222" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: The walk to the Zone — heroes of science -->
+  <div class="panel-row" style="height: 150px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="narrator" style="top:5px;left:5px;max-width:220px;font-size:11px;">
+          We trekked across the institute yard to the Zone entrance. So that everyone will see the heroes of science laying down their lives on the altar of humanity.
+        </div>
+        <div class="bubble" style="bottom:10px;left:60px;max-width:220px;font-size:12px;">
+          Hup two! Suck in your gut, you flabby platoon! A grateful mankind will never forget you!
+        </div>
+        <svg viewBox="0 0 680 150">
+          <!-- Institute yard -->
+          <rect x="0" y="0" width="680" height="150" fill="#aabbcc"/>
+          <rect x="0" y="105" width="680" height="45" fill="#889999"/>
+          <!-- Institute building behind them -->
+          <rect x="0" y="0" width="680" height="60" fill="#8899aa"/>
+          <!-- Windows with faces watching -->
+          <g>
+            <rect x="50" y="15" width="25" height="20" fill="#bbddff" stroke="#222" stroke-width="1"/>
+            <rect x="95" y="15" width="25" height="20" fill="#bbddff" stroke="#222" stroke-width="1"/>
+            <rect x="140" y="15" width="25" height="20" fill="#bbddff" stroke="#222" stroke-width="1"/>
+            <rect x="185" y="15" width="25" height="20" fill="#bbddff" stroke="#222" stroke-width="1"/>
+            <rect x="400" y="15" width="25" height="20" fill="#bbddff" stroke="#222" stroke-width="1"/>
+            <rect x="445" y="15" width="25" height="20" fill="#bbddff" stroke="#222" stroke-width="1"/>
+            <rect x="490" y="15" width="25" height="20" fill="#bbddff" stroke="#222" stroke-width="1"/>
+            <!-- Tiny faces in windows -->
+            <circle cx="62" cy="28" r="4" fill="#e8c8a8"/>
+            <circle cx="107" cy="28" r="4" fill="#e8c8a8"/>
+            <circle cx="152" cy="28" r="4" fill="#ddb899"/>
+            <circle cx="197" cy="28" r="4" fill="#e8c8a8"/>
+            <circle cx="412" cy="28" r="4" fill="#ddb899"/>
+            <circle cx="457" cy="28" r="4" fill="#e8c8a8"/>
+            <circle cx="502" cy="28" r="4" fill="#e8c8a8"/>
+          </g>
+
+          <!-- WELCOME VISITORS banner -->
+          <rect x="240" y="8" width="150" height="22" fill="#ddc8a0" stroke="#222" stroke-width="1"/>
+          <text x="315" y="23" text-anchor="middle" font-family="Bangers, cursive" font-size="11" fill="#666">WELCOME, VISITORS</text>
+
+          <!-- Three suited figures marching -->
+          <!-- Red leading -->
+          <g transform="translate(200,40) scale(0.55)">
+            <rect x="12" y="52" width="56" height="65" rx="6" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="12" y1="68" x2="-8" y2="85" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="68" y1="68" x2="88" y2="85" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="-8" cy="87" r="5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <circle cx="88" cy="87" r="5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <!-- Walking legs -->
+            <line x1="28" y1="117" x2="15" y2="150" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="52" y1="117" x2="65" y2="145" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="40" cy="26" r="27" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="26" rx="20" ry="18" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <path d="M20,18 Q28,5 40,6 Q52,5 60,18" fill="#c44" stroke="none"/>
+            <line x1="32" y1="24" x2="38" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+            <line x1="43" y1="24" x2="49" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="35" cy="24" r="1" fill="#222"/>
+            <circle cx="46" cy="24" r="1" fill="#222"/>
+            <!-- Smirking -->
+            <path d="M36,33 Q40,36 46,33" fill="none" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+          </g>
+          <!-- Kirill following -->
+          <g transform="translate(300,42) scale(0.5)">
+            <rect x="17" y="52" width="46" height="65" rx="5" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="17" y1="68" x2="2" y2="85" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="63" y1="68" x2="78" y2="85" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="30" y1="117" x2="20" y2="148" stroke="#cc3333" stroke-width="4.5" stroke-linecap="round"/>
+            <line x1="50" y1="117" x2="60" y2="145" stroke="#cc3333" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="40" cy="26" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="26" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="34" cy="24" r="5" fill="none" stroke="#444" stroke-width="1"/>
+            <circle cx="48" cy="24" r="5" fill="none" stroke="#444" stroke-width="1"/>
+            <line x1="39" y1="24" x2="43" y2="24" stroke="#444" stroke-width="1"/>
+            <circle cx="34" cy="24" r="1.5" fill="#222"/>
+            <circle cx="48" cy="24" r="1.5" fill="#222"/>
+          </g>
+          <!-- Tender lumbering behind -->
+          <g transform="translate(380,38) scale(0.5)">
+            <rect x="8" y="52" width="64" height="70" rx="8" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="8" y1="68" x2="-10" y2="88" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="72" y1="68" x2="90" y2="88" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="26" y1="122" x2="18" y2="155" stroke="#cc3333" stroke-width="5.5" stroke-linecap="round"/>
+            <line x1="54" y1="122" x2="62" y2="150" stroke="#cc3333" stroke-width="5.5" stroke-linecap="round"/>
+            <circle cx="40" cy="24" r="28" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="24" rx="20" ry="18" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <ellipse cx="32" cy="23" rx="3" ry="4" fill="white" stroke="#222" stroke-width="1"/>
+            <ellipse cx="48" cy="23" rx="3" ry="4" fill="white" stroke="#222" stroke-width="1"/>
+            <circle cx="32" cy="24" r="2" fill="#222"/>
+            <circle cx="48" cy="24" r="2" fill="#222"/>
+          </g>
+
+          <!-- Lieutenant saluting at door -->
+          <g transform="translate(570,45) scale(0.45)">
+            <rect x="15" y="55" width="45" height="65" rx="3" fill="#556b2f" stroke="#222" stroke-width="2"/>
+            <!-- Saluting arm -->
+            <line x1="60" y1="65" x2="65" y2="30" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="65" cy="28" r="4" fill="#f0c8b0" stroke="#222" stroke-width="1"/>
+            <line x1="15" y1="70" x2="5" y2="90" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="28" y1="120" x2="25" y2="155" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="47" y1="120" x2="50" y2="155" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="37" cy="28" r="18" fill="#f0c8b0" stroke="#222" stroke-width="2"/>
+            <path d="M19,20 Q22,12 37,10 Q52,12 55,20" fill="#556b2f" stroke="#222" stroke-width="1"/>
+            <rect x="19" y="18" width="36" height="4" fill="#556b2f" stroke="#222" stroke-width="0.5"/>
+            <circle cx="30" cy="26" r="1.5" fill="#222"/>
+            <circle cx="44" cy="26" r="1.5" fill="#222"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: ENTERING THE ZONE — the big atmospheric panel -->
+  <div class="panel-row" style="height: 260px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="narrator" style="top:5px;left:5px;max-width:200px;">
+          That's it. We were in the Zone. I felt a chill. Each time I feel that chill. And I never know if it's the Zone greeting me or my stalker's nerves.
+        </div>
+        <div class="narrator" style="bottom:8px;right:8px;max-width:220px;font-size:11px;">
+          The houses were chipped and dead. The windows so dirty they looked blind. At night you can see the glow inside—witches' jelly breathing in the cellars.
+        </div>
+        <svg viewBox="0 0 680 260">
+          <!-- THE ZONE — eerie, yellowish-green atmosphere -->
+          <!-- Sky - sickly yellow -->
+          <rect x="0" y="0" width="680" height="260" fill="#aaa87a"/>
+
+          <!-- Dead buildings - Plague Quarter -->
+          <g fill="#8a8878" stroke="#222" stroke-width="1.5">
+            <!-- Row of houses -->
+            <rect x="20" y="40" width="80" height="100"/>
+            <rect x="110" y="50" width="60" height="90"/>
+            <rect x="180" y="30" width="70" height="110"/>
+            <rect x="440" y="45" width="90" height="95"/>
+            <rect x="540" y="35" width="75" height="105"/>
+            <rect x="625" y="55" width="55" height="85"/>
+          </g>
+
+          <!-- Dirty blind windows -->
+          <g fill="#6a6a5a" stroke="#555" stroke-width="0.5">
+            <rect x="30" y="55" width="15" height="18" rx="1"/>
+            <rect x="55" y="55" width="15" height="18" rx="1"/>
+            <rect x="75" y="55" width="15" height="18" rx="1"/>
+            <rect x="30" y="85" width="15" height="18" rx="1"/>
+            <rect x="55" y="85" width="15" height="18" rx="1"/>
+            <rect x="75" y="85" width="15" height="18" rx="1"/>
+            <rect x="120" y="65" width="12" height="15" rx="1"/>
+            <rect x="140" y="65" width="12" height="15" rx="1"/>
+            <rect x="120" y="90" width="12" height="15" rx="1"/>
+            <rect x="190" y="50" width="15" height="18" rx="1"/>
+            <rect x="215" y="50" width="15" height="18" rx="1"/>
+            <rect x="190" y="80" width="15" height="18" rx="1"/>
+            <rect x="215" y="80" width="15" height="18" rx="1"/>
+            <!-- Right side -->
+            <rect x="455" y="60" width="15" height="18" rx="1"/>
+            <rect x="480" y="60" width="15" height="18" rx="1"/>
+            <rect x="505" y="60" width="15" height="18" rx="1"/>
+            <rect x="455" y="90" width="15" height="18" rx="1"/>
+            <rect x="550" y="50" width="15" height="18" rx="1"/>
+            <rect x="575" y="50" width="15" height="18" rx="1"/>
+            <rect x="550" y="80" width="15" height="18" rx="1"/>
+          </g>
+
+          <!-- Faint blue glow in some cellar windows -->
+          <rect x="30" y="125" width="12" height="10" fill="#6688cc" opacity="0.3" rx="1"/>
+          <rect x="120" y="128" width="10" height="8" fill="#6688cc" opacity="0.25" rx="1"/>
+          <rect x="455" y="125" width="12" height="10" fill="#6688cc" opacity="0.3" rx="1"/>
+
+          <!-- Antennas with hairy cotton stuff -->
+          <line x1="60" y1="40" x2="60" y2="10" stroke="#777" stroke-width="1.5"/>
+          <line x1="145" y1="50" x2="145" y2="18" stroke="#777" stroke-width="1.5"/>
+          <line x1="490" y1="45" x2="490" y2="12" stroke="#777" stroke-width="1.5"/>
+          <!-- Cotton growths on antennas -->
+          <ellipse cx="60" cy="18" rx="8" ry="5" fill="#ddd" stroke="#bbb" stroke-width="0.5" opacity="0.7"/>
+          <ellipse cx="145" cy="26" rx="10" ry="6" fill="#ddd" stroke="#bbb" stroke-width="0.5" opacity="0.7"/>
+          <ellipse cx="490" cy="20" rx="9" ry="5" fill="#ddd" stroke="#bbb" stroke-width="0.5" opacity="0.7"/>
+
+          <!-- Street/road down the middle -->
+          <rect x="260" y="130" width="160" height="130" fill="#777766"/>
+          <!-- Cracked asphalt -->
+          <path d="M300,140 L310,170 L305,200 L315,230 L310,260" fill="none" stroke="#555544" stroke-width="1"/>
+          <path d="M380,135 L370,165 L375,195 L365,225" fill="none" stroke="#555544" stroke-width="1"/>
+          <!-- Grass in cracks -->
+          <g stroke="#556633" stroke-width="1" fill="none">
+            <path d="M308,175 L310,168 L312,175"/>
+            <path d="M372,170 L374,163 L376,170"/>
+            <path d="M340,200 L342,193 L344,200"/>
+          </g>
+
+          <!-- Black bramble at Zone boundary — sidewalk -->
+          <g fill="#223322">
+            <ellipse cx="260" cy="155" rx="15" ry="8"/>
+            <ellipse cx="258" cy="170" rx="12" ry="6"/>
+            <ellipse cx="262" cy="185" rx="14" ry="7"/>
+            <ellipse cx="420" cy="155" rx="15" ry="8"/>
+            <ellipse cx="422" cy="170" rx="12" ry="6"/>
+            <ellipse cx="418" cy="185" rx="14" ry="7"/>
+          </g>
+
+          <!-- Pylons along the road -->
+          <rect x="275" y="130" width="4" height="25" fill="#888" stroke="#222" stroke-width="0.5"/>
+          <rect x="275" y="128" width="8" height="5" fill="#c44" stroke="#222" stroke-width="0.5" rx="1"/>
+          <rect x="400" y="130" width="4" height="25" fill="#888" stroke="#222" stroke-width="0.5"/>
+          <rect x="400" y="128" width="8" height="5" fill="#c44" stroke="#222" stroke-width="0.5" rx="1"/>
+
+          <!-- The flying boot (hovercraft) with three figures -->
+          <g transform="translate(300,195)">
+            <!-- Boot body -->
+            <rect x="0" y="0" width="80" height="20" rx="5" fill="#667788" stroke="#222" stroke-width="2"/>
+            <!-- Rails -->
+            <line x1="5" y1="20" x2="5" y2="25" stroke="#222" stroke-width="1.5"/>
+            <line x1="75" y1="20" x2="75" y2="25" stroke="#222" stroke-width="1.5"/>
+            <!-- Hover glow underneath -->
+            <ellipse cx="40" cy="28" rx="35" ry="4" fill="#aabbcc" opacity="0.3"/>
+
+            <!-- Three tiny suited figures standing in boot -->
+            <!-- Red -->
+            <g transform="translate(10,-30) scale(0.2)">
+              <rect x="12" y="52" width="56" height="65" rx="6" fill="#cc3333" stroke="#222" stroke-width="3"/>
+              <circle cx="40" cy="26" r="27" fill="#cc3333" stroke="#222" stroke-width="3"/>
+              <ellipse cx="40" cy="26" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="2" opacity="0.7"/>
+            </g>
+            <!-- Kirill -->
+            <g transform="translate(30,-28) scale(0.18)">
+              <rect x="17" y="52" width="46" height="65" rx="5" fill="#cc3333" stroke="#222" stroke-width="3"/>
+              <circle cx="40" cy="26" r="25" fill="#cc3333" stroke="#222" stroke-width="3"/>
+              <ellipse cx="40" cy="26" rx="16" ry="14" fill="#ddeeff" stroke="#222" stroke-width="2" opacity="0.7"/>
+            </g>
+            <!-- Tender -->
+            <g transform="translate(48,-32) scale(0.2)">
+              <rect x="8" y="52" width="64" height="70" rx="8" fill="#cc3333" stroke="#222" stroke-width="3"/>
+              <circle cx="40" cy="24" r="28" fill="#cc3333" stroke="#222" stroke-width="3"/>
+              <ellipse cx="40" cy="24" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="2" opacity="0.7"/>
+            </g>
+          </g>
+
+          <!-- Eerie haze overlay -->
+          <rect x="0" y="0" width="680" height="260" fill="#aaaa44" opacity="0.06"/>
+
+          <!-- Baby carriage in a driveway - creepy detail -->
+          <g transform="translate(195,118) scale(0.4)">
+            <rect x="0" y="0" width="20" height="15" fill="#aaa" stroke="#888" stroke-width="1" rx="2"/>
+            <circle cx="5" cy="18" r="3" fill="#666" stroke="#444" stroke-width="1"/>
+            <circle cx="15" cy="18" r="3" fill="#666" stroke="#444" stroke-width="1"/>
+            <line x1="20" y1="5" x2="25" y2="-5" stroke="#888" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-family:'Bangers',cursive;font-size:14px;color:#666;padding:4px;">
+    PAGE 3 &bull; CONTINUED...
+  </div>
+
+</div>
+</body>
+</html>
