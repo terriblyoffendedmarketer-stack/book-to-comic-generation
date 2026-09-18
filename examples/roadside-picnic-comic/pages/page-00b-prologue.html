@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadside Picnic — Prologue Page 2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .page {
+    width: 700px;
+    background: white;
+    border: 3px solid #222;
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+  }
+  .panel-row { display: flex; gap: 8px; }
+  .panel {
+    border: 2.5px solid #222;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+  }
+  .panel-wide { flex: 2; }
+  .panel-narrow { flex: 1; }
+  .panel-full { flex: 1; }
+  .panel-inner { width: 100%; height: 100%; position: relative; }
+  .bubble {
+    position: absolute;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 7px 11px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 220px;
+    z-index: 10;
+  }
+  .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; left: 25px;
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid white;
+  }
+  .bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; left: 24px;
+    width: 0; height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 14px solid #222;
+  }
+  .bubble.right::after { left: auto; right: 25px; }
+  .bubble.right::before { left: auto; right: 24px; }
+  .bubble.top-tail::after {
+    bottom: auto; top: -12px;
+    border-top: none;
+    border-bottom: 12px solid white;
+  }
+  .bubble.top-tail::before {
+    bottom: auto; top: -15px;
+    border-top: none;
+    border-bottom: 14px solid #222;
+  }
+  .narrator {
+    position: absolute;
+    background: #f8f0d0;
+    border: 2px solid #222;
+    padding: 6px 9px;
+    font-size: 12px;
+    line-height: 1.3;
+    z-index: 10;
+    max-width: 240px;
+  }
+  .bold { font-weight: bold; }
+  .italic { font-style: italic; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ROW 1: Interviewer asks + Pilman's big answer -->
+  <div class="panel-row" style="height: 240px;">
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble" style="top:8px;left:8px;max-width:170px;font-size:13px;">
+          What, in your opinion, has been the most important discovery in these thirty years?
+        </div>
+        <svg viewBox="0 0 230 240" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="230" height="240" fill="#2a3a4a"/>
+          <rect x="0" y="180" width="230" height="60" fill="#1a2a3a"/>
+          <!-- Desk edge -->
+          <rect x="0" y="170" width="230" height="10" fill="#445566" stroke="#222" stroke-width="1"/>
+          <!-- Interviewer with pen -->
+          <g transform="translate(55,40) scale(0.7)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#334455" stroke="#222" stroke-width="2"/>
+            <polygon points="40,55 37,66 40,70 43,66" fill="#c44" stroke="#222" stroke-width="0.5"/>
+            <line x1="65" y1="70" x2="90" y2="52" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+            <line x1="90" y1="52" x2="96" y2="44" stroke="#775533" stroke-width="1.5"/>
+            <circle cx="40" cy="28" r="22" fill="#e8c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M18,18 Q25,6 40,5 Q55,6 62,18" fill="#554433" stroke="#443322" stroke-width="1"/>
+            <circle cx="33" cy="26" r="2.5" fill="#222"/>
+            <circle cx="47" cy="26" r="2.5" fill="#222"/>
+            <path d="M35,38 Q40,42 45,38" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="bubble right" style="top:8px;right:10px;max-width:260px;font-size:13px;">
+          The fact of the Visitation itself is the most important discovery not only of the past thirty years but of the entire history of mankind.
+        </div>
+        <div class="bubble right" style="top:85px;right:10px;max-width:250px;font-size:13px;">
+          It's not so important to know who they were. The important thing is that humanity now knows for sure: <span class="bold">we are not alone.</span>
+        </div>
+        <svg viewBox="0 0 450 240" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cosmos background -->
+          <rect x="0" y="0" width="450" height="240" fill="#0a0e1a"/>
+          <!-- Stars -->
+          <circle cx="30" cy="30" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="80" cy="60" r="0.7" fill="#fff" opacity="0.4"/>
+          <circle cx="150" cy="20" r="1.2" fill="#fff" opacity="0.6"/>
+          <circle cx="200" cy="80" r="0.8" fill="#fff" opacity="0.3"/>
+          <circle cx="350" cy="40" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="410" cy="70" r="0.6" fill="#fff" opacity="0.4"/>
+          <circle cx="300" cy="15" r="1.3" fill="#fff" opacity="0.6"/>
+          <circle cx="50" cy="210" r="0.8" fill="#fff" opacity="0.3"/>
+          <circle cx="380" cy="200" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="120" cy="180" r="0.7" fill="#fff" opacity="0.4"/>
+
+          <!-- Pilman large, philosophical, hand on chin -->
+          <g transform="translate(140,90) scale(0.9)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#556655" stroke="#222" stroke-width="2"/>
+            <line x1="15" y1="70" x2="-5" y2="85" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="65" y1="65" x2="52" y2="30" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="-5" cy="87" r="5" fill="#e0c0a0" stroke="#222" stroke-width="1.2"/>
+            <circle cx="52" cy="28" r="5" fill="#e0c0a0" stroke="#222" stroke-width="1.2"/>
+            <circle cx="40" cy="22" r="24" fill="#e0c0a0" stroke="#222" stroke-width="2"/>
+            <path d="M18,10 Q25,-4 40,-6 Q55,-4 62,10" fill="#b0b0b0" stroke="#999" stroke-width="1"/>
+            <circle cx="33" cy="20" r="2" fill="#222"/>
+            <circle cx="47" cy="20" r="2" fill="#222"/>
+            <path d="M36,34 Q40,36 44,34" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Stalkers mentioned -->
+  <div class="panel-row" style="height: 200px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="narrator" style="top:6px;right:8px;max-width:220px;font-size:11px;">
+          There is a steady leak of materials from the Visitation Zones into the hands of irresponsible persons and organizations.
+        </div>
+        <div class="bubble" style="top:50px;left:12px;max-width:250px;font-size:12.5px;">
+          You probably mean <span class="bold">stalkers!</span> That's what we in Harmont call the thieves who risk their lives in the Zone to grab everything they can lay their hands on.
+        </div>
+        <div class="bubble right" style="top:115px;right:12px;max-width:180px;font-size:13px;">
+          I don't know what they are.
+        </div>
+        <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="680" height="200" fill="#2a3a4a"/>
+          <rect x="0" y="155" width="680" height="45" fill="#1a2a3a"/>
+          <!-- Desk -->
+          <rect x="100" y="145" width="480" height="10" fill="#445566" stroke="#222" stroke-width="1"/>
+          <!-- Mics -->
+          <line x1="240" y1="145" x2="240" y2="120" stroke="#666" stroke-width="2"/>
+          <circle cx="240" cy="115" r="7" fill="#555" stroke="#222" stroke-width="1"/>
+          <line x1="440" y1="145" x2="440" y2="122" stroke="#666" stroke-width="2"/>
+          <circle cx="440" cy="117" r="6" fill="#555" stroke="#222" stroke-width="1"/>
+          <!-- Interviewer excited, leaning forward -->
+          <g transform="translate(120,30) scale(0.6)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#334455" stroke="#222" stroke-width="2"/>
+            <polygon points="40,55 37,66 40,70 43,66" fill="#c44" stroke="#222" stroke-width="0.5"/>
+            <line x1="65" y1="70" x2="85" y2="55" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="87" cy="53" r="5" fill="#e8c8a8" stroke="#222" stroke-width="1"/>
+            <circle cx="40" cy="28" r="22" fill="#e8c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M18,18 Q25,6 40,5 Q55,6 62,18" fill="#554433" stroke="#443322" stroke-width="1"/>
+            <circle cx="33" cy="25" r="3" fill="#222"/>
+            <circle cx="47" cy="25" r="3" fill="#222"/>
+            <circle cx="34" cy="24" r="1" fill="white"/>
+            <circle cx="48" cy="24" r="1" fill="white"/>
+            <path d="M33,40 Q40,46 47,40" fill="none" stroke="#222" stroke-width="2"/>
+          </g>
+          <!-- Pilman, dismissive shrug -->
+          <g transform="translate(400,28) scale(0.62)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#556655" stroke="#222" stroke-width="2"/>
+            <line x1="15" y1="65" x2="-10" y2="55" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="-12" cy="53" r="5" fill="#e0c0a0" stroke="#222" stroke-width="1"/>
+            <line x1="65" y1="65" x2="90" y2="55" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="92" cy="53" r="5" fill="#e0c0a0" stroke="#222" stroke-width="1"/>
+            <circle cx="40" cy="28" r="24" fill="#e0c0a0" stroke="#222" stroke-width="2"/>
+            <path d="M18,16 Q25,2 40,0 Q55,2 62,16" fill="#b0b0b0" stroke="#999" stroke-width="1"/>
+            <circle cx="33" cy="26" r="2" fill="#222"/>
+            <circle cx="47" cy="26" r="2" fill="#222"/>
+            <path d="M36,40 L44,40" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: Stalker at the Zone fence — AI-generated background -->
+  <div class="panel-row" style="height: 200px;">
+    <div class="panel panel-full">
+      <div class="panel-inner" style="background:url('assets/stalker-fence.png') center/cover no-repeat;">
+        <div class="narrator" style="top:8px;left:10px;max-width:200px;font-size:12px;">
+          And the stalkers keep going back.
+        </div>
+        <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+          <!-- Night sky -->
+          <rect x="0" y="0" width="680" height="200" fill="#0c1428"/>
+          <!-- Stars -->
+          <circle cx="50" cy="15" r="1.2" fill="#fff" opacity="0.6"/>
+          <circle cx="140" cy="28" r="0.8" fill="#fff" opacity="0.4"/>
+          <circle cx="250" cy="10" r="1.5" fill="#fff" opacity="0.7"/>
+          <circle cx="380" cy="22" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="500" cy="8" r="1.3" fill="#fff" opacity="0.6"/>
+          <circle cx="600" cy="30" r="0.9" fill="#fff" opacity="0.4"/>
+          <circle cx="90" cy="40" r="0.7" fill="#fff" opacity="0.3"/>
+          <circle cx="320" cy="35" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="550" cy="15" r="1.1" fill="#fff" opacity="0.5"/>
+          <circle cx="440" cy="42" r="0.8" fill="#fff" opacity="0.3"/>
+
+          <!-- Eerie Zone glow beyond fence -->
+          <rect x="0" y="70" width="680" height="130" fill="#0c1428"/>
+          <ellipse cx="340" cy="100" rx="340" ry="60" fill="#1a3520" opacity="0.5"/>
+          <ellipse cx="340" cy="105" rx="280" ry="40" fill="#1d4a28" opacity="0.4"/>
+          <ellipse cx="340" cy="110" rx="200" ry="25" fill="#256b30" opacity="0.3"/>
+
+          <!-- Ground -->
+          <rect x="0" y="140" width="680" height="60" fill="#1a1a2a"/>
+          <rect x="0" y="138" width="680" height="4" fill="#2a2a3a"/>
+
+          <!-- Fence posts -->
+          <g stroke="#444" stroke-width="3">
+            <line x1="40" y1="70" x2="40" y2="142"/>
+            <line x1="130" y1="70" x2="130" y2="142"/>
+            <line x1="220" y1="70" x2="220" y2="142"/>
+            <line x1="310" y1="70" x2="310" y2="142"/>
+            <line x1="400" y1="70" x2="400" y2="142"/>
+            <line x1="490" y1="70" x2="490" y2="142"/>
+            <line x1="580" y1="70" x2="580" y2="142"/>
+            <line x1="660" y1="70" x2="660" y2="142"/>
+          </g>
+          <!-- Barbed wire -->
+          <g stroke="#666" stroke-width="1.5" fill="none">
+            <path d="M40,80 L130,78 L220,81 L310,78 L400,80 L490,79 L580,81 L660,78"/>
+            <path d="M40,95 L130,93 L220,96 L310,93 L400,95 L490,94 L580,96 L660,93"/>
+            <path d="M40,110 L130,108 L220,111 L310,108 L400,110 L490,109 L580,111 L660,108"/>
+          </g>
+          <!-- Barb details -->
+          <g stroke="#888" stroke-width="1">
+            <line x1="85" y1="76" x2="88" y2="73"/>
+            <line x1="85" y1="76" x2="82" y2="73"/>
+            <line x1="175" y1="80" x2="178" y2="77"/>
+            <line x1="175" y1="80" x2="172" y2="77"/>
+            <line x1="355" y1="77" x2="358" y2="74"/>
+            <line x1="355" y1="77" x2="352" y2="74"/>
+            <line x1="535" y1="80" x2="538" y2="77"/>
+            <line x1="535" y1="80" x2="532" y2="77"/>
+          </g>
+
+          <!-- WARNING sign -->
+          <rect x="265" y="82" width="80" height="22" rx="1" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+          <text x="305" y="98" text-anchor="middle" font-family="Bangers, cursive" font-size="12" fill="white" letter-spacing="1.5">DANGER — ZONE</text>
+
+          <!-- Stalker silhouette crawling under fence -->
+          <g fill="#0a0a15" stroke="none">
+            <!-- Body low, crawling -->
+            <ellipse cx="480" cy="138" rx="28" ry="10"/>
+            <!-- Backpack -->
+            <rect x="470" y="122" width="20" height="16" rx="3" fill="#0a0a15"/>
+            <!-- Head -->
+            <circle cx="510" cy="132" r="8" fill="#0a0a15"/>
+            <!-- Arms reaching forward -->
+            <line x1="515" y1="136" x2="530" y2="140" stroke="#0a0a15" stroke-width="4" stroke-linecap="round"/>
+            <!-- Legs behind -->
+            <line x1="455" y1="140" x2="440" y2="148" stroke="#0a0a15" stroke-width="4" stroke-linecap="round"/>
+            <line x1="460" y1="138" x2="445" y2="144" stroke="#0a0a15" stroke-width="3.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-family:'Bangers',cursive;font-size:12px;color:#888;padding:2px;">
+    2 / 3
+  </div>
+
+</div>
+</body>
+</html>

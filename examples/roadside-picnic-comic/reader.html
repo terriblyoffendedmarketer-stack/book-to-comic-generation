@@ -32,15 +32,16 @@
   }
   .reader-header .nav {
     display: flex;
-    gap: 8px;
+    gap: 6px;
+    flex-wrap: wrap;
   }
   .reader-header .nav a {
     color: #aaa;
     text-decoration: none;
-    padding: 4px 12px;
+    padding: 4px 10px;
     border: 1px solid #444;
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 12px;
     transition: all 0.2s;
     font-family: 'Patrick Hand', cursive;
   }
@@ -54,21 +55,40 @@
     border-color: #c44;
     background: #c44;
   }
+  .reader-header .art-mode {
+    color: #888;
+    font-size: 11px;
+    padding: 3px 8px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    background: #2a2a2a;
+  }
 
   .pages {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 20px;
-    gap: 40px;
+    gap: 30px;
+  }
+
+  .section-header {
+    font-family: 'Bangers', cursive;
+    color: #c44;
+    font-size: 18px;
+    letter-spacing: 3px;
+    padding: 20px 0 5px;
+    border-bottom: 1px solid #333;
+    width: 730px;
+    text-align: center;
   }
 
   .page-marker {
     font-family: 'Bangers', cursive;
     color: #666;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 2px;
-    padding: 8px 0;
+    padding: 4px 0;
   }
 
   iframe {
@@ -80,7 +100,7 @@
   }
 
   .page-break {
-    width: 200px;
+    width: 60px;
     border: none;
     border-top: 1px solid #333;
   }
@@ -103,48 +123,90 @@
   <h1>ROADSIDE PICNIC</h1>
   <div class="nav">
     <a href="#prologue" class="active">Prologue</a>
-    <a href="#page1">Page 1</a>
-    <a href="#page2">Page 2</a>
-    <a href="#page3">Page 3</a>
+    <a href="#ch1">Chapter 1</a>
   </div>
+  <span class="art-mode">Art: Hybrid (SVG + DrawThings AI)</span>
 </div>
 
 <div class="pages">
 
-  <div id="prologue" class="page-marker">PROLOGUE — THE INTERVIEW</div>
-  <iframe src="pages/page-00-prologue.html" id="frame-0"></iframe>
+  <!-- PROLOGUE: 3 pages -->
+  <div id="prologue" class="section-header">PROLOGUE — THE PILMAN INTERVIEW</div>
+
+  <div class="page-marker">PROLOGUE — PAGE 1</div>
+  <iframe src="pages/page-00a-prologue.html" id="frame-p1"></iframe>
 
   <hr class="page-break">
 
-  <div id="page1" class="page-marker">CHAPTER 1 — PAGE 1</div>
+  <div class="page-marker">PROLOGUE — PAGE 2</div>
+  <iframe src="pages/page-00b-prologue.html" id="frame-p2"></iframe>
+
+  <hr class="page-break">
+
+  <div class="page-marker">PROLOGUE — PAGE 3</div>
+  <iframe src="pages/page-00c-prologue.html" id="frame-p3"></iframe>
+
+  <!-- CHAPTER 1: existing pages + new ones -->
+  <div id="ch1" class="section-header">CHAPTER 1 — RED SCHUHART, AGE 23</div>
+
+  <div class="page-marker">CHAPTER 1 — PAGE 1</div>
   <iframe src="pages/page-01.html" id="frame-1"></iframe>
 
   <hr class="page-break">
 
-  <div id="page2" class="page-marker">CHAPTER 1 — PAGE 2</div>
+  <div class="page-marker">CHAPTER 1 — PAGE 2</div>
   <iframe src="pages/page-02.html" id="frame-2"></iframe>
 
   <hr class="page-break">
 
-  <div id="page3" class="page-marker">CHAPTER 1 — PAGE 3</div>
+  <div class="page-marker">CHAPTER 1 — PAGE 3</div>
   <iframe src="pages/page-03.html" id="frame-3"></iframe>
+
+  <hr class="page-break">
+
+  <div class="page-marker">CHAPTER 1 — PAGE 4: THE DUMP &amp; THE SHIMMER</div>
+  <iframe src="pages/page-04.html" id="frame-4"></iframe>
+
+  <hr class="page-break">
+
+  <div class="page-marker">CHAPTER 1 — PAGE 5: MOSQUITO MANGE &amp; THE INSTINCT</div>
+  <iframe src="pages/page-05.html" id="frame-5"></iframe>
+
+  <hr class="page-break">
+
+  <div class="page-marker">CHAPTER 1 — PAGE 6: THE GARAGE &amp; THE SILVER WEB</div>
+  <iframe src="pages/page-06.html" id="frame-6"></iframe>
+
+  <hr class="page-break">
+
+  <div class="page-marker">CHAPTER 1 — PAGE 7: THE RETURN &amp; THE SHOWERS</div>
+  <iframe src="pages/page-07.html" id="frame-7"></iframe>
+
+  <hr class="page-break">
+
+  <div class="page-marker">CHAPTER 1 — PAGE 8: THE BORSCHT — KIRILL'S DEATH</div>
+  <iframe src="pages/page-08.html" id="frame-8"></iframe>
+
+  <hr class="page-break">
+
+  <div class="page-marker">CHAPTER 1 — PAGE 9: RAGE &amp; TENDERNESS</div>
+  <iframe src="pages/page-09.html" id="frame-9"></iframe>
 
 </div>
 
 <div class="footer">
   <p>Based on <em>Roadside Picnic</em> by Arkady &amp; Boris Strugatsky</p>
-  <p style="margin-top:8px;font-size:12px;color:#444;">Proof of concept — Chapter 1 in progress</p>
+  <p style="margin-top:8px;font-size:12px;color:#444;">12 pages (3 prologue + 9 chapter 1) | Hybrid art: DrawThings SDXL backgrounds + SVG/CSS overlays</p>
 </div>
 
 <script>
-  // Auto-resize iframes to fit content
   function resizeFrames() {
     document.querySelectorAll('iframe').forEach(frame => {
       try {
         const h = frame.contentDocument.body.scrollHeight;
         if (h > 0) frame.style.height = (h + 40) + 'px';
       } catch(e) {
-        frame.style.height = '900px';
+        frame.style.height = '1000px';
       }
     });
   }
@@ -153,7 +215,6 @@
     frame.addEventListener('load', resizeFrames);
   });
 
-  // Highlight active nav based on scroll
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -165,7 +226,7 @@
     });
   }, { threshold: 0.3 });
 
-  document.querySelectorAll('.page-marker').forEach(m => observer.observe(m));
+  document.querySelectorAll('.section-header').forEach(m => observer.observe(m));
 </script>
 
 </body>

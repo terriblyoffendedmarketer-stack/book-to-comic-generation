@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadside Picnic — Chapter 1, Page 5</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .page {
+    width: 700px;
+    background: white;
+    border: 3px solid #222;
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+  }
+  .panel-row { display: flex; gap: 8px; }
+  .panel {
+    border: 2.5px solid #222;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+  }
+  .panel-wide { flex: 2; }
+  .panel-narrow { flex: 1; }
+  .panel-full { flex: 1; }
+  .panel-inner { width: 100%; height: 100%; position: relative; }
+  .bubble {
+    position: absolute;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 7px 11px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 220px;
+    z-index: 10;
+  }
+  .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; left: 25px;
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid white;
+  }
+  .bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; left: 24px;
+    width: 0; height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 14px solid #222;
+  }
+  .bubble.right::after { left: auto; right: 25px; }
+  .bubble.right::before { left: auto; right: 24px; }
+  .bubble.no-tail::after, .bubble.no-tail::before { display: none; }
+  .thought {
+    position: absolute;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 7px 11px;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.3;
+    max-width: 200px;
+    z-index: 10;
+  }
+  .thought::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; left: 20px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #222;
+  }
+  .thought::before {
+    content: '';
+    position: absolute;
+    bottom: -16px; left: 16px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #222;
+  }
+  .narrator {
+    position: absolute;
+    background: #f8f0d0;
+    border: 2px solid #222;
+    padding: 6px 9px;
+    font-size: 12px;
+    line-height: 1.3;
+    z-index: 10;
+    max-width: 240px;
+  }
+  .sfx {
+    position: absolute;
+    font-family: 'Bangers', cursive;
+    z-index: 10;
+  }
+  .bold { font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ROW 1: Red surveys, decides to throw bolts — Hansel & Gretel -->
+  <div class="panel-row" style="height: 170px;">
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="narrator" style="top:6px;left:6px;max-width:170px;font-size:11px;">
+          Pylon 27. Two suspicious hillocks blocked the direct path. Red refused to go between them.
+        </div>
+        <svg viewBox="0 0 220 170" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="220" height="170" fill="#7a8a5a"/>
+          <rect x="0" y="100" width="220" height="70" fill="#8a7a5a"/>
+          <!-- Two hillocks — menacing shapes -->
+          <path d="M40,100 Q70,50 100,100" fill="#7a6a4a" stroke="#6a5a3a" stroke-width="1.5"/>
+          <path d="M120,100 Q150,55 180,100" fill="#7a6a4a" stroke="#6a5a3a" stroke-width="1.5"/>
+          <!-- Pylon marker -->
+          <rect x="10" y="60" width="5" height="40" fill="#888" stroke="#222" stroke-width="1"/>
+          <text x="12" y="56" font-family="Patrick Hand, cursive" font-size="8" fill="#666">27</text>
+        </svg>
+      </div>
+    </div>
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="bubble" style="top:6px;left:8px;max-width:200px;font-size:12px;">
+          Why don't we jump over? Twenty yards up and then straight down?
+        </div>
+        <div class="bubble right" style="top:8px;right:8px;max-width:170px;font-size:13px;">
+          Shut up, you jerk. Don't bother me.
+        </div>
+        <div class="bubble" style="bottom:30px;left:8px;max-width:280px;font-size:12px;">
+          Remember Hansel and Gretel? We're going to do it in reverse. <span class="bold">Watch!</span>
+        </div>
+        <svg viewBox="0 0 450 170" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="450" height="170" fill="#7a8a5a"/>
+          <rect x="0" y="110" width="450" height="60" fill="#8a7a5a"/>
+          <!-- Red holding up handful of nuts and bolts -->
+          <g transform="translate(260,30) scale(0.55)">
+            <rect x="15" y="55" width="50" height="50" rx="3" fill="#cc5555" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="28" r="26" fill="#cc5555" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="28" r="20" fill="#e8c8a8"/>
+            <path d="M22,18 Q30,8 42,12 Q50,8 58,18" fill="#cc3300" stroke="#aa2200" stroke-width="1"/>
+            <circle cx="34" cy="24" r="2" fill="#222"/>
+            <circle cx="46" cy="24" r="2" fill="#222"/>
+            <path d="M35,36 Q40,40 45,36" fill="none" stroke="#222" stroke-width="1.5"/>
+            <!-- Arm holding bolts up -->
+            <line x1="65" y1="60" x2="95" y2="25" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="97" cy="22" r="7" fill="#e8c8a8" stroke="#222" stroke-width="1.5"/>
+            <!-- Bolts in hand -->
+            <rect x="92" y="12" width="3" height="10" fill="#888" stroke="#555" stroke-width="0.5" transform="rotate(-10,93,17)"/>
+            <rect x="97" y="10" width="3" height="12" fill="#888" stroke="#555" stroke-width="0.5"/>
+            <rect x="102" y="13" width="3" height="9" fill="#888" stroke="#555" stroke-width="0.5" transform="rotate(10,103,17)"/>
+            <circle cx="93" cy="11" r="2" fill="#999"/>
+            <circle cx="98" cy="9" r="2" fill="#999"/>
+            <circle cx="103" cy="12" r="2" fill="#999"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: THE BOLT SEQUENCE — throw, normal arc, then the impossible curve -->
+  <div class="panel-row" style="height: 220px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="narrator" style="top:6px;right:8px;max-width:240px;font-size:11.5px;">
+          Red threw the first bolt. Normal arc. The second — normal. The third...
+        </div>
+        <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="680" height="220" fill="#7a8a5a"/>
+          <rect x="0" y="150" width="680" height="70" fill="#8a7a5a"/>
+
+          <!-- Three bolt trajectory sequences side by side -->
+
+          <!-- Bolt 1: normal arc (left third) -->
+          <g>
+            <text x="30" y="20" font-family="Bangers, cursive" font-size="11" fill="#555" letter-spacing="1">1.</text>
+            <!-- Hand throwing -->
+            <circle cx="40" cy="90" r="6" fill="#e8c8a8" stroke="#222" stroke-width="1.5"/>
+            <!-- Normal arc path -->
+            <path d="M50,88 Q100,40 150,145" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="4,3"/>
+            <!-- Bolt at end -->
+            <circle cx="150" cy="145" r="4" fill="#888" stroke="#555" stroke-width="1"/>
+            <!-- Landing dust -->
+            <ellipse cx="150" cy="150" rx="8" ry="3" fill="#7a6a4a" opacity="0.5"/>
+            <!-- Check mark -->
+            <text x="160" y="148" font-family="Bangers, cursive" font-size="16" fill="#5a8a5a">OK</text>
+          </g>
+
+          <!-- Bolt 2: normal arc (middle) -->
+          <g>
+            <text x="210" y="20" font-family="Bangers, cursive" font-size="11" fill="#555" letter-spacing="1">2.</text>
+            <circle cx="220" cy="90" r="6" fill="#e8c8a8" stroke="#222" stroke-width="1.5"/>
+            <path d="M230,88 Q280,35 330,145" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="4,3"/>
+            <circle cx="330" cy="145" r="4" fill="#888" stroke="#555" stroke-width="1"/>
+            <ellipse cx="330" cy="150" rx="8" ry="3" fill="#7a6a4a" opacity="0.5"/>
+            <text x="340" y="148" font-family="Bangers, cursive" font-size="16" fill="#5a8a5a">OK</text>
+          </g>
+
+          <!-- Bolt 3: THE IMPOSSIBLE CURVE — yanked sideways! -->
+          <g>
+            <text x="420" y="20" font-family="Bangers, cursive" font-size="11" fill="#c44" letter-spacing="1">3.</text>
+            <circle cx="430" cy="90" r="6" fill="#e8c8a8" stroke="#222" stroke-width="1.5"/>
+            <!-- Starts normal... -->
+            <path d="M440,88 Q470,55 490,70" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="4,3"/>
+            <!-- Then WRENCHES sideways — thick red line -->
+            <path d="M490,70 Q530,60 570,140 Q580,155 600,150" fill="none" stroke="#c44" stroke-width="3"/>
+            <!-- Impact! -->
+            <circle cx="600" cy="150" r="5" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+            <!-- Impact crater -->
+            <ellipse cx="600" cy="155" rx="12" ry="4" fill="#6a5a3a"/>
+            <!-- SFX -->
+            <text x="560" y="125" font-family="Bangers, cursive" font-size="20" fill="#c44" transform="rotate(-15,560,125)" letter-spacing="2">WHAM!</text>
+            <!-- Arrow showing the impossible pull -->
+            <path d="M505,55 L540,50" fill="none" stroke="#c44" stroke-width="1.5" marker-end="none"/>
+            <polygon points="540,46 548,50 540,54" fill="#c44"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: Kirill's reaction + Red's internal monologue -->
+  <div class="panel-row" style="height: 160px;">
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="bubble" style="top:6px;left:8px;max-width:200px;font-size:12px;">
+          Are you looking for graviconcentrates?
+        </div>
+        <div class="thought" style="top:60px;right:10px;max-width:260px;font-size:11.5px;">
+          They're all like that, the eggheads. The most important thing for them is to find a name for things. Now that he had a label like "graviconcentrate," he thought he understood everything.
+        </div>
+        <div class="bubble" style="bottom:8px;left:8px;max-width:200px;font-size:12px;">
+          Throw another one, huh?
+        </div>
+        <svg viewBox="0 0 450 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="450" height="160" fill="#7a8a5a"/>
+          <rect x="0" y="110" width="450" height="50" fill="#8a7a5a"/>
+          <!-- Kirill leaning forward, face lit up with scientific excitement -->
+          <g transform="translate(50,15) scale(0.5)">
+            <rect x="15" y="55" width="50" height="50" rx="3" fill="#cc5555" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="28" r="26" fill="#cc5555" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="28" r="20" fill="#e8c8a8"/>
+            <path d="M22,18 Q30,10 42,14 Q50,10 58,18" fill="#443322" stroke="#332211" stroke-width="1"/>
+            <!-- Glasses -->
+            <circle cx="33" cy="24" r="6" fill="none" stroke="#222" stroke-width="1.5"/>
+            <circle cx="47" cy="24" r="6" fill="none" stroke="#222" stroke-width="1.5"/>
+            <line x1="39" y1="24" x2="41" y2="24" stroke="#222" stroke-width="1.5"/>
+            <circle cx="33" cy="24" r="2" fill="#222"/>
+            <circle cx="47" cy="24" r="2" fill="#222"/>
+            <circle cx="34" cy="23" r="0.8" fill="white"/>
+            <circle cx="48" cy="23" r="0.8" fill="white"/>
+            <!-- Excited open mouth -->
+            <path d="M34,38 Q40,44 46,38" fill="none" stroke="#222" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="thought" style="top:8px;left:6px;max-width:170px;font-size:11px;">
+          "Only in movies." One bolt! As though one would be enough! Oh, science.
+        </div>
+        <div class="narrator" style="bottom:8px;left:6px;max-width:170px;font-size:11px;">
+          Red threw eight more to map its shape. They moved only where a bolt had landed safely.
+        </div>
+        <svg viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="220" height="160" fill="#7a8a5a"/>
+          <rect x="0" y="105" width="220" height="55" fill="#8a7a5a"/>
+          <!-- Map of bolt impacts showing the invisible shape -->
+          <g>
+            <!-- Safe landings (gray dots) -->
+            <circle cx="50" cy="85" r="3" fill="#888"/>
+            <circle cx="80" cy="75" r="3" fill="#888"/>
+            <circle cx="140" cy="80" r="3" fill="#888"/>
+            <circle cx="170" cy="90" r="3" fill="#888"/>
+            <circle cx="60" cy="100" r="3" fill="#888"/>
+            <circle cx="155" cy="100" r="3" fill="#888"/>
+            <!-- Dangerous impact (red dot, center) -->
+            <circle cx="110" cy="85" r="5" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+            <circle cx="110" cy="85" r="8" fill="none" stroke="#c44" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+            <circle cx="110" cy="85" r="14" fill="none" stroke="#c44" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.3"/>
+            <!-- Dashed lines connecting safe path -->
+            <path d="M50,85 L80,75 L140,80 L170,90" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 4: The instinct — Red can't throw the nut forward -->
+  <div class="panel-row" style="height: 140px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="narrator" style="top:6px;left:8px;max-width:300px;font-size:12px;">
+          They cleared the mosquito mange. The asphalt was twenty feet away. Red picked up a nut to throw. And couldn't.
+        </div>
+        <div class="thought" style="bottom:8px;left:8px;max-width:300px;font-size:12.5px;">
+          I couldn't make up my mind to throw that nut. Not forward. Not for anything. Something in me <span class="bold">refused.</span>
+        </div>
+        <div class="bubble right" style="top:55px;right:10px;max-width:180px;font-size:12px;">
+          What's the matter? Why are we just standing here?
+        </div>
+        <svg viewBox="0 0 680 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="680" height="140" fill="#7a8a5a"/>
+          <rect x="0" y="95" width="680" height="45" fill="#8a7a5a"/>
+          <!-- Asphalt road ahead -->
+          <rect x="350" y="80" width="330" height="60" fill="#555550"/>
+
+          <!-- Red's hand frozen, clenched around the nut — CLOSE UP -->
+          <g transform="translate(200,20)">
+            <!-- Large hand, tight grip -->
+            <ellipse cx="0" cy="30" rx="30" ry="22" fill="#e8c8a8" stroke="#222" stroke-width="2.5"/>
+            <!-- Fingers wrapped tight -->
+            <path d="M-25,20 Q-30,30 -25,40" fill="none" stroke="#d0a888" stroke-width="3"/>
+            <path d="M-15,15 Q-22,28 -18,42" fill="none" stroke="#d0a888" stroke-width="3"/>
+            <path d="M15,15 Q22,28 18,42" fill="none" stroke="#d0a888" stroke-width="3"/>
+            <path d="M25,20 Q30,30 25,40" fill="none" stroke="#d0a888" stroke-width="3"/>
+            <!-- Nut barely visible between fingers -->
+            <circle cx="0" cy="28" r="5" fill="#888" stroke="#666" stroke-width="1"/>
+            <!-- Sweat drops -->
+            <circle cx="-35" cy="15" r="2.5" fill="#aac" opacity="0.6"/>
+            <circle cx="32" cy="10" r="2" fill="#aac" opacity="0.5"/>
+            <circle cx="-20" cy="5" r="1.5" fill="#aac" opacity="0.4"/>
+            <!-- Trembling lines -->
+            <g stroke="#222" stroke-width="0.8" opacity="0.4">
+              <line x1="-38" y1="25" x2="-42" y2="25"/>
+              <line x1="-38" y1="32" x2="-43" y2="32"/>
+              <line x1="35" y1="28" x2="40" y2="28"/>
+              <line x1="35" y1="35" x2="39" y2="35"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-family:'Bangers',cursive;font-size:12px;color:#888;padding:2px;">
+    5
+  </div>
+
+</div>
+</body>
+</html>

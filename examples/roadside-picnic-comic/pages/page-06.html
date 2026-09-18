@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadside Picnic — Chapter 1, Page 6</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .page {
+    width: 700px;
+    background: white;
+    border: 3px solid #222;
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+  }
+  .panel-row { display: flex; gap: 8px; }
+  .panel {
+    border: 2.5px solid #222;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+  }
+  .panel-wide { flex: 2; }
+  .panel-narrow { flex: 1; }
+  .panel-full { flex: 1; }
+  .panel-inner { width: 100%; height: 100%; position: relative; }
+  .bubble {
+    position: absolute;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 7px 11px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 220px;
+    z-index: 10;
+  }
+  .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; left: 25px;
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid white;
+  }
+  .bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; left: 24px;
+    width: 0; height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 14px solid #222;
+  }
+  .bubble.right::after { left: auto; right: 25px; }
+  .bubble.right::before { left: auto; right: 24px; }
+  .bubble.no-tail::after, .bubble.no-tail::before { display: none; }
+  .thought {
+    position: absolute;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 7px 11px;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.3;
+    max-width: 200px;
+    z-index: 10;
+  }
+  .thought::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; left: 20px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #222;
+  }
+  .thought::before {
+    content: '';
+    position: absolute;
+    bottom: -16px; left: 16px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #222;
+  }
+  .narrator {
+    position: absolute;
+    background: #f8f0d0;
+    border: 2px solid #222;
+    padding: 6px 9px;
+    font-size: 12px;
+    line-height: 1.3;
+    z-index: 10;
+    max-width: 240px;
+  }
+  .sfx {
+    position: absolute;
+    font-family: 'Bangers', cursive;
+    z-index: 10;
+  }
+  .bold { font-weight: bold; }
+  .caption {
+    font-family: 'Bangers', cursive;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #555;
+    text-align: center;
+    padding: 3px 0;
+    background: #f0ece0;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="caption">INSIDE THE GARAGE</div>
+
+  <!-- ROW 1: Entering the garage — AI background, wide establishing shot -->
+  <div class="panel-row" style="height: 220px;">
+    <div class="panel panel-full">
+      <div class="panel-inner" style="background:url('assets/garage-silverweb.png') center/cover no-repeat;">
+        <div class="narrator" style="top:6px;left:8px;max-width:250px;font-size:12px;">
+          The garage. Dusty half-light after the blinding sun outside. A dump truck over a pit. And near the ceiling — silvery threads, like cobwebs. I'd never seen bugs in the Zone.
+        </div>
+        <div class="bubble" style="bottom:40px;left:10px;max-width:200px;font-size:12px;">
+          Follow me step for step. Two steps behind. Eyes on my back. Stay alert.
+        </div>
+        <div class="bubble right" style="bottom:8px;right:10px;max-width:150px;font-size:12px;">
+          Don't rush. No hurry. Less dust.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Finding the full empty + The fatal moment -->
+  <div class="panel-row" style="height: 180px;">
+    <!-- Panel A: Red crouches to pick up the full empty -->
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="narrator" style="top:5px;left:5px;max-width:180px;font-size:11px;">
+          There it was. Gleaming copper disks with blue syrup shifting between them. The full empty.
+        </div>
+        <svg viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="220" height="180" fill="#4a5a4a"/>
+          <rect x="0" y="130" width="220" height="50" fill="#3a4a3a"/>
+          <!-- Red crouching -->
+          <g transform="translate(60,50) scale(0.6)">
+            <rect x="12" y="52" width="56" height="45" rx="6" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="12" y1="68" x2="-5" y2="88" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="68" y1="62" x2="88" y2="80" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="-5" cy="90" r="5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <circle cx="88" cy="82" r="5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <line x1="28" y1="97" x2="18" y2="130" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="52" y1="97" x2="62" y2="130" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="40" cy="28" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="28" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <path d="M22,18 Q30,6 40,8 Q50,6 58,18" fill="#c44" stroke="none"/>
+            <circle cx="35" cy="26" r="1.5" fill="#222"/>
+            <circle cx="45" cy="26" r="1.5" fill="#222"/>
+          </g>
+          <!-- The full empty on the ground — glowing -->
+          <g transform="translate(130,115)">
+            <ellipse cx="0" cy="0" rx="18" ry="5" fill="#cc8844" stroke="#222" stroke-width="1.5"/>
+            <rect x="-18" y="-18" width="36" height="18" fill="#4488cc" opacity="0.4"/>
+            <ellipse cx="0" cy="-18" rx="18" ry="5" fill="#cc8844" stroke="#222" stroke-width="1.5"/>
+            <!-- Blue glow between disks -->
+            <ellipse cx="0" cy="-9" rx="14" ry="8" fill="#4488dd" opacity="0.5"/>
+            <ellipse cx="0" cy="-9" rx="8" ry="5" fill="#66aaff" opacity="0.4"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel B: THE MOMENT — Kirill walks through the silver web -->
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="thought" style="top:5px;left:8px;max-width:220px;font-size:12px;">
+          I looked up and felt a catch in my throat. I couldn't utter a sound. I wanted to shout "Stop! Freeze!" but I couldn't.
+        </div>
+        <div class="sfx" style="bottom:60px;right:15px;font-size:18px;color:#ccc;letter-spacing:3px;transform:rotate(-2deg);">
+          crckl... crckl...
+        </div>
+        <div class="narrator" style="bottom:6px;left:8px;max-width:250px;font-size:11px;">
+          I shut my eyes. I went numb. The only thing I heard was the web tearing. A weak, crackly noise.
+        </div>
+        <svg viewBox="0 0 450 180" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="450" height="180" fill="#3a4a3a"/>
+          <!-- Dusty light from above -->
+          <polygon points="180,0 280,0 320,180 140,180" fill="#5a6a5a" opacity="0.3"/>
+
+          <!-- Silver web threads stretching and tearing -->
+          <g stroke="#ddddee" stroke-width="1.2" fill="none" opacity="0.7">
+            <path d="M200,10 Q240,40 250,80 Q260,110 280,140"/>
+            <path d="M220,5 Q255,35 265,75 Q275,105 290,135"/>
+            <path d="M240,8 Q270,38 278,70 Q288,100 300,130"/>
+            <path d="M260,12 Q285,42 290,65 Q298,95 310,125"/>
+          </g>
+          <!-- Breaking/torn threads -->
+          <g stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.8">
+            <path d="M248,60 L255,55" stroke-dasharray="3,2"/>
+            <path d="M262,55 L270,50" stroke-dasharray="3,2"/>
+            <path d="M275,62 L282,58" stroke-dasharray="3,2"/>
+          </g>
+          <!-- Small sparkles at break points -->
+          <circle cx="252" cy="57" r="2" fill="white" opacity="0.8"/>
+          <circle cx="266" cy="52" r="1.5" fill="white" opacity="0.6"/>
+          <circle cx="279" cy="60" r="2" fill="white" opacity="0.7"/>
+
+          <!-- Kirill stepping backwards into the web -->
+          <g transform="translate(225,25) scale(0.65)">
+            <rect x="17" y="52" width="46" height="65" rx="5" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="17" y1="68" x2="2" y2="88" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="63" y1="68" x2="78" y2="88" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="2" cy="90" r="4.5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <circle cx="78" cy="90" r="4.5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <line x1="30" y1="117" x2="20" y2="148" stroke="#cc3333" stroke-width="4.5" stroke-linecap="round"/>
+            <line x1="50" y1="117" x2="60" y2="148" stroke="#cc3333" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="40" cy="26" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="26" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="34" cy="24" r="5" fill="none" stroke="#444" stroke-width="1"/>
+            <circle cx="48" cy="24" r="5" fill="none" stroke="#444" stroke-width="1"/>
+            <line x1="39" y1="24" x2="43" y2="24" stroke="#444" stroke-width="1"/>
+            <circle cx="34" cy="24" r="1.5" fill="#222"/>
+            <circle cx="48" cy="24" r="1.5" fill="#222"/>
+            <!-- Mouth normal — he doesn't know -->
+            <path d="M35,36 Q40,38 45,36" fill="none" stroke="#222" stroke-width="1"/>
+          </g>
+
+          <!-- Red frozen in horror, foreground left -->
+          <g transform="translate(60,55) scale(0.6)">
+            <rect x="12" y="52" width="56" height="55" rx="6" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="28" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="28" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <path d="M22,18 Q30,6 40,8 Q50,6 58,18" fill="#c44" stroke="none"/>
+            <!-- Eyes wide with horror -->
+            <ellipse cx="33" cy="25" rx="3.5" ry="4" fill="white" stroke="#222" stroke-width="1"/>
+            <ellipse cx="47" cy="25" rx="3.5" ry="4" fill="white" stroke="#222" stroke-width="1"/>
+            <circle cx="33" cy="26" r="2" fill="#222"/>
+            <circle cx="47" cy="26" r="2" fill="#222"/>
+            <!-- Open mouth — silent scream -->
+            <ellipse cx="40" cy="38" rx="6" ry="5" fill="#333"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: After — checking Kirill's back -->
+  <div class="panel-row" style="height: 140px;">
+    <div class="panel panel-wide">
+      <div class="panel-inner">
+        <div class="bubble right" style="top:6px;right:10px;max-width:180px;font-size:13px;">
+          Well, shall we get on with it?
+        </div>
+        <div class="bubble" style="top:55px;left:10px;max-width:180px;font-size:13px;">
+          Turn around. Let me see your back.
+        </div>
+        <svg viewBox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="450" height="140" fill="#4a5a4a"/>
+          <rect x="0" y="100" width="450" height="40" fill="#3a4a3a"/>
+          <!-- Kirill turned, Red inspecting his back -->
+          <g transform="translate(160,15) scale(0.6)">
+            <!-- Kirill from behind -->
+            <rect x="17" y="52" width="46" height="65" rx="5" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <circle cx="40" cy="26" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <!-- Back of helmet, no face -->
+            <ellipse cx="40" cy="30" rx="15" ry="12" fill="#bb2222" stroke="#222" stroke-width="1" opacity="0.5"/>
+          </g>
+          <!-- Red looking closely, touching Kirill's suit -->
+          <g transform="translate(250,18) scale(0.55)">
+            <rect x="12" y="52" width="56" height="55" rx="6" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="12" y1="68" x2="-15" y2="60" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="-17" cy="58" r="5" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
+            <line x1="68" y1="68" x2="85" y2="85" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="40" cy="28" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="28" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+            <path d="M22,18 Q30,6 40,8 Q50,6 58,18" fill="#c44" stroke="none"/>
+            <!-- Squinting, examining -->
+            <line x1="30" y1="26" x2="38" y2="26" stroke="#222" stroke-width="2"/>
+            <line x1="42" y1="26" x2="50" y2="26" stroke="#222" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="panel panel-narrow">
+      <div class="panel-inner">
+        <div class="bubble" style="top:6px;left:6px;max-width:160px;font-size:12px;">
+          Did you see the spider web?
+        </div>
+        <div class="bubble right" style="top:50px;right:6px;max-width:140px;font-size:12px;">
+          What web? Where?
+        </div>
+        <div class="thought" style="bottom:8px;left:8px;max-width:170px;font-size:11px;">
+          Actually, there's no way of knowing that yet.
+        </div>
+        <svg viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="220" height="140" fill="#4a5a4a"/>
+          <!-- Red's face close-up, hiding his dread -->
+          <g transform="translate(35,20) scale(0.55)">
+            <circle cx="80" cy="65" r="55" fill="#cc3333" stroke="#222" stroke-width="3"/>
+            <ellipse cx="80" cy="65" rx="40" ry="35" fill="#ddeeff" stroke="#222" stroke-width="2" opacity="0.7"/>
+            <path d="M42,50 Q60,30 80,35 Q100,30 118,50" fill="#c44" stroke="none"/>
+            <!-- Squinting, grim -->
+            <line x1="62" y1="60" x2="74" y2="60" stroke="#222" stroke-width="2.5"/>
+            <line x1="86" y1="60" x2="98" y2="60" stroke="#222" stroke-width="2.5"/>
+            <circle cx="68" cy="60" r="2" fill="#222"/>
+            <circle cx="92" cy="60" r="2" fill="#222"/>
+            <path d="M72,78 L88,76" fill="none" stroke="#222" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 4: Carrying the empty out — sunlight, fragile triumph -->
+  <div class="panel-row" style="height: 120px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="narrator" style="top:6px;left:8px;max-width:300px;font-size:12px;">
+          We were lucky. That's what I told myself. We carried the full empty into the sunlight — copper gleaming, blue substance shifting between the disks like something alive. A thing of terrible beauty.
+        </div>
+        <div class="bubble right" style="bottom:8px;right:10px;max-width:250px;font-size:12px;">
+          Here, grab one end. Don't drop it — it's heavy.
+        </div>
+        <svg viewBox="0 0 680 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Bright sunlight outside garage -->
+          <rect x="0" y="0" width="680" height="120" fill="#aaa87a"/>
+          <rect x="0" y="80" width="680" height="40" fill="#8a8a6a"/>
+          <!-- Garage doorway behind — dark rectangle -->
+          <rect x="250" y="0" width="180" height="80" fill="#2a3a2a" rx="2"/>
+          <!-- Two suited figures carrying the empty between them -->
+          <g transform="translate(300,20) scale(0.45)">
+            <!-- Red -->
+            <rect x="12" y="52" width="56" height="55" rx="6" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="68" y1="62" x2="95" y2="55" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="12" y1="68" x2="-5" y2="85" stroke="#cc3333" stroke-width="6" stroke-linecap="round"/>
+            <line x1="28" y1="107" x2="18" y2="140" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="52" y1="107" x2="62" y2="140" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="40" cy="26" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="26" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+          </g>
+          <!-- The full empty between them -->
+          <g transform="translate(370,55)">
+            <ellipse cx="0" cy="0" rx="15" ry="4" fill="#cc8844" stroke="#222" stroke-width="1.5"/>
+            <rect x="-15" y="-15" width="30" height="15" fill="#4488cc" opacity="0.4"/>
+            <ellipse cx="0" cy="-15" rx="15" ry="4" fill="#cc8844" stroke="#222" stroke-width="1.5"/>
+            <ellipse cx="0" cy="-8" rx="10" ry="6" fill="#4488dd" opacity="0.5"/>
+            <ellipse cx="0" cy="-8" rx="6" ry="4" fill="#66aaff" opacity="0.4"/>
+          </g>
+          <!-- Kirill -->
+          <g transform="translate(400,18) scale(0.45)">
+            <rect x="17" y="52" width="46" height="55" rx="5" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <line x1="17" y1="62" x2="-5" y2="55" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="63" y1="68" x2="78" y2="85" stroke="#cc3333" stroke-width="5" stroke-linecap="round"/>
+            <line x1="30" y1="107" x2="20" y2="140" stroke="#cc3333" stroke-width="4.5" stroke-linecap="round"/>
+            <line x1="50" y1="107" x2="60" y2="140" stroke="#cc3333" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="40" cy="26" r="25" fill="#cc3333" stroke="#222" stroke-width="2"/>
+            <ellipse cx="40" cy="26" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="1.5" opacity="0.7"/>
+          </g>
+          <!-- Sunlight beams from upper right -->
+          <line x1="680" y1="0" x2="350" y2="80" stroke="#ffee88" stroke-width="1" opacity="0.2"/>
+          <line x1="680" y1="20" x2="380" y2="90" stroke="#ffee88" stroke-width="1" opacity="0.15"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-family:'Bangers',cursive;font-size:12px;color:#888;padding:2px;">
+    6
+  </div>
+
+</div>
+</body>
+</html>

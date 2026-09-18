@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadside Picnic — Prologue Page 1</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .page {
+    width: 700px;
+    background: white;
+    border: 3px solid #222;
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+  }
+  .title-row {
+    text-align: center;
+    padding: 14px 0 10px;
+    border-bottom: 2.5px solid #222;
+    margin-bottom: 2px;
+  }
+  .title-row h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 46px;
+    letter-spacing: 5px;
+    color: #222;
+    text-shadow: 2px 2px 0 #c44, 4px 4px 0 rgba(0,0,0,0.1);
+  }
+  .title-row .subtitle { font-size: 15px; color: #666; margin-top: 4px; }
+  .title-row .authors { font-size: 13px; color: #888; margin-top: 2px; }
+  .panel-row { display: flex; gap: 8px; }
+  .panel {
+    border: 2.5px solid #222;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+  }
+  .panel-wide { flex: 2; }
+  .panel-narrow { flex: 1; }
+  .panel-full { flex: 1; }
+  .panel-inner { width: 100%; height: 100%; position: relative; }
+  .bubble {
+    position: absolute;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 18px;
+    padding: 7px 11px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 200px;
+    z-index: 10;
+  }
+  .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; left: 25px;
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid white;
+  }
+  .bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; left: 24px;
+    width: 0; height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 14px solid #222;
+  }
+  .bubble.right::after { left: auto; right: 25px; }
+  .bubble.right::before { left: auto; right: 24px; }
+  .bubble.no-tail::after, .bubble.no-tail::before { display: none; }
+  .narrator {
+    position: absolute;
+    background: #f8f0d0;
+    border: 2px solid #222;
+    padding: 6px 9px;
+    font-size: 12px;
+    line-height: 1.3;
+    z-index: 10;
+    max-width: 220px;
+  }
+  .caption {
+    font-family: 'Bangers', cursive;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #555;
+    text-align: center;
+    padding: 3px 0;
+    background: #f0ece0;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  }
+  .bold { font-weight: bold; }
+  .italic { font-style: italic; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="title-row">
+    <h1>ROADSIDE PICNIC</h1>
+    <div class="subtitle">A Comic Adaptation</div>
+    <div class="authors">Based on the novel by Arkady &amp; Boris Strugatsky</div>
+  </div>
+
+  <div class="caption">FROM AN INTERVIEW WITH DR. VALENTINE PILMAN, RECIPIENT OF THE NOBEL PRIZE IN PHYSICS — HARMONT RADIO</div>
+
+  <!-- ROW 1: Radio studio establishing shot — AI background -->
+  <div class="panel-row" style="height: 240px;">
+    <div class="panel panel-full">
+      <div class="panel-inner" style="background:url('assets/test-radio-studio.png') center/cover no-repeat;">
+        <div class="bubble" style="top:8px;left:12px;max-width:250px;font-size:13px;">
+          I suppose that your first serious discovery, Dr. Pilman, should be considered what is now called the Pilman Radiant?
+        </div>
+        <div class="bubble right" style="top:80px;right:12px;max-width:280px;font-size:13px;">
+          I don't think so. The Pilman Radiant wasn't the first, nor was it serious, nor was it really a discovery. And it wasn't completely mine, either.
+        </div>
+        <svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+          <!-- Studio background -->
+          <rect x="0" y="0" width="680" height="240" fill="#2a3a4a"/>
+          <rect x="0" y="180" width="680" height="60" fill="#1a2a3a"/>
+          <!-- Soundproofing tiles -->
+          <g fill="#3a4a5a" stroke="#2a3a4a" stroke-width="0.5">
+            <rect x="8" y="15" width="22" height="22" rx="2"/>
+            <rect x="8" y="42" width="22" height="22" rx="2"/>
+            <rect x="8" y="69" width="22" height="22" rx="2"/>
+            <rect x="8" y="96" width="22" height="22" rx="2"/>
+            <rect x="650" y="15" width="22" height="22" rx="2"/>
+            <rect x="650" y="42" width="22" height="22" rx="2"/>
+            <rect x="650" y="69" width="22" height="22" rx="2"/>
+            <rect x="650" y="96" width="22" height="22" rx="2"/>
+          </g>
+          <!-- ON AIR sign -->
+          <rect x="290" y="8" width="100" height="26" rx="4" fill="#c44" stroke="#a22" stroke-width="2"/>
+          <text x="340" y="26" text-anchor="middle" font-family="Bangers, cursive" font-size="15" fill="white" letter-spacing="3">ON AIR</text>
+          <!-- Desk -->
+          <rect x="120" y="155" width="440" height="12" fill="#445566" stroke="#222" stroke-width="1.5" rx="1"/>
+          <!-- Mics -->
+          <line x1="230" y1="155" x2="230" y2="130" stroke="#666" stroke-width="2.5"/>
+          <circle cx="230" cy="124" r="9" fill="#555" stroke="#222" stroke-width="1.5"/>
+          <line x1="225" y1="122" x2="235" y2="122" stroke="#777" stroke-width="0.5"/>
+          <line x1="225" y1="126" x2="235" y2="126" stroke="#777" stroke-width="0.5"/>
+          <line x1="450" y1="155" x2="450" y2="132" stroke="#666" stroke-width="2.5"/>
+          <circle cx="450" cy="126" r="8" fill="#555" stroke="#222" stroke-width="1.5"/>
+
+          <!-- INTERVIEWER - left, small eager man in suit -->
+          <g transform="translate(150,60) scale(0.65)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#334455" stroke="#222" stroke-width="2"/>
+            <polygon points="40,55 37,66 40,70 43,66" fill="#c44" stroke="#222" stroke-width="0.5"/>
+            <line x1="15" y1="70" x2="-2" y2="90" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="65" y1="70" x2="82" y2="90" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="-2" cy="92" r="5" fill="#e8c8a8" stroke="#222" stroke-width="1.2"/>
+            <circle cx="82" cy="92" r="5" fill="#e8c8a8" stroke="#222" stroke-width="1.2"/>
+            <circle cx="40" cy="28" r="22" fill="#e8c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M18,18 Q25,6 40,5 Q55,6 62,18" fill="#554433" stroke="#443322" stroke-width="1"/>
+            <circle cx="33" cy="26" r="2.5" fill="#222"/>
+            <circle cx="47" cy="26" r="2.5" fill="#222"/>
+            <circle cx="34" cy="25" r="0.8" fill="white"/>
+            <circle cx="48" cy="25" r="0.8" fill="white"/>
+            <path d="M35,38 Q40,43 45,38" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+
+          <!-- DR. PILMAN - right, distinguished older man -->
+          <g transform="translate(390,52) scale(0.7)">
+            <rect x="15" y="55" width="50" height="55" rx="3" fill="#556655" stroke="#222" stroke-width="2"/>
+            <line x1="15" y1="70" x2="-2" y2="90" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <line x1="65" y1="70" x2="82" y2="90" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="-2" cy="92" r="5" fill="#e0c0a0" stroke="#222" stroke-width="1.2"/>
+            <circle cx="82" cy="92" r="5" fill="#e0c0a0" stroke="#222" stroke-width="1.2"/>
+            <circle cx="40" cy="28" r="24" fill="#e0c0a0" stroke="#222" stroke-width="2"/>
+            <path d="M18,16 Q25,2 40,0 Q55,2 62,16" fill="#b0b0b0" stroke="#999" stroke-width="1"/>
+            <circle cx="33" cy="26" r="2" fill="#222"/>
+            <circle cx="47" cy="26" r="2" fill="#222"/>
+            <line x1="24" y1="24" x2="28" y2="23" stroke="#c0a090" stroke-width="0.7"/>
+            <line x1="52" y1="23" x2="56" y2="24" stroke="#c0a090" stroke-width="0.7"/>
+            <path d="M35,42 Q40,45 45,42" fill="none" stroke="#222" stroke-width="1.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: The Pilman Radiant diagram — AI background -->
+  <div class="panel-row" style="height: 280px;">
+    <div class="panel panel-full">
+      <div class="panel-inner" style="background:url('assets/pilman-radiant-v2.png') center/cover no-repeat;">
+        <div class="bubble right" style="top:6px;right:10px;max-width:250px;font-size:13px;">
+          Imagine you spin a huge globe and start firing bullets into it. The holes would lie in a smooth curve.
+        </div>
+        <div class="narrator" style="bottom:8px;left:8px;max-width:280px;font-size:12px;">
+          All six Visitation Zones are situated on the surface of our planet as though someone had taken six shots at Earth from a pistol located somewhere along the Earth-Deneb line.
+        </div>
+        <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+          <!-- Deep space background -->
+          <rect x="0" y="0" width="680" height="280" fill="#0a0e1a"/>
+          <!-- Stars -->
+          <circle cx="30" cy="20" r="1" fill="#fff" opacity="0.6"/>
+          <circle cx="120" cy="45" r="0.8" fill="#fff" opacity="0.4"/>
+          <circle cx="200" cy="15" r="1.2" fill="#fff" opacity="0.5"/>
+          <circle cx="580" cy="30" r="1" fill="#fff" opacity="0.5"/>
+          <circle cx="650" cy="60" r="0.7" fill="#fff" opacity="0.4"/>
+          <circle cx="500" cy="18" r="1.5" fill="#fff" opacity="0.6"/>
+          <circle cx="60" cy="250" r="0.8" fill="#fff" opacity="0.3"/>
+          <circle cx="620" cy="220" r="1" fill="#fff" opacity="0.4"/>
+          <circle cx="400" cy="260" r="0.7" fill="#fff" opacity="0.3"/>
+          <circle cx="150" cy="200" r="1" fill="#fff" opacity="0.5"/>
+
+          <!-- Deneb star - top left area -->
+          <circle cx="100" cy="40" r="4" fill="#ffffcc" opacity="0.9"/>
+          <circle cx="100" cy="40" r="8" fill="#ffffcc" opacity="0.2"/>
+          <text x="100" y="22" text-anchor="middle" font-family="Patrick Hand, cursive" font-size="14" fill="#ffdd88" font-weight="bold">DENEB ★</text>
+
+          <!-- Earth - large, center -->
+          <circle cx="380" cy="160" r="85" fill="#2a5a8a" stroke="#1a3a5a" stroke-width="2"/>
+          <!-- Continents -->
+          <ellipse cx="380" cy="160" rx="85" ry="30" fill="none" stroke="#3a7aaa" stroke-width="0.8" opacity="0.5"/>
+          <ellipse cx="380" cy="160" rx="55" ry="85" fill="none" stroke="#3a7aaa" stroke-width="0.8" opacity="0.5"/>
+          <path d="M320,120 Q340,115 360,125 Q370,130 365,140 Q355,135 340,138 Q325,135 320,120Z" fill="#4a8a4a" opacity="0.6"/>
+          <path d="M390,100 Q420,105 430,120 Q435,135 425,140 Q410,130 395,125 Q388,115 390,100Z" fill="#4a8a4a" opacity="0.6"/>
+          <path d="M350,160 Q370,155 390,162 Q400,170 395,182 Q380,178 360,180 Q345,175 350,160Z" fill="#4a8a4a" opacity="0.6"/>
+          <path d="M410,160 Q430,155 440,170 Q438,185 420,188 Q410,180 410,160Z" fill="#4a8a4a" opacity="0.5"/>
+
+          <!-- Six Visitation Zones - red dots -->
+          <circle cx="340" cy="118" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
+          <circle cx="395" cy="108" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
+          <circle cx="355" cy="155" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
+          <circle cx="425" cy="145" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
+          <circle cx="370" cy="190" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
+          <circle cx="410" cy="178" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
+
+          <!-- Curve connecting zones -->
+          <path d="M340,118 Q365,100 395,108 Q420,120 425,145 Q420,170 410,178 Q390,195 370,190 Q350,180 355,155" fill="none" stroke="#ffaa44" stroke-width="2" stroke-dasharray="5,3"/>
+
+          <!-- Line from Deneb to Earth -->
+          <line x1="105" y1="45" x2="330" y2="115" stroke="#ffaa44" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.7"/>
+          <polygon points="325,112 335,118 328,120" fill="#ffaa44" opacity="0.7"/>
+
+          <!-- Labels -->
+          <text x="380" y="258" text-anchor="middle" font-family="Bangers, cursive" font-size="14" fill="#ffaa44" letter-spacing="2">THE PILMAN RADIANT</text>
+          <text x="480" cy="108" text-anchor="start" font-family="Patrick Hand, cursive" font-size="11" fill="#ff6666">
+            <tspan x="455" y="96">Six Visitation</tspan>
+            <tspan x="465" y="110">Zones</tspan>
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: Interviewer reacting -->
+  <div class="panel-row" style="height: 120px;">
+    <div class="panel panel-full">
+      <div class="panel-inner">
+        <div class="bubble" style="top:8px;left:12px;max-width:320px;font-size:13px;">
+          My fellow Harmonites! Finally we have heard a clear explanation of the Pilman Radiant! The day before yesterday was the <span class="bold">thirtieth anniversary</span> of the Visitation.
+        </div>
+        <svg viewBox="0 0 680 120" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="680" height="120" fill="#2a3a4a"/>
+          <rect x="0" y="90" width="680" height="30" fill="#1a2a3a"/>
+          <!-- Interviewer close-up, excited -->
+          <g transform="translate(50,10) scale(0.75)">
+            <rect x="15" y="55" width="50" height="50" rx="3" fill="#334455" stroke="#222" stroke-width="2"/>
+            <polygon points="40,55 37,66 40,70 43,66" fill="#c44" stroke="#222" stroke-width="0.5"/>
+            <circle cx="40" cy="28" r="22" fill="#e8c8a8" stroke="#222" stroke-width="2"/>
+            <path d="M18,18 Q25,6 40,5 Q55,6 62,18" fill="#554433" stroke="#443322" stroke-width="1"/>
+            <circle cx="33" cy="25" r="3" fill="#222"/>
+            <circle cx="47" cy="25" r="3" fill="#222"/>
+            <circle cx="34" cy="24" r="1" fill="white"/>
+            <circle cx="48" cy="24" r="1" fill="white"/>
+            <path d="M33,38 Q40,44 47,38" fill="none" stroke="#222" stroke-width="2"/>
+          </g>
+          <!-- Mic -->
+          <line x1="130" y1="90" x2="130" y2="65" stroke="#666" stroke-width="2"/>
+          <circle cx="130" cy="60" r="7" fill="#555" stroke="#222" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-family:'Bangers',cursive;font-size:12px;color:#888;padding:2px;">
+    1 / 3
+  </div>
+
+</div>
+</body>
+</html>
