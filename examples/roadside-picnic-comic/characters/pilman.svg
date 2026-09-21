@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250">
+  <!-- DR. VALENTINE PILMAN — Character Sheet
+       5 data-driven expressions (Prologue + Ch3 Borscht bar)
+       Key identifiers: dark glasses, grey hair, neat/composed, Nobel laureate
+       Famous for: "roadside picnic" metaphor, Pilman Radiant -->
+  <style>
+    text { font-family: 'Courier New', monospace; }
+    .label { font-size: 11px; font-weight: bold; text-anchor: middle; fill: #333; }
+    .sublabel { font-size: 9px; text-anchor: middle; fill: #888; }
+  </style>
+
+  <defs>
+    <g id="pilman-body">
+      <!-- Neat dark suit -->
+      <rect x="-16" y="-2" width="32" height="46" rx="4" fill="#2a2a3a" stroke="#222" stroke-width="2"/>
+      <!-- White shirt + dark tie -->
+      <rect x="-4" y="-2" width="8" height="20" fill="white" stroke="none"/>
+      <rect x="-2" y="2" width="4" height="16" fill="#333" stroke="none"/>
+      <!-- Composed arms at sides -->
+      <line x1="-16" y1="8" x2="-22" y2="36" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="16" y1="8" x2="22" y2="36" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="-22" cy="38" r="4" fill="#d0b098" stroke="#222" stroke-width="1.2"/>
+      <circle cx="22" cy="38" r="4" fill="#d0b098" stroke="#222" stroke-width="1.2"/>
+      <!-- Legs -->
+      <line x1="-6" y1="44" x2="-6" y2="72" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="6" y1="44" x2="6" y2="72" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="-8" cy="74" rx="7" ry="3.5" fill="#222" stroke="#111" stroke-width="1.2"/>
+      <ellipse cx="8" cy="74" rx="7" ry="3.5" fill="#222" stroke="#111" stroke-width="1.2"/>
+    </g>
+
+    <g id="pilman-head-base">
+      <!-- Clean-shaven, composed face -->
+      <ellipse cx="0" cy="-8" rx="17" ry="20" fill="#d0b098" stroke="#222" stroke-width="2"/>
+      <!-- Grey hair — neatly combed -->
+      <path d="M-14,-22 Q-8,-30 0,-28 Q8,-30 14,-22 Q16,-16 14,-14 L-14,-14 Q-16,-16 -14,-22 Z"
+            fill="#999" stroke="#888" stroke-width="1.2"/>
+      <!-- Dark glasses (KEY identifier) — rectangular, dark -->
+      <rect x="-13" y="-14" width="11" height="8" rx="2" fill="#333" stroke="#222" stroke-width="1.5"/>
+      <rect x="4" y="-14" width="11" height="8" rx="2" fill="#333" stroke="#222" stroke-width="1.5"/>
+      <line x1="-2" y1="-10" x2="4" y2="-10" stroke="#222" stroke-width="1.5"/>
+      <line x1="-13" y1="-10" x2="-16" y2="-12" stroke="#222" stroke-width="1.2"/>
+      <line x1="15" y1="-10" x2="18" y2="-12" stroke="#222" stroke-width="1.2"/>
+      <!-- Small straight nose -->
+      <line x1="1" y1="-3" x2="0" y2="2" stroke="#222" stroke-width="1" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <text x="300" y="22" font-size="14" font-weight="bold" text-anchor="middle" fill="#222" font-family="'Courier New', monospace">DR. PILMAN — 5 Expressions (Prologue, Ch3)</text>
+
+  <!-- 1. COMPOSED/INTELLECTUAL — default, radio interview -->
+  <g id="pilman-composed" transform="translate(60, 95)">
+    <use href="#pilman-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#pilman-head-base"/>
+      <!-- Eyes hidden behind dark glasses — mouth conveys expression -->
+      <!-- Slight confident smile -->
+      <path d="M-4,5 Q0,7 4,5" fill="none" stroke="#222" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="95" class="label">composed</text>
+    <text x="0" y="106" class="sublabel">intellectual, default</text>
+  </g>
+
+  <!-- 2. SARDONIC — "roadside picnic" metaphor delivery -->
+  <g id="pilman-sardonic" transform="translate(180, 95)">
+    <use href="#pilman-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#pilman-head-base"/>
+      <!-- Head slightly tilted -->
+      <!-- Asymmetric knowing smirk -->
+      <path d="M-3,5 Q2,9 6,6" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="95" class="label">sardonic</text>
+    <text x="0" y="106" class="sublabel">wry, knowing</text>
+  </g>
+
+  <!-- 3. DISMISSIVE — about stalkers, about mysteries -->
+  <g id="pilman-dismissive" transform="translate(300, 95)">
+    <use href="#pilman-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#pilman-head-base"/>
+      <!-- Slightly turned head -->
+      <!-- Flat unimpressed mouth -->
+      <line x1="-4" y1="6" x2="4" y2="6" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- One hand raised dismissively -->
+    </g>
+    <text x="0" y="95" class="label">dismissive</text>
+    <text x="0" y="106" class="sublabel">flat, unimpressed</text>
+  </g>
+
+  <!-- 4. THOUGHTFUL/GRAVE — deeper discussion with Noonan -->
+  <g id="pilman-grave" transform="translate(420, 95)">
+    <use href="#pilman-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#pilman-head-base"/>
+      <!-- Downturned serious mouth -->
+      <path d="M-4,6 Q0,4 4,6" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Chin touching gesture (hand near face) -->
+    </g>
+    <text x="0" y="95" class="label">grave</text>
+    <text x="0" y="106" class="sublabel">thoughtful, serious</text>
+  </g>
+
+  <!-- 5. AMUSED/WARM — rare genuine warmth with Noonan -->
+  <g id="pilman-amused" transform="translate(540, 95)">
+    <use href="#pilman-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#pilman-head-base"/>
+      <!-- Genuine open smile — rare -->
+      <path d="M-5,4 Q0,10 5,4" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Slight crinkle lines at glasses edges -->
+      <line x1="-14" y1="-7" x2="-16" y2="-6" stroke="#b89878" stroke-width="0.8"/>
+      <line x1="16" y1="-7" x2="18" y2="-6" stroke="#b89878" stroke-width="0.8"/>
+    </g>
+    <text x="0" y="95" class="label">amused</text>
+    <text x="0" y="106" class="sublabel">warm, genuine smile</text>
+  </g>
+</svg>

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250">
+  <!-- DINA BURBRIDGE — Character Sheet
+       4 data-driven expressions (Ch2 only, one scene)
+       Key identifiers: stunning beauty, raven hair, emerald eyes, tanned,
+       large wet mouth, minuscule bathing suit
+       REVEAL: Zone-affected like Monkey — "a plastic fake, a dummy" -->
+  <style>
+    text { font-family: 'Courier New', monospace; }
+    .label { font-size: 11px; font-weight: bold; text-anchor: middle; fill: #333; }
+    .sublabel { font-size: 9px; text-anchor: middle; fill: #888; }
+  </style>
+
+  <defs>
+    <g id="dina-body">
+      <!-- Provocative posture — confident stance -->
+      <path d="M-14,-4 Q-16,8 -14,28 Q-12,36 -10,44 L10,44 Q12,36 14,28 Q16,8 14,-4 Z"
+            fill="#c44040" stroke="#222" stroke-width="2"/>
+      <!-- Tanned skin showing — low neckline -->
+      <path d="M-8,-6 L0,6 L8,-6" fill="#c89870" stroke="#222" stroke-width="1.2"/>
+      <!-- Slim arms -->
+      <line x1="-16" y1="4" x2="-22" y2="32" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="16" y1="4" x2="22" y2="32" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="-22" cy="34" r="3.5" fill="#c89870" stroke="#222" stroke-width="1"/>
+      <circle cx="22" cy="34" r="3.5" fill="#c89870" stroke="#222" stroke-width="1"/>
+      <!-- Long legs -->
+      <line x1="-6" y1="44" x2="-6" y2="70" stroke="#c89870" stroke-width="3" stroke-linecap="round"/>
+      <line x1="6" y1="44" x2="6" y2="70" stroke="#c89870" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="-7" cy="72" rx="6" ry="3" fill="#c44040" stroke="#222" stroke-width="1"/>
+      <ellipse cx="7" cy="72" rx="6" ry="3" fill="#c44040" stroke="#222" stroke-width="1"/>
+    </g>
+
+    <g id="dina-head-base">
+      <!-- Beautiful face — tanned -->
+      <ellipse cx="0" cy="-8" rx="17" ry="20" fill="#c89870" stroke="#222" stroke-width="2"/>
+      <!-- Raven hair — long, shining, flowing -->
+      <path d="M-18,-20 Q-22,-8 -24,6 Q-26,20 -20,32 L-16,12 Q-16,-4 -14,-14 Z"
+            fill="#1a0a1a" stroke="#111" stroke-width="1.5"/>
+      <path d="M18,-20 Q22,-8 24,6 Q26,20 20,32 L16,12 Q16,-4 14,-14 Z"
+            fill="#1a0a1a" stroke="#111" stroke-width="1.5"/>
+      <path d="M-14,-24 Q-6,-30 0,-28 Q6,-30 14,-24 Q16,-16 14,-14 L-14,-14 Q-16,-16 -14,-24 Z"
+            fill="#1a0a1a" stroke="#111" stroke-width="1.5"/>
+      <!-- Small nose -->
+      <path d="M0,-3 L-2,2 Q0,3 2,2 Z" fill="#b88060" stroke="#222" stroke-width="0.8"/>
+      <!-- Large defined lips (KEY: "large wet mouth") -->
+      <path d="M-6,5 Q-3,3 0,5 Q3,3 6,5" fill="none" stroke="#a44" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M-5,6 Q0,9 5,6" fill="#c55" stroke="#a44" stroke-width="1" opacity="0.6"/>
+    </g>
+  </defs>
+
+  <text x="250" y="22" font-size="14" font-weight="bold" text-anchor="middle" fill="#222" font-family="'Courier New', monospace">DINA BURBRIDGE — 4 Expressions (Ch2)</text>
+
+  <!-- 1. AMUSED/PROVOCATIVE — flirting with Red -->
+  <g id="dina-provocative" transform="translate(70, 95)">
+    <use href="#dina-body"/>
+    <g transform="translate(0, -55)">
+      <use href="#dina-head-base"/>
+      <!-- Emerald eyes (KEY) — half-lidded, alluring -->
+      <ellipse cx="-6" cy="-8" rx="3.5" ry="2.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-8" rx="3.5" ry="2.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-6" cy="-8" r="2" fill="#2a8a4a"/>
+      <circle cx="8" cy="-8" r="2" fill="#2a8a4a"/>
+      <!-- Arched knowing brows -->
+      <path d="M-10,-14 Q-6,-17 -2,-14" fill="none" stroke="#1a0a1a" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M4,-14 Q8,-17 12,-14" fill="none" stroke="#1a0a1a" stroke-width="1.3" stroke-linecap="round"/>
+      <!-- Knowing smile -->
+      <path d="M-4,6 Q0,10 4,6" fill="none" stroke="#a44" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="88" class="label">provocative</text>
+    <text x="0" y="99" class="sublabel">flirting, amused</text>
+  </g>
+
+  <!-- 2. FROZEN SMILE — hearing about father -->
+  <g id="dina-frozen" transform="translate(190, 95)">
+    <use href="#dina-body"/>
+    <g transform="translate(0, -55)">
+      <use href="#dina-head-base"/>
+      <!-- Wide fixed eyes -->
+      <ellipse cx="-6" cy="-8" rx="3.5" ry="3" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-8" rx="3.5" ry="3" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-6" cy="-8" r="2" fill="#2a8a4a"/>
+      <circle cx="8" cy="-8" r="2" fill="#2a8a4a"/>
+      <!-- Level stiff brows -->
+      <line x1="-10" y1="-14" x2="-2" y2="-14" stroke="#1a0a1a" stroke-width="1.3" stroke-linecap="round"/>
+      <line x1="4" y1="-14" x2="12" y2="-14" stroke="#1a0a1a" stroke-width="1.3" stroke-linecap="round"/>
+      <!-- Frozen forced smile — stiff -->
+      <path d="M-4,6 Q0,8 4,6" fill="none" stroke="#a44" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="88" class="label">frozen</text>
+    <text x="0" y="99" class="sublabel">stiff smile, mask</text>
+  </g>
+
+  <!-- 3. FURIOUS/SCREAMING — "He's got all of you idiots!" -->
+  <g id="dina-furious" transform="translate(310, 95)">
+    <use href="#dina-body"/>
+    <g transform="translate(0, -55)">
+      <use href="#dina-head-base"/>
+      <!-- Wild angry eyes -->
+      <ellipse cx="-6" cy="-8" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-8" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-6" cy="-8" r="2" fill="#2a8a4a"/>
+      <circle cx="8" cy="-8" r="2" fill="#2a8a4a"/>
+      <!-- Hard V brows -->
+      <line x1="-10" y1="-16" x2="-2" y2="-13" stroke="#1a0a1a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4" y1="-13" x2="12" y2="-16" stroke="#1a0a1a" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Screaming open mouth -->
+      <ellipse cx="0" cy="7" rx="5" ry="4" fill="#833" stroke="#222" stroke-width="1.5"/>
+      <!-- Teeth -->
+      <line x1="-3" y1="5" x2="3" y2="5" stroke="white" stroke-width="1.5"/>
+    </g>
+    <text x="0" y="88" class="label">furious</text>
+    <text x="0" y="99" class="sublabel">screaming, ranting</text>
+  </g>
+
+  <!-- 4. DEFEATED/SLUMPED — after Red slaps her -->
+  <g id="dina-defeated" transform="translate(430, 95)">
+    <use href="#dina-body"/>
+    <g transform="translate(0, -55)">
+      <use href="#dina-head-base"/>
+      <!-- Downcast eyes -->
+      <ellipse cx="-6" cy="-8" rx="3" ry="2" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-8" rx="3" ry="2" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-7" cy="-7" r="1.5" fill="#2a8a4a"/>
+      <circle cx="7" cy="-7" r="1.5" fill="#2a8a4a"/>
+      <!-- Sagging brows -->
+      <line x1="-10" y1="-13" x2="-2" y2="-14" stroke="#1a0a1a" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="4" y1="-14" x2="12" y2="-13" stroke="#1a0a1a" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- Trembling frown -->
+      <path d="M-4,7 Q0,5 4,7" fill="none" stroke="#a44" stroke-width="1.3" stroke-linecap="round"/>
+      <!-- Red mark on cheek -->
+      <ellipse cx="10" cy="-2" rx="3" ry="2" fill="#d66" opacity="0.4"/>
+    </g>
+    <text x="0" y="88" class="label">defeated</text>
+    <text x="0" y="99" class="sublabel">slumped, slapped</text>
+  </g>
+</svg>

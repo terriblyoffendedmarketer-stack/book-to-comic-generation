@@ -1,0 +1,505 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900">
+  <!-- RED SCHUHART — Character Sheet
+       20 data-driven expressions from book inventory
+       Style: Persepolis/XKCD — simple line art, strong identifiers
+       Key identifiers: red messy hair, green jacket, cigarette, squinting eyes, stocky build
+       Usage: each <g id="red-EXPRESSION"> is a standalone character for panel embedding -->
+  <style>
+    text { font-family: 'Courier New', monospace; }
+    .label { font-size: 11px; font-weight: bold; text-anchor: middle; fill: #333; }
+    .sublabel { font-size: 9px; text-anchor: middle; fill: #888; }
+  </style>
+
+  <defs>
+    <!-- Reusable body parts -->
+    <!-- Green jacket torso -->
+    <g id="red-body-standing">
+      <rect x="-25" y="0" width="50" height="55" rx="4" fill="#3a5a3a" stroke="#222" stroke-width="2"/>
+      <!-- Jacket collar -->
+      <path d="M-10,0 L0,12 L10,0" fill="none" stroke="#222" stroke-width="1.5"/>
+      <!-- Arms at sides -->
+      <line x1="-25" y1="12" x2="-35" y2="45" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+      <line x1="25" y1="12" x2="35" y2="45" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+      <!-- Hands -->
+      <circle cx="-35" cy="47" r="5" fill="#e0b088" stroke="#222" stroke-width="1.5"/>
+      <circle cx="35" cy="47" r="5" fill="#e0b088" stroke="#222" stroke-width="1.5"/>
+      <!-- Legs -->
+      <line x1="-10" y1="55" x2="-12" y2="85" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+      <line x1="10" y1="55" x2="12" y2="85" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+      <!-- Boots -->
+      <ellipse cx="-14" cy="88" rx="10" ry="5" fill="#333" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="14" cy="88" rx="10" ry="5" fill="#333" stroke="#222" stroke-width="1.5"/>
+    </g>
+
+    <!-- Red's messy red hair (consistent across all expressions) -->
+    <g id="red-hair">
+      <path d="M-18,-18 Q-12,-32 -5,-28 Q0,-35 8,-30 Q14,-36 20,-28 Q24,-32 25,-18" fill="#c44" stroke="#a33" stroke-width="1.5"/>
+    </g>
+
+    <!-- Head base -->
+    <g id="red-head-base">
+      <circle cx="0" cy="-8" r="22" fill="#e0b088" stroke="#222" stroke-width="2"/>
+      <use href="#red-hair"/>
+      <!-- Stubble -->
+      <g opacity="0.3">
+        <circle cx="-8" cy="6" r="0.7" fill="#666"/>
+        <circle cx="-4" cy="8" r="0.7" fill="#666"/>
+        <circle cx="0" cy="9" r="0.7" fill="#666"/>
+        <circle cx="4" cy="8" r="0.7" fill="#666"/>
+        <circle cx="8" cy="6" r="0.7" fill="#666"/>
+      </g>
+      <!-- Nose -->
+      <path d="M-2,-4 L0,2 L3,2" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Cigarette addon -->
+    <g id="cigarette">
+      <line x1="10" y1="4" x2="26" y2="1" stroke="#eee" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="27" cy="0" r="2" fill="#f80" opacity="0.8"/>
+      <!-- Smoke wisp -->
+      <path d="M28,-2 Q30,-6 28,-10 Q30,-14 32,-16" fill="none" stroke="#aaa" stroke-width="0.8" opacity="0.5"/>
+    </g>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="25" font-size="16" font-weight="bold" text-anchor="middle" fill="#222" font-family="'Courier New', monospace">RED SCHUHART — 20 Expressions (Data-Driven from Book)</text>
+
+  <!-- ROW 1: expressions 1-5 -->
+
+  <!-- 1. AMUSED/SMIRKING — Ch1: teasing Kirill about the full empty -->
+  <g id="red-amused" transform="translate(100, 130)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Squinting eyes with crinkle -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1.5" fill="#222"/>
+      <circle cx="8" cy="-10" r="1.5" fill="#222"/>
+      <!-- Smirk — asymmetric upturn -->
+      <path d="M-7,4 Q0,6 5,4 Q8,2 12,0" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Relaxed brows -->
+      <line x1="-12" y1="-15" x2="-2" y2="-14" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="4" y1="-14" x2="14" y2="-15" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <use href="#cigarette"/>
+    </g>
+    <text x="0" y="108" class="label">amused</text>
+    <text x="0" y="119" class="sublabel">smirking, teasing</text>
+  </g>
+
+  <!-- 2. DETERMINED/FOCUSED — Ch1: Zone expedition, Ch4: stalker mode -->
+  <g id="red-determined" transform="translate(260, 130)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Tight squint -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1.2" fill="#222"/>
+      <circle cx="8" cy="-10" r="1.2" fill="#222"/>
+      <!-- Tight flat mouth -->
+      <line x1="-6" y1="4" x2="8" y2="4" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <!-- Low flat brows — pressed down -->
+      <line x1="-12" y1="-14" x2="-2" y2="-14" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <line x1="4" y1="-14" x2="14" y2="-14" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="108" class="label">determined</text>
+    <text x="0" y="119" class="sublabel">focused, jaw set</text>
+  </g>
+
+  <!-- 3. SCARED/SWEATING — Ch1: mosquito mange, silver web -->
+  <g id="red-scared" transform="translate(420, 130)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Wide eyes -->
+      <ellipse cx="-6" cy="-10" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-10" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-6" cy="-9.5" r="2" fill="#222"/>
+      <circle cx="8" cy="-9.5" r="2" fill="#222"/>
+      <!-- Brows up and apart -->
+      <line x1="-12" y1="-18" x2="-3" y2="-16" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5" y1="-16" x2="14" y2="-18" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Slightly open mouth -->
+      <ellipse cx="1" cy="5" rx="5" ry="3" fill="#222" stroke="#222" stroke-width="1"/>
+      <!-- Sweat drops -->
+      <path d="M-18,-5 L-20,-1 L-16,-1 Z" fill="#6bf" opacity="0.7"/>
+      <path d="M20,-8 L18,-4 L22,-4 Z" fill="#6bf" opacity="0.5"/>
+    </g>
+    <text x="0" y="108" class="label">scared</text>
+    <text x="0" y="119" class="sublabel">sweating, wide-eyed</text>
+  </g>
+
+  <!-- 4. IRRITABLE/WOUND-UP — Ch1: snapping at Tender -->
+  <g id="red-irritable" transform="translate(580, 130)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Tight angry squint -->
+      <line x1="-10" y1="-9" x2="-2" y2="-11" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="4" y1="-11" x2="12" y2="-9" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1.3" fill="#222"/>
+      <circle cx="8" cy="-10" r="1.3" fill="#222"/>
+      <!-- V-shaped furrowed brows -->
+      <line x1="-12" y1="-16" x2="-3" y2="-13" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <line x1="5" y1="-13" x2="14" y2="-16" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <!-- Grimace -->
+      <path d="M-7,4 Q-3,2 1,4 Q5,6 9,3" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <use href="#cigarette"/>
+    </g>
+    <text x="0" y="108" class="label">irritable</text>
+    <text x="0" y="119" class="sublabel">wound-up, snapping</text>
+  </g>
+
+  <!-- 5. SARCASTIC/DEFLECTING — Ch1: with Herzog, Ch2: with Noonan -->
+  <g id="red-sarcastic" transform="translate(740, 130)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- One eyebrow raised, one flat -->
+      <line x1="-12" y1="-17" x2="-3" y2="-15" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="4" y1="-16" x2="14" y2="-19" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Squinting but asymmetric -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1.3" fill="#222"/>
+      <circle cx="8" cy="-10" r="1.5" fill="#222"/>
+      <!-- Half-smirk, one corner up -->
+      <path d="M-7,4 Q-2,5 2,4 Q6,2 10,0" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"/>
+      <use href="#cigarette"/>
+    </g>
+    <text x="0" y="108" class="label">sarcastic</text>
+    <text x="0" y="119" class="sublabel">deflecting, wry</text>
+  </g>
+
+  <!-- 6. RELIEVED — Ch1: shower after Zone -->
+  <g id="red-relieved" transform="translate(900, 130)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Half-closed relaxed eyes -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <!-- Relaxed brows, slightly up -->
+      <line x1="-11" y1="-16" x2="-3" y2="-15" stroke="#a33" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="5" y1="-15" x2="13" y2="-16" stroke="#a33" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- Slight soft smile -->
+      <path d="M-5,4 Q1,7 7,4" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="108" class="label">relieved</text>
+    <text x="0" y="119" class="sublabel">exhaling, relaxed</text>
+  </g>
+
+  <!-- 7. ANGRY/RAGE — Ch1: at Ernest after Kirill's death -->
+  <g id="red-angry" transform="translate(1060, 130)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Glaring eyes -->
+      <ellipse cx="-6" cy="-10" rx="3.5" ry="3" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-10" rx="3.5" ry="3" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-5" cy="-10" r="2" fill="#222"/>
+      <circle cx="9" cy="-10" r="2" fill="#222"/>
+      <!-- Hard V brows -->
+      <line x1="-13" y1="-18" x2="-3" y2="-13" stroke="#a33" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="5" y1="-13" x2="15" y2="-18" stroke="#a33" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Yelling mouth -->
+      <path d="M-8,2 Q-4,0 1,2 Q6,4 10,2" fill="none" stroke="#222" stroke-width="1.5"/>
+      <path d="M-6,3 L-6,8 Q1,11 8,8 L8,3" fill="#411" stroke="#222" stroke-width="1.5"/>
+      <!-- Teeth -->
+      <line x1="-3" y1="4" x2="-3" y2="6" stroke="white" stroke-width="1.5"/>
+      <line x1="1" y1="4" x2="1" y2="6" stroke="white" stroke-width="1.5"/>
+      <line x1="5" y1="4" x2="5" y2="6" stroke="white" stroke-width="1.5"/>
+    </g>
+    <text x="0" y="108" class="label">angry</text>
+    <text x="0" y="119" class="sublabel">rage, yelling</text>
+  </g>
+
+  <!-- 8. GRIEF-STRICKEN — Ch1: Kirill's death -->
+  <g id="red-grief" transform="translate(1220, 130)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Squeezing-shut eyes -->
+      <path d="M-10,-10 Q-6,-8 -2,-10" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <path d="M4,-10 Q8,-8 12,-10" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <!-- Brows up and strained -->
+      <line x1="-12" y1="-17" x2="-3" y2="-14" stroke="#a33" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="5" y1="-14" x2="14" y2="-17" stroke="#a33" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Trembling downturn mouth -->
+      <path d="M-6,4 Q1,8 8,4" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <!-- Tear track -->
+      <line x1="-7" y1="-7" x2="-8" y2="0" stroke="#6bf" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+    </g>
+    <text x="0" y="108" class="label">grief</text>
+    <text x="0" y="119" class="sublabel">stricken, eyes shut</text>
+  </g>
+
+  <!-- ROW 2: expressions 9-14 -->
+
+  <!-- 9. TENDER/VULNERABLE — Ch1: with Guta, Ch2: with Monkey -->
+  <g id="red-tender" transform="translate(100, 310)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Soft half-closed eyes -->
+      <path d="M-10,-10 Q-6,-7 -2,-10" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <path d="M4,-10 Q8,-7 12,-10" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="-6" cy="-9" r="1" fill="#222"/>
+      <circle cx="8" cy="-9" r="1" fill="#222"/>
+      <!-- Gentle raised brows -->
+      <line x1="-11" y1="-16" x2="-3" y2="-15" stroke="#a33" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="5" y1="-15" x2="13" y2="-16" stroke="#a33" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- Gentle smile -->
+      <path d="M-5,3 Q1,7 7,3" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="108" class="label">tender</text>
+    <text x="0" y="119" class="sublabel">vulnerable, soft</text>
+  </g>
+
+  <!-- 10. COLD/CALCULATING — Ch2: dragging Burbridge, dealing with Throaty -->
+  <g id="red-cold" transform="translate(260, 310)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Narrow intense eyes -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="2.8" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="2.8" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1" fill="#222"/>
+      <circle cx="8" cy="-10" r="1" fill="#222"/>
+      <!-- Flat low brows -->
+      <line x1="-12" y1="-14" x2="-2" y2="-14" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <line x1="4" y1="-14" x2="14" y2="-14" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <!-- Thin tight line mouth -->
+      <line x1="-5" y1="4" x2="7" y2="4" stroke="#222" stroke-width="1.8" stroke-linecap="round"/>
+      <use href="#cigarette"/>
+    </g>
+    <text x="0" y="108" class="label">cold</text>
+    <text x="0" y="119" class="sublabel">calculating, flat</text>
+  </g>
+
+  <!-- 11. DISGUSTED — Ch2: at Burbridge's begging -->
+  <g id="red-disgusted" transform="translate(420, 310)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Squinting, slightly turned -->
+      <line x1="-10" y1="-10" x2="-3" y2="-10" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="4" y1="-11" x2="12" y2="-9" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1.3" fill="#222"/>
+      <circle cx="8" cy="-10" r="1.3" fill="#222"/>
+      <!-- One brow up, one furrowed -->
+      <line x1="-12" y1="-16" x2="-3" y2="-14" stroke="#a33" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="5" y1="-15" x2="14" y2="-18" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Curled lip / sneer -->
+      <path d="M-5,3 Q-2,6 1,3 Q4,1 8,4" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="108" class="label">disgusted</text>
+    <text x="0" y="119" class="sublabel">sneering, revulsed</text>
+  </g>
+
+  <!-- 12. EXHAUSTED/WEARY — Ch2: arriving home, cab ride -->
+  <g id="red-exhausted" transform="translate(580, 310)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Drooping half-closed eyes -->
+      <path d="M-10,-10 Q-6,-8 -2,-10" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <path d="M4,-10 Q8,-8 12,-10" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="-6" cy="-9" r="1" fill="#222"/>
+      <circle cx="8" cy="-9" r="1" fill="#222"/>
+      <!-- Drooping brows -->
+      <line x1="-12" y1="-14" x2="-3" y2="-15" stroke="#a33" stroke-width="1.3" stroke-linecap="round"/>
+      <line x1="5" y1="-15" x2="14" y2="-14" stroke="#a33" stroke-width="1.3" stroke-linecap="round"/>
+      <!-- Slack mouth -->
+      <path d="M-5,4 Q1,5 7,4" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Under-eye circles -->
+      <path d="M-9,-7 Q-6,-5 -3,-7" fill="none" stroke="#999" stroke-width="0.8" opacity="0.5"/>
+      <path d="M5,-7 Q8,-5 11,-7" fill="none" stroke="#999" stroke-width="0.8" opacity="0.5"/>
+    </g>
+    <text x="0" y="108" class="label">exhausted</text>
+    <text x="0" y="119" class="sublabel">weary, dark circles</text>
+  </g>
+
+  <!-- 13. PLAYFUL/AFFECTIONATE — Ch2: with Guta in kitchen -->
+  <g id="red-playful" transform="translate(740, 310)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Crinkled happy eyes -->
+      <path d="M-10,-10 Q-6,-7 -2,-10" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M4,-10 Q8,-7 12,-10" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Raised playful brows -->
+      <line x1="-12" y1="-17" x2="-3" y2="-15" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5" y1="-15" x2="14" y2="-17" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Grin -->
+      <path d="M-7,3 Q1,9 9,3" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="108" class="label">playful</text>
+    <text x="0" y="119" class="sublabel">affectionate, grin</text>
+  </g>
+
+  <!-- 14. BUSINESSLIKE/TENSE — Ch2: Throaty deal -->
+  <g id="red-businesslike" transform="translate(900, 310)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Direct stare -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1.5" fill="#222"/>
+      <circle cx="8" cy="-10" r="1.5" fill="#222"/>
+      <!-- Flat neutral brows -->
+      <line x1="-12" y1="-15" x2="-3" y2="-15" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5" y1="-15" x2="14" y2="-15" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Neutral thin mouth -->
+      <line x1="-5" y1="4" x2="7" y2="4" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+      <use href="#cigarette"/>
+    </g>
+    <text x="0" y="108" class="label">businesslike</text>
+    <text x="0" y="119" class="sublabel">tense, direct</text>
+  </g>
+
+  <!-- 15. DEFIANT/FURIOUS — Ch2: arrest — "Snakes! Skunks!" -->
+  <g id="red-defiant" transform="translate(1060, 310)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Glaring eyes, slightly wider than angry -->
+      <ellipse cx="-6" cy="-10" rx="3" ry="2.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-10" rx="3" ry="2.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-5" cy="-10" r="1.8" fill="#222"/>
+      <circle cx="9" cy="-10" r="1.8" fill="#222"/>
+      <!-- Steep V brows -->
+      <line x1="-13" y1="-17" x2="-3" y2="-13" stroke="#a33" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="5" y1="-13" x2="15" y2="-17" stroke="#a33" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Snarl showing teeth -->
+      <path d="M-7,2 Q-4,0 0,2 Q4,4 9,2" fill="none" stroke="#222" stroke-width="1.5"/>
+      <line x1="-4" y1="3" x2="-4" y2="6" stroke="white" stroke-width="1.5"/>
+      <line x1="1" y1="4" x2="1" y2="6" stroke="white" stroke-width="1.5"/>
+      <line x1="6" y1="3" x2="6" y2="6" stroke="white" stroke-width="1.5"/>
+    </g>
+    <text x="0" y="108" class="label">defiant</text>
+    <text x="0" y="119" class="sublabel">furious, snarling</text>
+  </g>
+
+  <!-- 16. RESOURCEFUL/DESPERATE — Ch2: escape through cellar -->
+  <g id="red-desperate" transform="translate(1220, 310)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Wide alert eyes -->
+      <ellipse cx="-6" cy="-10" rx="3.5" ry="3" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-10" rx="3.5" ry="3" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-5" cy="-10" r="1.8" fill="#222"/>
+      <circle cx="9" cy="-10" r="1.8" fill="#222"/>
+      <!-- Furrowed but raised brows (strained) -->
+      <line x1="-13" y1="-18" x2="-3" y2="-14" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <line x1="5" y1="-14" x2="15" y2="-18" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <!-- Grimace -->
+      <path d="M-6,3 Q-2,6 1,3 Q5,1 8,3" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <!-- Sweat -->
+      <path d="M-19,-3 L-21,1 L-17,1 Z" fill="#6bf" opacity="0.6"/>
+    </g>
+    <text x="0" y="108" class="label">desperate</text>
+    <text x="0" y="119" class="sublabel">resourceful, tense</text>
+  </g>
+
+  <!-- ROW 3: expressions 17-20 -->
+
+  <!-- 17. RESIGNED/DECISIVE — Ch2: phone calls before surrender -->
+  <g id="red-resigned" transform="translate(100, 490)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Half-closed steady eyes -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1.2" fill="#222"/>
+      <circle cx="8" cy="-10" r="1.2" fill="#222"/>
+      <!-- Flat, slight droop brows -->
+      <line x1="-12" y1="-14" x2="-3" y2="-15" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5" y1="-15" x2="14" y2="-14" stroke="#a33" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Flat mouth, slight downturn -->
+      <path d="M-5,4 Q1,5 7,4" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="108" class="label">resigned</text>
+    <text x="0" y="119" class="sublabel">decisive, calm</text>
+  </g>
+
+  <!-- 18. GUARDED — Ch3: Burbridge visiting -->
+  <g id="red-guarded" transform="translate(260, 490)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Watchful narrow eyes -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="2.8" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="2.8" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1" fill="#222"/>
+      <circle cx="8" cy="-10" r="1" fill="#222"/>
+      <!-- Flat brows, slight tension -->
+      <line x1="-12" y1="-14" x2="-2" y2="-14" stroke="#a33" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4" y1="-14" x2="14" y2="-14" stroke="#a33" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tight closed mouth -->
+      <line x1="-5" y1="4" x2="7" y2="4" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <use href="#cigarette"/>
+    </g>
+    <text x="0" y="108" class="label">guarded</text>
+    <text x="0" y="119" class="sublabel">watchful, closed</text>
+  </g>
+
+  <!-- 19. GRIM/DISPASSIONATE — Ch4: treating Arthur as "talking key" -->
+  <g id="red-grim" transform="translate(420, 490)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Cold stare, tight eyes -->
+      <line x1="-10" y1="-10" x2="-2" y2="-10" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="4" y1="-10" x2="12" y2="-10" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="-6" cy="-10" r="1" fill="#222"/>
+      <circle cx="8" cy="-10" r="1" fill="#222"/>
+      <!-- Low pressed brows -->
+      <line x1="-12" y1="-13" x2="-2" y2="-13" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <line x1="4" y1="-13" x2="14" y2="-13" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <!-- Tight frown -->
+      <path d="M-5,5 Q1,3 7,5" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="108" class="label">grim</text>
+    <text x="0" y="119" class="sublabel">dispassionate, cold</text>
+  </g>
+
+  <!-- 20. ANGUISHED/HOPEFUL — Ch4: at the Golden Ball, final prayer -->
+  <g id="red-anguished" transform="translate(580, 490)">
+    <use href="#red-body-standing"/>
+    <g transform="translate(0, -55)">
+      <use href="#red-head-base"/>
+      <!-- Wide strained eyes, glistening -->
+      <ellipse cx="-6" cy="-10" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-10" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-6" cy="-10" r="2.2" fill="#222"/>
+      <circle cx="8" cy="-10" r="2.2" fill="#222"/>
+      <!-- Light reflection for glistening -->
+      <circle cx="-4" cy="-11" r="0.8" fill="white"/>
+      <circle cx="10" cy="-11" r="0.8" fill="white"/>
+      <!-- Strained up brows -->
+      <line x1="-13" y1="-19" x2="-3" y2="-15" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <line x1="5" y1="-15" x2="15" y2="-19" stroke="#a33" stroke-width="2" stroke-linecap="round"/>
+      <!-- Open, struggling mouth -->
+      <ellipse cx="1" cy="5" rx="6" ry="4" fill="#522" stroke="#222" stroke-width="1.5"/>
+    </g>
+    <text x="0" y="108" class="label">anguished</text>
+    <text x="0" y="119" class="sublabel">hopeful, pleading</text>
+  </g>
+
+  <!-- EXPRESSION MAP KEY -->
+  <g transform="translate(800, 490)">
+    <rect x="-10" y="-20" width="520" height="120" rx="5" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+    <text x="250" y="0" font-size="12" font-weight="bold" text-anchor="middle" fill="#222" font-family="'Courier New', monospace">EXPRESSION MAP — What Changes Per Face</text>
+    <text x="10" y="20" font-size="10" fill="#555" font-family="'Courier New', monospace">EYEBROWS: angle → mood (V=angry, raised=surprise, flat=calm)</text>
+    <text x="10" y="35" font-size="10" fill="#555" font-family="'Courier New', monospace">EYES: line=squint(default), circles=open, arcs=closed/soft</text>
+    <text x="10" y="50" font-size="10" fill="#555" font-family="'Courier New', monospace">MOUTH: line=neutral, curve-up=happy, curve-down=sad, open=yelling</text>
+    <text x="10" y="65" font-size="10" fill="#555" font-family="'Courier New', monospace">EXTRAS: sweat=fear, circles-under=tired, tears=grief, teeth=rage</text>
+    <text x="10" y="85" font-size="10" fill="#888" font-family="'Courier New', monospace">KEY IDENTIFIERS (always present): red hair, stubble, green jacket</text>
+    <text x="10" y="95" font-size="10" fill="#888" font-family="'Courier New', monospace">CIGARETTE: present in amused, irritable, sarcastic, cold, guarded, businesslike</text>
+  </g>
+</svg>

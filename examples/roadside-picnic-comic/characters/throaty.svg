@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250">
+  <!-- THROATY (HUGH) — Character Sheet
+       4 data-driven expressions (Ch2 hotel deal scene)
+       Key identifiers: puffy face, thinning hair, pajamas, cigar,
+       "clear blue angelic eyes" that NEVER blink -->
+  <style>
+    text { font-family: 'Courier New', monospace; }
+    .label { font-size: 11px; font-weight: bold; text-anchor: middle; fill: #333; }
+    .sublabel { font-size: 9px; text-anchor: middle; fill: #888; }
+  </style>
+
+  <defs>
+    <g id="throaty-body">
+      <!-- Pajama top — striped, loose -->
+      <rect x="-18" y="-2" width="36" height="44" rx="5" fill="#c8b8d0" stroke="#222" stroke-width="2"/>
+      <!-- Pajama stripes -->
+      <line x1="-10" y1="-2" x2="-10" y2="42" stroke="#b0a0c0" stroke-width="1"/>
+      <line x1="0" y1="-2" x2="0" y2="42" stroke="#b0a0c0" stroke-width="1"/>
+      <line x1="10" y1="-2" x2="10" y2="42" stroke="#b0a0c0" stroke-width="1"/>
+      <!-- Open collar -->
+      <path d="M-8,-2 L0,8 L8,-2" fill="#d8b8a0" stroke="#222" stroke-width="1.2"/>
+      <!-- Chest hair in V -->
+      <path d="M-3,2 L0,6 L3,2" fill="none" stroke="#888" stroke-width="0.8"/>
+      <!-- Arms -->
+      <line x1="-18" y1="8" x2="-24" y2="34" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+      <line x1="18" y1="8" x2="24" y2="34" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="-24" cy="36" r="4.5" fill="#d8b8a0" stroke="#222" stroke-width="1.2"/>
+      <circle cx="24" cy="36" r="4.5" fill="#d8b8a0" stroke="#222" stroke-width="1.2"/>
+      <!-- Cigar in right hand (KEY identifier) -->
+      <rect x="24" y="30" width="14" height="3" rx="1" fill="#8a6a40" stroke="#664" stroke-width="0.8" transform="rotate(-20, 24, 30)"/>
+      <!-- Smoke wisp -->
+      <path d="M36,26 Q38,22 36,18 Q38,14 36,10" fill="none" stroke="#aaa" stroke-width="1" opacity="0.4"/>
+      <!-- Pajama pants -->
+      <line x1="-8" y1="42" x2="-8" y2="68" stroke="#c8b8d0" stroke-width="4" stroke-linecap="round"/>
+      <line x1="8" y1="42" x2="8" y2="68" stroke="#c8b8d0" stroke-width="4" stroke-linecap="round"/>
+      <!-- Slippers -->
+      <ellipse cx="-10" cy="70" rx="8" ry="3.5" fill="#8a6a50" stroke="#222" stroke-width="1"/>
+      <ellipse cx="10" cy="70" rx="8" ry="3.5" fill="#8a6a50" stroke="#222" stroke-width="1"/>
+    </g>
+
+    <g id="throaty-head-base">
+      <!-- Puffy round face -->
+      <circle cx="0" cy="-8" r="20" fill="#d8b8a0" stroke="#222" stroke-width="2"/>
+      <!-- Thinning combed hair -->
+      <path d="M-16,-20 Q-8,-26 0,-24 Q8,-26 16,-20 Q18,-14 16,-12 L-16,-12 Q-18,-14 -16,-20 Z"
+            fill="#8a7a60" stroke="#776" stroke-width="1"/>
+      <!-- Puffy jowls -->
+      <path d="M-16,0 Q-14,6 -10,8" fill="none" stroke="#c8a890" stroke-width="1.2"/>
+      <path d="M16,0 Q14,6 10,8" fill="none" stroke="#c8a890" stroke-width="1.2"/>
+      <!-- Nose — fleshy -->
+      <path d="M0,-4 L-3,2 Q0,4 3,2 Z" fill="#c8a088" stroke="#222" stroke-width="1"/>
+    </g>
+
+    <!-- The EYES — "clear blue angelic eyes" that never blink -->
+    <g id="throaty-eyes-open">
+      <ellipse cx="-7" cy="-8" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="9" cy="-8" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.5"/>
+      <circle cx="-7" cy="-8" r="2.5" fill="#4488cc"/>
+      <circle cx="9" cy="-8" r="2.5" fill="#4488cc"/>
+      <circle cx="-6" cy="-9" r="0.8" fill="white"/>
+      <circle cx="10" cy="-9" r="0.8" fill="white"/>
+    </g>
+  </defs>
+
+  <text x="250" y="22" font-size="14" font-weight="bold" text-anchor="middle" fill="#222" font-family="'Courier New', monospace">THROATY (Hugh) — 4 Expressions (Ch2)</text>
+
+  <!-- 1. HEARTY/PATERNAL — "why do I love you so much, my son?" -->
+  <g id="throaty-paternal" transform="translate(70, 95)">
+    <use href="#throaty-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#throaty-head-base"/>
+      <use href="#throaty-eyes-open"/>
+      <!-- Warm creased brows -->
+      <path d="M-12,-14 Q-8,-16 -4,-13" fill="none" stroke="#8a7a60" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M4,-13 Q8,-16 12,-14" fill="none" stroke="#8a7a60" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- Broad paternal smile -->
+      <path d="M-6,4 Q0,10 6,4" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="88" class="label">paternal</text>
+    <text x="0" y="99" class="sublabel">hearty, "my son"</text>
+  </g>
+
+  <!-- 2. BUSINESSLIKE/CALCULATING — inspecting swag -->
+  <g id="throaty-calculating" transform="translate(190, 95)">
+    <use href="#throaty-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#throaty-head-base"/>
+      <use href="#throaty-eyes-open"/>
+      <!-- Level focused brows -->
+      <line x1="-12" y1="-14" x2="-4" y2="-13" stroke="#8a7a60" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="4" y1="-13" x2="12" y2="-14" stroke="#8a7a60" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Tight evaluating mouth -->
+      <line x1="-4" y1="5" x2="4" y2="5" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="88" class="label">calculating</text>
+    <text x="0" y="99" class="sublabel">inspecting, cold</text>
+  </g>
+
+  <!-- 3. SHARP/INTENSE — asking about porcelain container -->
+  <g id="throaty-intense" transform="translate(310, 95)">
+    <use href="#throaty-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#throaty-head-base"/>
+      <!-- Same unblinking blue eyes but with harder stare -->
+      <ellipse cx="-7" cy="-8" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.8"/>
+      <ellipse cx="9" cy="-8" rx="4" ry="3.5" fill="white" stroke="#222" stroke-width="1.8"/>
+      <circle cx="-7" cy="-8" r="2.8" fill="#4488cc"/>
+      <circle cx="9" cy="-8" r="2.8" fill="#4488cc"/>
+      <circle cx="-6" cy="-9" r="0.6" fill="white"/>
+      <circle cx="10" cy="-9" r="0.6" fill="white"/>
+      <!-- Lowered intense brows -->
+      <line x1="-12" y1="-14" x2="-4" y2="-12" stroke="#8a7a60" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4" y1="-12" x2="12" y2="-14" stroke="#8a7a60" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Pursed demanding mouth -->
+      <path d="M-3,5 Q0,4 3,5" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="88" class="label">intense</text>
+    <text x="0" y="99" class="sublabel">sharp, unblinking</text>
+  </g>
+
+  <!-- 4. AMUSED — at Bones's fright -->
+  <g id="throaty-amused" transform="translate(430, 95)">
+    <use href="#throaty-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#throaty-head-base"/>
+      <use href="#throaty-eyes-open"/>
+      <!-- Relaxed raised brows -->
+      <line x1="-12" y1="-16" x2="-4" y2="-14" stroke="#8a7a60" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="4" y1="-14" x2="12" y2="-16" stroke="#8a7a60" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- Chuckling smile -->
+      <path d="M-5,4 Q0,9 5,4" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="88" class="label">amused</text>
+    <text x="0" y="99" class="sublabel">chuckling, watching</text>
+  </g>
+</svg>
