@@ -78,13 +78,20 @@
   }
   .narrator {
     position: absolute;
-    background: #f8f0d0;
+    background: rgba(248, 240, 208, 0.88);
     border: 2px solid #222;
     padding: 5px 8px;
     font-size: 12px;
     line-height: 1.3;
     z-index: 10;
     max-width: 200px;
+  }
+  .characters {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
   }
   .caption {
     font-family: 'Bangers', cursive;
@@ -356,107 +363,20 @@
   <!-- ROW 3: ENTERING THE ZONE — AI background -->
   <div class="panel-row" style="height: 260px;">
     <div class="panel panel-full">
-      <div class="panel-inner" style="background:url('assets/zone-entrance.png') center/cover no-repeat;">
+      <div class="panel-inner" style="background:url('../assets/zone-entrance.png') center/cover no-repeat;">
         <div class="narrator" style="top:5px;left:5px;max-width:200px;">
           That's it. We were in the Zone. I felt a chill. Each time I feel that chill. And I never know if it's the Zone greeting me or my stalker's nerves.
         </div>
         <div class="narrator" style="bottom:8px;right:8px;max-width:220px;font-size:11px;">
           The houses were chipped and dead. The windows so dirty they looked blind. At night you can see the glow inside—witches' jelly breathing in the cellars.
         </div>
-        <svg viewBox="0 0 680 260" style="display:none;">
-          <!-- THE ZONE — eerie, yellowish-green atmosphere -->
-          <!-- Sky - sickly yellow -->
-          <rect x="0" y="0" width="680" height="260" fill="#aaa87a"/>
-
-          <!-- Dead buildings - Plague Quarter -->
-          <g fill="#8a8878" stroke="#222" stroke-width="1.5">
-            <!-- Row of houses -->
-            <rect x="20" y="40" width="80" height="100"/>
-            <rect x="110" y="50" width="60" height="90"/>
-            <rect x="180" y="30" width="70" height="110"/>
-            <rect x="440" y="45" width="90" height="95"/>
-            <rect x="540" y="35" width="75" height="105"/>
-            <rect x="625" y="55" width="55" height="85"/>
-          </g>
-
-          <!-- Dirty blind windows -->
-          <g fill="#6a6a5a" stroke="#555" stroke-width="0.5">
-            <rect x="30" y="55" width="15" height="18" rx="1"/>
-            <rect x="55" y="55" width="15" height="18" rx="1"/>
-            <rect x="75" y="55" width="15" height="18" rx="1"/>
-            <rect x="30" y="85" width="15" height="18" rx="1"/>
-            <rect x="55" y="85" width="15" height="18" rx="1"/>
-            <rect x="75" y="85" width="15" height="18" rx="1"/>
-            <rect x="120" y="65" width="12" height="15" rx="1"/>
-            <rect x="140" y="65" width="12" height="15" rx="1"/>
-            <rect x="120" y="90" width="12" height="15" rx="1"/>
-            <rect x="190" y="50" width="15" height="18" rx="1"/>
-            <rect x="215" y="50" width="15" height="18" rx="1"/>
-            <rect x="190" y="80" width="15" height="18" rx="1"/>
-            <rect x="215" y="80" width="15" height="18" rx="1"/>
-            <!-- Right side -->
-            <rect x="455" y="60" width="15" height="18" rx="1"/>
-            <rect x="480" y="60" width="15" height="18" rx="1"/>
-            <rect x="505" y="60" width="15" height="18" rx="1"/>
-            <rect x="455" y="90" width="15" height="18" rx="1"/>
-            <rect x="550" y="50" width="15" height="18" rx="1"/>
-            <rect x="575" y="50" width="15" height="18" rx="1"/>
-            <rect x="550" y="80" width="15" height="18" rx="1"/>
-          </g>
-
-          <!-- Faint blue glow in some cellar windows -->
-          <rect x="30" y="125" width="12" height="10" fill="#6688cc" opacity="0.3" rx="1"/>
-          <rect x="120" y="128" width="10" height="8" fill="#6688cc" opacity="0.25" rx="1"/>
-          <rect x="455" y="125" width="12" height="10" fill="#6688cc" opacity="0.3" rx="1"/>
-
-          <!-- Antennas with hairy cotton stuff -->
-          <line x1="60" y1="40" x2="60" y2="10" stroke="#777" stroke-width="1.5"/>
-          <line x1="145" y1="50" x2="145" y2="18" stroke="#777" stroke-width="1.5"/>
-          <line x1="490" y1="45" x2="490" y2="12" stroke="#777" stroke-width="1.5"/>
-          <!-- Cotton growths on antennas -->
-          <ellipse cx="60" cy="18" rx="8" ry="5" fill="#ddd" stroke="#bbb" stroke-width="0.5" opacity="0.7"/>
-          <ellipse cx="145" cy="26" rx="10" ry="6" fill="#ddd" stroke="#bbb" stroke-width="0.5" opacity="0.7"/>
-          <ellipse cx="490" cy="20" rx="9" ry="5" fill="#ddd" stroke="#bbb" stroke-width="0.5" opacity="0.7"/>
-
-          <!-- Street/road down the middle -->
-          <rect x="260" y="130" width="160" height="130" fill="#777766"/>
-          <!-- Cracked asphalt -->
-          <path d="M300,140 L310,170 L305,200 L315,230 L310,260" fill="none" stroke="#555544" stroke-width="1"/>
-          <path d="M380,135 L370,165 L375,195 L365,225" fill="none" stroke="#555544" stroke-width="1"/>
-          <!-- Grass in cracks -->
-          <g stroke="#556633" stroke-width="1" fill="none">
-            <path d="M308,175 L310,168 L312,175"/>
-            <path d="M372,170 L374,163 L376,170"/>
-            <path d="M340,200 L342,193 L344,200"/>
-          </g>
-
-          <!-- Black bramble at Zone boundary — sidewalk -->
-          <g fill="#223322">
-            <ellipse cx="260" cy="155" rx="15" ry="8"/>
-            <ellipse cx="258" cy="170" rx="12" ry="6"/>
-            <ellipse cx="262" cy="185" rx="14" ry="7"/>
-            <ellipse cx="420" cy="155" rx="15" ry="8"/>
-            <ellipse cx="422" cy="170" rx="12" ry="6"/>
-            <ellipse cx="418" cy="185" rx="14" ry="7"/>
-          </g>
-
-          <!-- Pylons along the road -->
-          <rect x="275" y="130" width="4" height="25" fill="#888" stroke="#222" stroke-width="0.5"/>
-          <rect x="275" y="128" width="8" height="5" fill="#c44" stroke="#222" stroke-width="0.5" rx="1"/>
-          <rect x="400" y="130" width="4" height="25" fill="#888" stroke="#222" stroke-width="0.5"/>
-          <rect x="400" y="128" width="8" height="5" fill="#c44" stroke="#222" stroke-width="0.5" rx="1"/>
-
+        <svg class="characters" viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
           <!-- The flying boot (hovercraft) with three figures -->
           <g transform="translate(300,195)">
-            <!-- Boot body -->
             <rect x="0" y="0" width="80" height="20" rx="5" fill="#667788" stroke="#222" stroke-width="2"/>
-            <!-- Rails -->
             <line x1="5" y1="20" x2="5" y2="25" stroke="#222" stroke-width="1.5"/>
             <line x1="75" y1="20" x2="75" y2="25" stroke="#222" stroke-width="1.5"/>
-            <!-- Hover glow underneath -->
             <ellipse cx="40" cy="28" rx="35" ry="4" fill="#aabbcc" opacity="0.3"/>
-
-            <!-- Three tiny suited figures standing in boot -->
             <!-- Red -->
             <g transform="translate(10,-30) scale(0.2)">
               <rect x="12" y="52" width="56" height="65" rx="6" fill="#cc3333" stroke="#222" stroke-width="3"/>
@@ -475,17 +395,6 @@
               <circle cx="40" cy="24" r="28" fill="#cc3333" stroke="#222" stroke-width="3"/>
               <ellipse cx="40" cy="24" rx="18" ry="16" fill="#ddeeff" stroke="#222" stroke-width="2" opacity="0.7"/>
             </g>
-          </g>
-
-          <!-- Eerie haze overlay -->
-          <rect x="0" y="0" width="680" height="260" fill="#aaaa44" opacity="0.06"/>
-
-          <!-- Baby carriage in a driveway - creepy detail -->
-          <g transform="translate(195,118) scale(0.4)">
-            <rect x="0" y="0" width="20" height="15" fill="#aaa" stroke="#888" stroke-width="1" rx="2"/>
-            <circle cx="5" cy="18" r="3" fill="#666" stroke="#444" stroke-width="1"/>
-            <circle cx="15" cy="18" r="3" fill="#666" stroke="#444" stroke-width="1"/>
-            <line x1="20" y1="5" x2="25" y2="-5" stroke="#888" stroke-width="1"/>
           </g>
         </svg>
       </div>

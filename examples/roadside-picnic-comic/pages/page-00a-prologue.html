@@ -83,13 +83,20 @@
   .bubble.no-tail::after, .bubble.no-tail::before { display: none; }
   .narrator {
     position: absolute;
-    background: #f8f0d0;
+    background: rgba(248, 240, 208, 0.88);
     border: 2px solid #222;
     padding: 6px 9px;
     font-size: 12px;
     line-height: 1.3;
     z-index: 10;
     max-width: 220px;
+  }
+  .characters {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
   }
   .caption {
     font-family: 'Bangers', cursive;
@@ -120,41 +127,14 @@
   <!-- ROW 1: Radio studio establishing shot — AI background -->
   <div class="panel-row" style="height: 240px;">
     <div class="panel panel-full">
-      <div class="panel-inner" style="background:url('assets/test-radio-studio.png') center/cover no-repeat;">
+      <div class="panel-inner" style="background:url('../assets/test-radio-studio.png') center/cover no-repeat;">
         <div class="bubble" style="top:8px;left:12px;max-width:250px;font-size:13px;">
           I suppose that your first serious discovery, Dr. Pilman, should be considered what is now called the Pilman Radiant?
         </div>
         <div class="bubble right" style="top:80px;right:12px;max-width:280px;font-size:13px;">
           I don't think so. The Pilman Radiant wasn't the first, nor was it serious, nor was it really a discovery. And it wasn't completely mine, either.
         </div>
-        <svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" style="display:none;">
-          <!-- Studio background -->
-          <rect x="0" y="0" width="680" height="240" fill="#2a3a4a"/>
-          <rect x="0" y="180" width="680" height="60" fill="#1a2a3a"/>
-          <!-- Soundproofing tiles -->
-          <g fill="#3a4a5a" stroke="#2a3a4a" stroke-width="0.5">
-            <rect x="8" y="15" width="22" height="22" rx="2"/>
-            <rect x="8" y="42" width="22" height="22" rx="2"/>
-            <rect x="8" y="69" width="22" height="22" rx="2"/>
-            <rect x="8" y="96" width="22" height="22" rx="2"/>
-            <rect x="650" y="15" width="22" height="22" rx="2"/>
-            <rect x="650" y="42" width="22" height="22" rx="2"/>
-            <rect x="650" y="69" width="22" height="22" rx="2"/>
-            <rect x="650" y="96" width="22" height="22" rx="2"/>
-          </g>
-          <!-- ON AIR sign -->
-          <rect x="290" y="8" width="100" height="26" rx="4" fill="#c44" stroke="#a22" stroke-width="2"/>
-          <text x="340" y="26" text-anchor="middle" font-family="Bangers, cursive" font-size="15" fill="white" letter-spacing="3">ON AIR</text>
-          <!-- Desk -->
-          <rect x="120" y="155" width="440" height="12" fill="#445566" stroke="#222" stroke-width="1.5" rx="1"/>
-          <!-- Mics -->
-          <line x1="230" y1="155" x2="230" y2="130" stroke="#666" stroke-width="2.5"/>
-          <circle cx="230" cy="124" r="9" fill="#555" stroke="#222" stroke-width="1.5"/>
-          <line x1="225" y1="122" x2="235" y2="122" stroke="#777" stroke-width="0.5"/>
-          <line x1="225" y1="126" x2="235" y2="126" stroke="#777" stroke-width="0.5"/>
-          <line x1="450" y1="155" x2="450" y2="132" stroke="#666" stroke-width="2.5"/>
-          <circle cx="450" cy="126" r="8" fill="#555" stroke="#222" stroke-width="1.5"/>
-
+        <svg class="characters" viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg">
           <!-- INTERVIEWER - left, small eager man in suit -->
           <g transform="translate(150,60) scale(0.65)">
             <rect x="15" y="55" width="50" height="55" rx="3" fill="#334455" stroke="#222" stroke-width="2"/>
@@ -195,65 +175,13 @@
   <!-- ROW 2: The Pilman Radiant diagram — AI background -->
   <div class="panel-row" style="height: 280px;">
     <div class="panel panel-full">
-      <div class="panel-inner" style="background:url('assets/pilman-radiant-v2.png') center/cover no-repeat;">
+      <div class="panel-inner" style="background:url('../assets/pilman-radiant-v2.png') center/cover no-repeat;">
         <div class="bubble right" style="top:6px;right:10px;max-width:250px;font-size:13px;">
           Imagine you spin a huge globe and start firing bullets into it. The holes would lie in a smooth curve.
         </div>
         <div class="narrator" style="bottom:8px;left:8px;max-width:280px;font-size:12px;">
           All six Visitation Zones are situated on the surface of our planet as though someone had taken six shots at Earth from a pistol located somewhere along the Earth-Deneb line.
         </div>
-        <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="display:none;">
-          <!-- Deep space background -->
-          <rect x="0" y="0" width="680" height="280" fill="#0a0e1a"/>
-          <!-- Stars -->
-          <circle cx="30" cy="20" r="1" fill="#fff" opacity="0.6"/>
-          <circle cx="120" cy="45" r="0.8" fill="#fff" opacity="0.4"/>
-          <circle cx="200" cy="15" r="1.2" fill="#fff" opacity="0.5"/>
-          <circle cx="580" cy="30" r="1" fill="#fff" opacity="0.5"/>
-          <circle cx="650" cy="60" r="0.7" fill="#fff" opacity="0.4"/>
-          <circle cx="500" cy="18" r="1.5" fill="#fff" opacity="0.6"/>
-          <circle cx="60" cy="250" r="0.8" fill="#fff" opacity="0.3"/>
-          <circle cx="620" cy="220" r="1" fill="#fff" opacity="0.4"/>
-          <circle cx="400" cy="260" r="0.7" fill="#fff" opacity="0.3"/>
-          <circle cx="150" cy="200" r="1" fill="#fff" opacity="0.5"/>
-
-          <!-- Deneb star - top left area -->
-          <circle cx="100" cy="40" r="4" fill="#ffffcc" opacity="0.9"/>
-          <circle cx="100" cy="40" r="8" fill="#ffffcc" opacity="0.2"/>
-          <text x="100" y="22" text-anchor="middle" font-family="Patrick Hand, cursive" font-size="14" fill="#ffdd88" font-weight="bold">DENEB ★</text>
-
-          <!-- Earth - large, center -->
-          <circle cx="380" cy="160" r="85" fill="#2a5a8a" stroke="#1a3a5a" stroke-width="2"/>
-          <!-- Continents -->
-          <ellipse cx="380" cy="160" rx="85" ry="30" fill="none" stroke="#3a7aaa" stroke-width="0.8" opacity="0.5"/>
-          <ellipse cx="380" cy="160" rx="55" ry="85" fill="none" stroke="#3a7aaa" stroke-width="0.8" opacity="0.5"/>
-          <path d="M320,120 Q340,115 360,125 Q370,130 365,140 Q355,135 340,138 Q325,135 320,120Z" fill="#4a8a4a" opacity="0.6"/>
-          <path d="M390,100 Q420,105 430,120 Q435,135 425,140 Q410,130 395,125 Q388,115 390,100Z" fill="#4a8a4a" opacity="0.6"/>
-          <path d="M350,160 Q370,155 390,162 Q400,170 395,182 Q380,178 360,180 Q345,175 350,160Z" fill="#4a8a4a" opacity="0.6"/>
-          <path d="M410,160 Q430,155 440,170 Q438,185 420,188 Q410,180 410,160Z" fill="#4a8a4a" opacity="0.5"/>
-
-          <!-- Six Visitation Zones - red dots -->
-          <circle cx="340" cy="118" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
-          <circle cx="395" cy="108" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
-          <circle cx="355" cy="155" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
-          <circle cx="425" cy="145" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
-          <circle cx="370" cy="190" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
-          <circle cx="410" cy="178" r="5" fill="#ff3333" stroke="#ff6666" stroke-width="1.5"/>
-
-          <!-- Curve connecting zones -->
-          <path d="M340,118 Q365,100 395,108 Q420,120 425,145 Q420,170 410,178 Q390,195 370,190 Q350,180 355,155" fill="none" stroke="#ffaa44" stroke-width="2" stroke-dasharray="5,3"/>
-
-          <!-- Line from Deneb to Earth -->
-          <line x1="105" y1="45" x2="330" y2="115" stroke="#ffaa44" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.7"/>
-          <polygon points="325,112 335,118 328,120" fill="#ffaa44" opacity="0.7"/>
-
-          <!-- Labels -->
-          <text x="380" y="258" text-anchor="middle" font-family="Bangers, cursive" font-size="14" fill="#ffaa44" letter-spacing="2">THE PILMAN RADIANT</text>
-          <text x="480" cy="108" text-anchor="start" font-family="Patrick Hand, cursive" font-size="11" fill="#ff6666">
-            <tspan x="455" y="96">Six Visitation</tspan>
-            <tspan x="465" y="110">Zones</tspan>
-          </text>
-        </svg>
       </div>
     </div>
   </div>

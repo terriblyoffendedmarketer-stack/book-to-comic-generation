@@ -77,13 +77,20 @@
   }
   .narrator {
     position: absolute;
-    background: #f8f0d0;
+    background: rgba(248, 240, 208, 0.88);
     border: 2px solid #222;
     padding: 6px 9px;
     font-size: 12px;
     line-height: 1.3;
     z-index: 10;
     max-width: 240px;
+  }
+  .characters {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
   }
   .bold { font-weight: bold; }
   .italic { font-style: italic; }
@@ -218,79 +225,17 @@
   <!-- ROW 3: Stalker at the Zone fence — AI-generated background -->
   <div class="panel-row" style="height: 200px;">
     <div class="panel panel-full">
-      <div class="panel-inner" style="background:url('assets/stalker-fence.png') center/cover no-repeat;">
+      <div class="panel-inner" style="background:url('../assets/stalker-fence.png') center/cover no-repeat;">
         <div class="narrator" style="top:8px;left:10px;max-width:200px;font-size:12px;">
           And the stalkers keep going back.
         </div>
-        <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="display:none;">
-          <!-- Night sky -->
-          <rect x="0" y="0" width="680" height="200" fill="#0c1428"/>
-          <!-- Stars -->
-          <circle cx="50" cy="15" r="1.2" fill="#fff" opacity="0.6"/>
-          <circle cx="140" cy="28" r="0.8" fill="#fff" opacity="0.4"/>
-          <circle cx="250" cy="10" r="1.5" fill="#fff" opacity="0.7"/>
-          <circle cx="380" cy="22" r="1" fill="#fff" opacity="0.5"/>
-          <circle cx="500" cy="8" r="1.3" fill="#fff" opacity="0.6"/>
-          <circle cx="600" cy="30" r="0.9" fill="#fff" opacity="0.4"/>
-          <circle cx="90" cy="40" r="0.7" fill="#fff" opacity="0.3"/>
-          <circle cx="320" cy="35" r="1" fill="#fff" opacity="0.5"/>
-          <circle cx="550" cy="15" r="1.1" fill="#fff" opacity="0.5"/>
-          <circle cx="440" cy="42" r="0.8" fill="#fff" opacity="0.3"/>
-
-          <!-- Eerie Zone glow beyond fence -->
-          <rect x="0" y="70" width="680" height="130" fill="#0c1428"/>
-          <ellipse cx="340" cy="100" rx="340" ry="60" fill="#1a3520" opacity="0.5"/>
-          <ellipse cx="340" cy="105" rx="280" ry="40" fill="#1d4a28" opacity="0.4"/>
-          <ellipse cx="340" cy="110" rx="200" ry="25" fill="#256b30" opacity="0.3"/>
-
-          <!-- Ground -->
-          <rect x="0" y="140" width="680" height="60" fill="#1a1a2a"/>
-          <rect x="0" y="138" width="680" height="4" fill="#2a2a3a"/>
-
-          <!-- Fence posts -->
-          <g stroke="#444" stroke-width="3">
-            <line x1="40" y1="70" x2="40" y2="142"/>
-            <line x1="130" y1="70" x2="130" y2="142"/>
-            <line x1="220" y1="70" x2="220" y2="142"/>
-            <line x1="310" y1="70" x2="310" y2="142"/>
-            <line x1="400" y1="70" x2="400" y2="142"/>
-            <line x1="490" y1="70" x2="490" y2="142"/>
-            <line x1="580" y1="70" x2="580" y2="142"/>
-            <line x1="660" y1="70" x2="660" y2="142"/>
-          </g>
-          <!-- Barbed wire -->
-          <g stroke="#666" stroke-width="1.5" fill="none">
-            <path d="M40,80 L130,78 L220,81 L310,78 L400,80 L490,79 L580,81 L660,78"/>
-            <path d="M40,95 L130,93 L220,96 L310,93 L400,95 L490,94 L580,96 L660,93"/>
-            <path d="M40,110 L130,108 L220,111 L310,108 L400,110 L490,109 L580,111 L660,108"/>
-          </g>
-          <!-- Barb details -->
-          <g stroke="#888" stroke-width="1">
-            <line x1="85" y1="76" x2="88" y2="73"/>
-            <line x1="85" y1="76" x2="82" y2="73"/>
-            <line x1="175" y1="80" x2="178" y2="77"/>
-            <line x1="175" y1="80" x2="172" y2="77"/>
-            <line x1="355" y1="77" x2="358" y2="74"/>
-            <line x1="355" y1="77" x2="352" y2="74"/>
-            <line x1="535" y1="80" x2="538" y2="77"/>
-            <line x1="535" y1="80" x2="532" y2="77"/>
-          </g>
-
-          <!-- WARNING sign -->
-          <rect x="265" y="82" width="80" height="22" rx="1" fill="#cc3333" stroke="#222" stroke-width="1.5"/>
-          <text x="305" y="98" text-anchor="middle" font-family="Bangers, cursive" font-size="12" fill="white" letter-spacing="1.5">DANGER — ZONE</text>
-
+        <svg class="characters" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
           <!-- Stalker silhouette crawling under fence -->
           <g fill="#0a0a15" stroke="none">
-            <!-- Body low, crawling -->
             <ellipse cx="480" cy="138" rx="28" ry="10"/>
-            <!-- Backpack -->
             <rect x="470" y="122" width="20" height="16" rx="3" fill="#0a0a15"/>
-            <!-- Head -->
             <circle cx="510" cy="132" r="8" fill="#0a0a15"/>
-            <!-- Arms reaching forward -->
             <line x1="515" y1="136" x2="530" y2="140" stroke="#0a0a15" stroke-width="4" stroke-linecap="round"/>
-            <!-- Legs behind -->
             <line x1="455" y1="140" x2="440" y2="148" stroke="#0a0a15" stroke-width="4" stroke-linecap="round"/>
             <line x1="460" y1="138" x2="445" y2="144" stroke="#0a0a15" stroke-width="3.5" stroke-linecap="round"/>
           </g>

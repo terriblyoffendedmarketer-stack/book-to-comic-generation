@@ -98,13 +98,20 @@
   }
   .narrator {
     position: absolute;
-    background: #f8f0d0;
+    background: rgba(248, 240, 208, 0.88);
     border: 2px solid #222;
     padding: 6px 9px;
     font-size: 12px;
     line-height: 1.3;
     z-index: 10;
     max-width: 240px;
+  }
+  .characters {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
   }
   .sfx {
     position: absolute;
@@ -279,7 +286,7 @@
   <!-- ROW 3: THE SHIMMER — full width, AI background -->
   <div class="panel-row" style="height: 260px;">
     <div class="panel panel-full">
-      <div class="panel-inner" style="background:url('assets/zone-shimmer.png') center/cover no-repeat;">
+      <div class="panel-inner" style="background:url('../assets/zone-shimmer.png') center/cover no-repeat;">
         <div class="narrator" style="top:6px;left:8px;max-width:260px;font-size:12px;">
           <span style="font-style:italic;">Trrr... trrr... trrr...</span><br>
           A sound like a slow crackling. Then Red saw it — a shimmering in the air, crawling over the refuse heap. Not heat haze. Something else.
@@ -293,56 +300,13 @@
         <div class="bubble right" style="bottom:8px;right:10px;max-width:230px;font-size:12px;">
           The devil knows. It was, and now it's gone. Thank God.
         </div>
-        <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" style="display:none;">
-          <!-- Zone atmosphere — sickly, oppressive -->
-          <rect x="0" y="0" width="680" height="260" fill="#6a7a4a"/>
-          <!-- Haze bands -->
-          <rect x="0" y="0" width="680" height="60" fill="#7a8a5a" opacity="0.5"/>
-          <!-- Ground — refuse dump -->
-          <rect x="0" y="160" width="680" height="100" fill="#6a5a3a"/>
-          <!-- Scattered refuse -->
-          <g fill="#5a4a2a" opacity="0.5">
-            <rect x="40" y="170" width="18" height="8" rx="1" transform="rotate(12,49,174)"/>
-            <rect x="120" y="175" width="14" height="6" rx="1" transform="rotate(-8,127,178)"/>
-            <circle cx="200" cy="180" r="5"/>
-            <rect x="280" y="172" width="20" height="7" rx="1"/>
-            <rect x="400" y="168" width="12" height="5" rx="1" transform="rotate(20,406,170)"/>
-            <circle cx="500" cy="178" r="4"/>
-            <rect x="560" y="174" width="16" height="6" rx="1" transform="rotate(-15,568,177)"/>
-            <rect x="620" y="170" width="10" height="4" rx="1"/>
-          </g>
-          <!-- Broken glass glints -->
-          <g fill="#aabb88" opacity="0.3">
-            <polygon points="90,168 94,165 98,169 93,172"/>
-            <polygon points="350,170 354,167 358,171 353,174"/>
-            <polygon points="500,166 505,163 508,168"/>
-          </g>
-
-          <!-- THE SHIMMER — the terrifying distortion -->
-          <!-- Rippling, heat-haze-like distortion in the center -->
-          <g opacity="0.6">
-            <ellipse cx="340" cy="140" rx="80" ry="50" fill="none" stroke="#aabb88" stroke-width="2" stroke-dasharray="4,3"/>
-            <ellipse cx="340" cy="140" rx="60" ry="35" fill="none" stroke="#bbcc99" stroke-width="1.5" stroke-dasharray="3,4"/>
-            <ellipse cx="340" cy="140" rx="40" ry="20" fill="none" stroke="#ccdd99" stroke-width="1" stroke-dasharray="2,5"/>
-          </g>
-          <!-- Shimmer core — barely visible distortion -->
-          <ellipse cx="340" cy="140" rx="50" ry="30" fill="#7a8a5a" opacity="0.3"/>
-          <ellipse cx="340" cy="140" rx="30" ry="18" fill="#8a9a6a" opacity="0.2"/>
-          <!-- Ripple lines radiating out -->
-          <g stroke="#99aa77" stroke-width="0.8" fill="none" opacity="0.5">
-            <path d="M280,130 Q310,120 340,125 Q370,120 400,130"/>
-            <path d="M290,145 Q320,138 340,140 Q360,138 390,145"/>
-            <path d="M300,155 Q325,150 340,152 Q355,150 380,155"/>
-          </g>
-
-          <!-- Boot with three figures, frozen -->
+        <svg class="characters" viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+          <!-- Boot with three figures, frozen in terror -->
           <g transform="translate(80,100)">
             <rect x="-30" y="0" width="60" height="18" rx="6" fill="#777" stroke="#222" stroke-width="1.5"/>
-            <!-- Three heads in helmets, frozen still -->
             <circle cx="-15" cy="-8" r="9" fill="#cc5555" stroke="#222" stroke-width="1.5"/>
             <circle cx="0" cy="-10" r="9" fill="#cc5555" stroke="#222" stroke-width="1.5"/>
             <circle cx="15" cy="-8" r="9" fill="#cc5555" stroke="#222" stroke-width="1.5"/>
-            <!-- Eyes wide, staring -->
             <circle cx="-17" cy="-9" r="1.5" fill="#222"/>
             <circle cx="-13" cy="-9" r="1.5" fill="#222"/>
             <circle cx="-2" cy="-11" r="1.5" fill="#222"/>
@@ -350,9 +314,6 @@
             <circle cx="13" cy="-9" r="1.5" fill="#222"/>
             <circle cx="17" cy="-9" r="1.5" fill="#222"/>
           </g>
-
-          <!-- SFX: the crackling sound -->
-          <text x="420" y="110" font-family="Bangers, cursive" font-size="22" fill="#334422" letter-spacing="4" opacity="0.7" transform="rotate(-3,420,110)">TRRR... TRRR...</text>
         </svg>
       </div>
     </div>
