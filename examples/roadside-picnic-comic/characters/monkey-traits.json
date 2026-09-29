@@ -1,0 +1,37 @@
+[
+  {
+    "name": "hair_color",
+    "expected": "golden tawny messy hair, not black or brown",
+    "priority": "critical"
+  },
+  {
+    "name": "eye_appearance",
+    "expected": "huge oversized dark eyes with NO whites visible at all — entirely dark/black orbs",
+    "priority": "critical"
+  },
+  {
+    "name": "cheek_fur",
+    "expected": "plump cheeks covered in soft golden fur/fleece — visible texture on face",
+    "priority": "critical"
+  },
+  {
+    "name": "body_type",
+    "expected": "small toddler, plump, child-sized",
+    "priority": "important"
+  },
+  {
+    "name": "outfit",
+    "expected": "pink dress with peter pan collar, red mary jane shoes",
+    "priority": "important"
+  },
+  {
+    "name": "overall_vibe",
+    "expected": "slightly inhuman, eerie cute — not a normal-looking child, something is subtly wrong",
+    "priority": "important"
+  },
+  {
+    "name": "art_style",
+    "expected": "flat cel-shaded, clean outlines, comic book style, solid color fills",
+    "priority": "important"
+  }
+]

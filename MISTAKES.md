@@ -91,7 +91,23 @@ to produce AND easier to read.
 and reuse it across 2-4 panels with only the speech bubbles changing. This is standard
 comic practice and massively reduces asset creation.
 
-## Mistake 10: Starting from scratch each session
+## Mistake 10: Trusting diffusion model prompt adherence
+**What happened**: Gave SDXL a precise prompt for Monkey character — "golden tawny messy
+hair, huge dark black eyes with no whites visible, plump cheeks covered in golden fur."
+The model produced: black hair, normal eyes with whites, no visible fur. Every defining
+trait was ignored.
+**Why it was wrong**: Assumed a well-written prompt would produce a well-matched image.
+Diffusion models have strong training priors — "cute toddler" overrides unusual features.
+CLIP can't process negation ("no whites"). Rare feature combinations get dropped.
+This means NO prompt, no matter how perfect, will reliably produce unusual characters.
+**Do instead**: Never trust a single generation. Use a verification loop:
+generate → score each trait with Claude vision → retry with adjusted prompt if any
+critical trait fails → inpaint as fallback. The key insight: Claude vision is far
+better at RECOGNIZING traits than SDXL is at GENERATING them. Verification is reliable;
+generation is not. Budget 2-5 attempts per character, not 1.
+See APPROACH.md Step 3a for the full verification loop architecture.
+
+## Mistake 11: Starting from scratch each session
 **What happened**: Context loss between chat sessions meant re-deriving decisions already made.
 **Why it was wrong**: Wasted tokens and time on the same dead ends.
 **Do instead**: This file exists. Read it. The CLAUDE.md has the current state. The

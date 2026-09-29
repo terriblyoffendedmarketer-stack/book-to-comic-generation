@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300">
+  <!-- MONKEY (MARIA SCHUHART) v2 — Improved art direction
+       "huge dark eyes that had no whites at all"
+       "plump little cheek covered with silky golden fleece"
+       "warm golden fur" on back, child-sized, increasingly alien
+       Ch2: bubbly toddler. Ch3: silent hollow shell. -->
+  <style>
+    text { font-family: 'Courier New', monospace; }
+    .label { font-size: 11px; font-weight: bold; text-anchor: middle; fill: #333; }
+    .sublabel { font-size: 9px; text-anchor: middle; fill: #888; }
+  </style>
+
+  <defs>
+    <!-- Soft golden fur texture patch (reusable) -->
+    <pattern id="fur-texture" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M0,3 Q1,0 2,3 Q3,6 4,3 Q5,0 6,3" fill="none" stroke="#c89830" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+
+    <g id="monkey2-body">
+      <!-- Small child body in pink dress with peter pan collar -->
+      <path d="M-14,-6 Q-18,8 -20,28 Q-18,40 -12,46 L12,46 Q18,40 20,28 Q18,8 14,-6 Z"
+            fill="#e8a0b0" stroke="#c48090" stroke-width="1.5"/>
+      <!-- Dress pleats -->
+      <path d="M-8,20 L-10,44" fill="none" stroke="#d090a0" stroke-width="0.8"/>
+      <path d="M0,16 L0,44" fill="none" stroke="#d090a0" stroke-width="0.8"/>
+      <path d="M8,20 L10,44" fill="none" stroke="#d090a0" stroke-width="0.8"/>
+      <!-- Peter pan collar -->
+      <path d="M-14,-6 Q-8,-2 0,0 Q8,-2 14,-6" fill="white" stroke="#ddd" stroke-width="1"/>
+      <path d="M-10,-5 Q-5,-1 0,-0.5" fill="none" stroke="#eee" stroke-width="0.5"/>
+      <path d="M10,-5 Q5,-1 0,-0.5" fill="none" stroke="#eee" stroke-width="0.5"/>
+      <!-- Small arms — golden fur visible on forearms -->
+      <path d="M-18,4 Q-24,14 -22,26" fill="none" stroke="#b08040" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M18,4 Q24,14 22,26" fill="none" stroke="#b08040" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- Fur texture on arms -->
+      <path d="M-20,12 Q-22,16 -21,20" fill="none" stroke="#d4a840" stroke-width="1" opacity="0.5"/>
+      <path d="M20,12 Q22,16 21,20" fill="none" stroke="#d4a840" stroke-width="1" opacity="0.5"/>
+      <!-- Hands — distinctly furry, golden, with tiny fingers -->
+      <ellipse cx="-22" cy="28" rx="5" ry="4" fill="#d4a840" stroke="#b08030" stroke-width="1"/>
+      <path d="M-26,26 L-28,24" stroke="#b08030" stroke-width="1" stroke-linecap="round"/>
+      <path d="M-24,25 L-25,22" stroke="#b08030" stroke-width="1" stroke-linecap="round"/>
+      <ellipse cx="22" cy="28" rx="5" ry="4" fill="#d4a840" stroke="#b08030" stroke-width="1"/>
+      <path d="M26,26 L28,24" stroke="#b08030" stroke-width="1" stroke-linecap="round"/>
+      <path d="M24,25 L25,22" stroke="#b08030" stroke-width="1" stroke-linecap="round"/>
+      <!-- Short child legs with golden fur showing -->
+      <path d="M-7,46 L-8,62 Q-8,66 -12,68" fill="none" stroke="#b08040" stroke-width="3" stroke-linecap="round"/>
+      <path d="M7,46 L8,62 Q8,66 12,68" fill="none" stroke="#b08040" stroke-width="3" stroke-linecap="round"/>
+      <!-- Little red mary-jane shoes -->
+      <path d="M-16,66 Q-12,72 -6,68" fill="#c44040" stroke="#a33030" stroke-width="1.2"/>
+      <circle cx="-12" cy="67" r="1" fill="#a33030"/>
+      <path d="M16,66 Q12,72 6,68" fill="#c44040" stroke="#a33030" stroke-width="1.2"/>
+      <circle cx="12" cy="67" r="1" fill="#a33030"/>
+    </g>
+
+    <g id="monkey2-head-base">
+      <!-- Round child face — slightly larger proportions (toddler) -->
+      <circle cx="0" cy="0" r="24" fill="#e8c8a8" stroke="#c8a888" stroke-width="1.5"/>
+      <!-- Golden fleece on cheeks — the key Zone-affected feature -->
+      <path d="M-18,4 Q-22,8 -20,14 Q-16,18 -12,14 Q-14,8 -16,4 Z"
+            fill="#d4a840" stroke="none" opacity="0.35"/>
+      <path d="M18,4 Q22,8 20,14 Q16,18 12,14 Q14,8 16,4 Z"
+            fill="#d4a840" stroke="none" opacity="0.35"/>
+      <!-- Fine fur wisps on cheeks -->
+      <path d="M-16,6 Q-18,9 -17,12" fill="none" stroke="#c89830" stroke-width="0.6" opacity="0.5"/>
+      <path d="M-14,8 Q-16,11 -15,14" fill="none" stroke="#c89830" stroke-width="0.6" opacity="0.4"/>
+      <path d="M16,6 Q18,9 17,12" fill="none" stroke="#c89830" stroke-width="0.6" opacity="0.5"/>
+      <path d="M14,8 Q16,11 15,14" fill="none" stroke="#c89830" stroke-width="0.6" opacity="0.4"/>
+      <!-- Hair — golden-tawny, messy toddler wisps -->
+      <path d="M-18,-14 Q-14,-28 -4,-26 Q4,-30 10,-26 Q18,-24 20,-14 Q22,-8 18,-6
+             L14,-10 Q8,-18 0,-16 Q-8,-18 -14,-10 L-18,-6 Q-22,-8 -18,-14 Z"
+            fill="#c89830" stroke="#a87820" stroke-width="1.2"/>
+      <!-- Hair wisps sticking up -->
+      <path d="M-6,-26 Q-8,-32 -4,-34" fill="none" stroke="#a87820" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M4,-28 Q2,-34 6,-36" fill="none" stroke="#a87820" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M-2,-26 Q0,-33 2,-30" fill="none" stroke="#b88828" stroke-width="1" stroke-linecap="round"/>
+      <!-- Small upturned nose -->
+      <path d="M-2,4 Q0,7 2,4" fill="#d8b898" stroke="#c8a888" stroke-width="0.8"/>
+      <circle cx="-1" cy="5" r="0.8" fill="#c8a080"/>
+      <circle cx="1" cy="5" r="0.8" fill="#c8a080"/>
+    </g>
+  </defs>
+
+  <text x="280" y="22" font-size="14" font-weight="bold" text-anchor="middle" fill="#222" font-family="'Courier New', monospace">MONKEY v2 — 4 Expressions (improved art direction)</text>
+
+  <!-- 1. JOYFUL/CHATTERING — Ch2 morning, full of life -->
+  <g id="monkey2-joyful" transform="translate(75, 110)">
+    <use href="#monkey2-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#monkey2-head-base"/>
+      <!-- THE EYES: huge, dark, NO whites — but alive, sparkling -->
+      <ellipse cx="-8" cy="-4" rx="8" ry="8" fill="#0a0500" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="10" cy="-4" rx="8" ry="8" fill="#0a0500" stroke="#222" stroke-width="1.5"/>
+      <!-- Life in the eyes — warm amber reflections -->
+      <ellipse cx="-6" cy="-6" rx="2.5" ry="2" fill="#4a3010" opacity="0.6"/>
+      <ellipse cx="12" cy="-6" rx="2.5" ry="2" fill="#4a3010" opacity="0.6"/>
+      <circle cx="-5" cy="-7" r="1.2" fill="#887040" opacity="0.5"/>
+      <circle cx="13" cy="-7" r="1.2" fill="#887040" opacity="0.5"/>
+      <!-- Wide happy mouth — showing tiny teeth -->
+      <path d="M-6,10 Q0,18 6,10" fill="#a03030" stroke="#802020" stroke-width="1"/>
+      <path d="M-4,10 Q0,11 4,10" fill="white" stroke="none"/>
+      <!-- Rosy happiness -->
+      <circle cx="-14" cy="6" r="4" fill="#e0a090" opacity="0.25"/>
+      <circle cx="14" cy="6" r="4" fill="#e0a090" opacity="0.25"/>
+    </g>
+    <text x="0" y="92" class="label">joyful</text>
+    <text x="0" y="103" class="sublabel">chattering, alive</text>
+  </g>
+
+  <!-- 2. DEMANDING — "Kiss me!" arms up -->
+  <g id="monkey2-demanding" transform="translate(215, 110)">
+    <use href="#monkey2-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#monkey2-head-base"/>
+      <!-- Big insistent dark eyes — slightly narrowed, determined -->
+      <ellipse cx="-8" cy="-4" rx="8" ry="7" fill="#0a0500" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="10" cy="-4" rx="8" ry="7" fill="#0a0500" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="-6" cy="-6" rx="2" ry="1.5" fill="#4a3010" opacity="0.5"/>
+      <ellipse cx="12" cy="-6" rx="2" ry="1.5" fill="#4a3010" opacity="0.5"/>
+      <!-- Pouty demanding mouth — lower lip pushed out -->
+      <path d="M-4,10 Q0,13 4,10" fill="#c08080" stroke="#a06060" stroke-width="1"/>
+      <path d="M-3,12 Q0,15 3,12" fill="#b87070" stroke="none"/>
+      <!-- Slight crinkle between eyes (willful) -->
+      <line x1="-1" y1="-10" x2="1" y2="-10" stroke="#c8a888" stroke-width="1" opacity="0.5"/>
+    </g>
+    <text x="0" y="92" class="label">demanding</text>
+    <text x="0" y="103" class="sublabel">"Kiss me!", pouty</text>
+  </g>
+
+  <!-- 3. SILENT/UNRECOGNIZING — Ch3, no longer human -->
+  <g id="monkey2-silent" transform="translate(355, 110)">
+    <use href="#monkey2-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#monkey2-head-base"/>
+      <!-- Same huge eyes but VOID — deeper black, no reflections -->
+      <ellipse cx="-8" cy="-4" rx="8" ry="8" fill="#020000" stroke="#111" stroke-width="2"/>
+      <ellipse cx="10" cy="-4" rx="8" ry="8" fill="#020000" stroke="#111" stroke-width="2"/>
+      <!-- Absolute nothing — no light, no life -->
+      <!-- Mouth barely a line — slack -->
+      <path d="M-3,11 Q0,12 3,11" fill="none" stroke="#a08878" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- Heavier fur — Ch3 deterioration, more golden patches -->
+      <path d="M-18,2 Q-22,6 -20,12 Q-16,16 -12,12" fill="#c89830" stroke="none" opacity="0.25"/>
+      <path d="M18,2 Q22,6 20,12 Q16,16 12,12" fill="#c89830" stroke="none" opacity="0.25"/>
+      <path d="M-16,4 Q-19,8 -18,12" fill="none" stroke="#b88828" stroke-width="0.8" opacity="0.6"/>
+      <path d="M-14,6 Q-17,10 -16,14" fill="none" stroke="#b88828" stroke-width="0.8" opacity="0.5"/>
+      <path d="M16,4 Q19,8 18,12" fill="none" stroke="#b88828" stroke-width="0.8" opacity="0.6"/>
+      <path d="M14,6 Q17,10 16,14" fill="none" stroke="#b88828" stroke-width="0.8" opacity="0.5"/>
+    </g>
+    <text x="0" y="92" class="label">silent</text>
+    <text x="0" y="103" class="sublabel">void eyes, gone</text>
+  </g>
+
+  <!-- 4. LEANING/COMFORT — against grandfather, animal warmth -->
+  <g id="monkey2-leaning" transform="translate(495, 110)">
+    <use href="#monkey2-body"/>
+    <g transform="translate(0, -52)">
+      <use href="#monkey2-head-base"/>
+      <!-- Half-closed dark eyes — like a cat settling -->
+      <ellipse cx="-8" cy="-3" rx="8" ry="4.5" fill="#0a0500" stroke="#222" stroke-width="1.5"/>
+      <ellipse cx="10" cy="-3" rx="8" ry="4.5" fill="#0a0500" stroke="#222" stroke-width="1.5"/>
+      <!-- Faintest warm glow — not human recognition, animal comfort -->
+      <ellipse cx="-6" cy="-4" rx="1.5" ry="1" fill="#3a2010" opacity="0.4"/>
+      <ellipse cx="12" cy="-4" rx="1.5" ry="1" fill="#3a2010" opacity="0.4"/>
+      <!-- Slightly relaxed mouth -->
+      <path d="M-3,10 Q0,13 3,10" fill="none" stroke="#b09888" stroke-width="1" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="92" class="label">leaning</text>
+    <text x="0" y="103" class="sublabel">half-closed, settling</text>
+  </g>
+</svg>

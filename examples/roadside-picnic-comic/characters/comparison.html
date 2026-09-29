@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Monkey Character — 3-Way Comparison</title>
+<style>
+body { background: #1a1a1a; color: #eee; font-family: system-ui; margin: 0; padding: 20px; }
+h1 { text-align: center; font-size: 24px; margin-bottom: 30px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; max-width: 1400px; margin: 0 auto; }
+.card { background: #2a2a2a; border-radius: 12px; padding: 16px; text-align: center; }
+.card h2 { font-size: 16px; margin: 0 0 4px 0; color: #fff; }
+.card p { font-size: 12px; color: #888; margin: 0 0 12px 0; }
+.card img, .card object { width: 100%; height: 400px; object-fit: contain; background: #fff; border-radius: 8px; }
+.verdict { margin-top: 8px; font-size: 13px; color: #aaa; }
+</style>
+</head>
+<body>
+<h1>Monkey (Maria Schuhart) — Character Art Comparison</h1>
+<div class="grid">
+  <div class="card">
+    <h2>v1: Hand-coded SVG</h2>
+    <p>Claude-written geometric shapes, modular defs</p>
+    <img src="monkey-v2.svg" alt="Hand-coded SVG">
+    <div class="verdict">Geometric primitives. Flat, simple, limited detail.</div>
+  </div>
+  <div class="card">
+    <h2>v2: DrawThings SDXL (raster)</h2>
+    <p>AI-generated PNG, SDXL Base v1.0, 512x768</p>
+    <img src="monkey-drawthings-test.png" alt="DrawThings PNG">
+    <div class="verdict">Illustrated quality. Proper shading, proportions, detail.</div>
+  </div>
+  <div class="card">
+    <h2>v3: DrawThings → VTracer (vector)</h2>
+    <p>VTracer color spline vectorization of PNG</p>
+    <img src="monkey-vtracer.svg" alt="VTracer SVG">
+    <div class="verdict">Vector from raster. Scalable, ~462KB, comic-ready.</div>
+  </div>
+</div>
+</body>
+</html>

@@ -54,35 +54,201 @@ Every Claude call costs tokens. The approach must minimize waste by:
 - **THIS STEP IS CRITICAL** — it determines the entire asset budget
 - AI budget: ~1 Claude call analyzing the full book text
 
-### Step 3: CHARACTER DESIGN
+### Step 3: CHARACTER DESIGN (Parametric SVG Assembly)
 - Input: Character inventory from Step 2
-- Output: SVG character sheets — one per character
+- Output: SVG character sheets — one per character, all in same art style
 - **Key rule**: Each character gets EXACTLY the expressions found in the book.
-  If Red has 10 emotions across the book, Red gets 10 expression SVGs.
-  If Gutalin only appears stoic/intense, Gutalin gets 1-2 expressions.
 - **Key identifiers**: Mined from the text's physical descriptions.
   Not invented — extracted from the author's words.
-- **Simplicity level**: Think Cyanide & Happiness, XKCD, or Persepolis.
-  Simple line drawings with strong identifiers. Not aiming for manga or superhero art.
-  The simpler the style, the more CONSISTENT it is across panels, and the easier
-  to template.
-- **Poses**: Map from scene types. Dialogue scenes need: standing, sitting, gesturing.
-  Action scenes need: running, ducking, reaching. Count what's needed from the beat maps.
-- AI budget: 0 — SVG is hand-coded (by the LLM, but no image generation)
+- **Pipeline**: Component selection → SVG assembly → (optional) AI enhancement
+- AI budget: 0 for assembly. Optional ~1 DrawThings call per character for polish.
+
+**Why parametric, not AI generation:**
+SDXL text-to-image was tested and FAILED — 3 attempts on one character proved that
+diffusion models ignore unusual features (golden hair → black hair, no-whites eyes
+→ normal eyes). Each retry fixes one trait and breaks another. The verification
+loop helps detect failures but can't make the generator reliable. The fundamental
+problem: diffusion models are pattern completers, not instruction followers.
+
+Parametric assembly solves this by SELECTING features, not GENERATING them.
+"Golden hair" = pick the golden hair component. 100% accurate. Zero randomness.
+
+### Step 3a: THE COMPONENT LIBRARY (one-time build, reusable across all books)
+
+Art style: **Bold Outlined** (Persepolis/Tintin-inspired)
+- Thick black outlines (stroke-width 2-3px at character scale)
+- Flat color fills (no gradients on characters)
+- Deliberate simplicity — readable at comic panel size
+- Key identifiers EXAGGERATED (bigger glasses, bolder scars, wilder hair)
+
+The library is EXTENSIBLE — start with core set, add components as new books
+need them. Each new component is drawn in the same style, so it integrates
+seamlessly. Components are organized by category:
+
+```
+BODY TEMPLATES (~8):
+  adult-male, adult-female, child, teen, elderly-male, elderly-female,
+  large-heavy, thin-tall
+  (Each template: full body outline with neutral pose)
+  (Variants per template: standing, sitting, walking, gesturing)
+
+HEADS/FACES (~10 shapes):
+  round, oval, angular, square, long, heart, wide, narrow, childish, gaunt
+  (Head shape affects the entire face — this is the biggest differentiator)
+
+HAIRSTYLES (~25):
+  male-short, male-medium, male-long, male-bald, male-buzz, male-slicked,
+  male-mohawk, male-messy, male-curly, male-ponytail, male-receding,
+  female-short, female-medium, female-long, female-bob, female-curly,
+  female-braids, female-ponytail, female-bun, female-flowing, female-afro,
+  child-short, child-messy, child-pigtails, wild-unkempt
+  (Color is a FILL attribute — any color on any style)
+
+EYES (~10 types):
+  normal, wide, narrow, squinting, glasses, sunglasses, closed, sleepy,
+  all-dark (alien/supernatural), heterochromia
+  (Each type has expression variants: neutral, angry, surprised, sad, happy)
+
+NOSES (~6): small, large, pointed, flat, upturned, hooked
+MOUTHS (~8): neutral, smile, frown, open, gritted, smirk, grimace, laugh
+BROWS (~5): neutral, raised, furrowed, one-raised, thick
+
+FACIAL HAIR (~6): none, stubble, short-beard, full-beard, mustache, goatee
+SKIN FEATURES (~8): freckles, wrinkles, scar-cheek, scar-eye, mole,
+  blush, fur-texture, radiation-marks
+
+CLOTHING (~20):
+  t-shirt, button-shirt, polo, jacket, coat, hoodie, suit, uniform,
+  lab-coat, apron, dress-simple, dress-formal, robe, tank-top, sweater,
+  hazmat-suit, armor-simple, cloak, overalls, jumpsuit
+  (Color/pattern is a FILL attribute)
+
+ACCESSORIES (~15):
+  glasses, sunglasses, hat-cap, hat-formal, hat-military, pipe, cigarette,
+  scarf, tie, bowtie, badge, earring, headband, bandage, necklace
+
+SPECIAL/UNUSUAL (~10):
+  fur-overlay (body), scales-overlay, cybernetic-arm, wings-small,
+  tail, horns, pointed-ears, extra-eyes, tattoo-pattern, prosthetic
+  (For non-standard characters — fantasy, sci-fi, supernatural)
+
+PROPS (held items, ~10):
+  book, weapon-sword, weapon-gun, bag, cane, phone, drink, tool,
+  musical-instrument, umbrella
+```
+
+Estimated total: ~130+ components across categories.
+Core set (enough for most realistic fiction): ~60-80 components.
+Full set (fantasy, sci-fi, supernatural coverage): ~130+ components.
+
+### Step 3b: DIFFERENTIATING SIMILAR CHARACTERS
+
+The hardest case: two characters who SHOULD look similar (siblings, twins,
+same-ethnicity colleagues). The pipeline must make them visually distinct.
+
+**The Differentiation Algorithm:**
+```
+For each character pair in the book:
+  1. Compute visual similarity:
+     - Same gender? Same age range? Same build? Same hair color?
+     - Count shared component selections
+
+  2. If similarity > threshold (e.g., 3+ shared major components):
+     - Extract ALL text-described differences, however subtle
+     - Assign differentiators from this priority list:
+
+     Priority 1 (from book text):
+       Physical differences the author describes ("Greg is taller",
+       "Finn has a scar on his chin")
+
+     Priority 2 (color coding):
+       Assign different primary colors to their clothing.
+       This is the strongest visual differentiator in comics.
+       Reader learns: blue = Greg, green = Finn.
+
+     Priority 3 (signature accessory):
+       Give one character an accessory the other doesn't have.
+       One wears glasses, the other doesn't. One has a hat.
+       Only if it doesn't contradict the book.
+
+     Priority 4 (silhouette difference):
+       Different hairstyle. Different posture. Different build variation.
+       Even within "adult-male" template, one can be broader-shouldered.
+
+     Priority 5 (face shape):
+       Different head shape — round vs angular. This is subtle but
+       effective. Real siblings have different face shapes.
+
+  3. SILHOUETTE TEST: Render both characters as solid black silhouettes.
+     Can you tell them apart? If no → add another differentiator.
+
+  4. COLOR TEST: Are their primary colors distinct?
+     No two characters should share the same primary clothing color.
+```
+
+**The "unpredictable differentiator" problem:**
+The user correctly notes: you can't predict WHAT will make two characters different
+in an arbitrary book. One book might distinguish them by shoes, another by posture,
+another by a tiny scar.
+
+Solution: The component library doesn't need to contain every possible differentiator.
+It needs:
+1. A RICH SET of standard differentiators (hair, face, clothing color, accessories)
+2. A FREEFORM OVERLAY slot — an SVG layer where Claude can place a custom small
+   detail (a specific scar, a unique pin, a distinctive belt) by writing a small
+   SVG path. This is where Claude's SVG-writing ability is actually useful — not
+   for whole characters, but for ONE small distinguishing detail.
+3. On-demand component generation: if a book needs "a character with a monocle"
+   and there's no monocle component, DrawThings generates JUST the monocle
+   (simple isolated object on white background — Tier 1 easy for AI), VTracer
+   vectorizes it, and it joins the library permanently.
+
+### Step 3c: AI ENHANCEMENT LAYER (optional)
+
+After parametric assembly, each character SVG can optionally be enhanced:
+1. Render SVG to PNG
+2. DrawThings img2img with Flux model, LOW denoising (0.2-0.3)
+   - Adds texture, anti-aliasing, artistic depth
+   - Same style prompt for ALL characters → consistent enhancement
+   - Low denoising preserves structure and colors
+3. Claude vision verifies: did enhancement preserve all critical features?
+   - Yes → VTracer vectorize → use as final art
+   - No → reduce denoising or skip enhancement, use plain SVG
+4. The parametric SVG is always the SAFETY NET — if AI messes up, fall back to it
+
+This layer is optional. The parametric SVG alone is usable. Enhancement adds
+visual polish but accuracy is never at risk.
 
 ### Step 4: BACKGROUND ASSET PLANNING
 - Input: Settings inventory from Step 2
-- For each setting, decide:
-  - **Skip**: No background needed (dialogue-heavy, emotion-focused)
-  - **Solid color/gradient**: Simple mood setting (warm interior = amber gradient, night = dark blue)
-  - **Simple SVG**: Basic line-art scenery (table, window, buildings silhouette)
-  - **DrawThings**: ONLY for generic ambient shots where accuracy doesn't matter
-    (sky, landscape, abstract texture, simple room)
-- **DrawThings rules**:
-  - NEVER use for: specific object interactions, directional movement, spatial relationships
-  - ALWAYS pin seed. NEVER regenerate. Save once, reference forever.
+- Backgrounds are EASIER than characters: they don't need cross-panel consistency
+  (different scenes = different backgrounds). They just set atmosphere.
+
+**Background tiers (decide per setting):**
+  - **Tier 0 — Skip**: No background. Solid white or character's color behind them.
+    Use for: pure dialogue, emotional close-ups. Most panels use this.
+  - **Tier 1 — Solid/gradient**: CSS gradient or flat color. Warm amber for interiors,
+    dark blue for night, grey for tension. Zero generation cost.
+  - **Tier 2 — Simple SVG scenery**: Line-art buildings, simple table, window frame.
+    Claude writes these — simple shapes work fine for backgrounds (unlike characters).
+  - **Tier 3 — DrawThings AI**: For establishing shots and atmosphere ONLY.
+    Generic bar interior, cityscape, forest, sky. Never for specific spatial layouts.
+
+**Style consistency between backgrounds and characters:**
+  Characters are bold-outlined SVGs. Backgrounds must not clash.
+  - Tier 0-1: Automatic — solid colors can't clash with anything
+  - Tier 2: SVG backgrounds use same line weight as characters → unified
+  - Tier 3 (AI): Apply CSS filters to AI backgrounds to harmonize:
+    `filter: contrast(1.1) saturate(0.7) opacity(0.85)`
+    Plus slight blur to push backgrounds visually behind sharp character outlines.
+    This "background recession" makes characters pop and hides AI inconsistencies.
+
+**DrawThings background rules (unchanged):**
+  - NEVER use for: object interactions, directional movement, spatial relationships
+  - ALWAYS pin seed. Save once, reference forever.
+  - Use Flux with same style preamble as character enhancement (if used)
   - Best for: establishing shots, atmosphere, texture overlays
-- AI budget: Only the DrawThings calls for qualifying backgrounds
+- AI budget: Only the DrawThings calls for qualifying Tier 3 backgrounds
 
 ### Step 5: BEAT MAPPING (chapter-level)
 - Input: Chapter text + character inventory + settings
