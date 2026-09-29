@@ -160,6 +160,57 @@ Full book (20 chapters): ~12-20 hours of DrawThings time
 This fits within 2 five-hour Claude Pro sessions if we batch efficiently
 and reuse compositions for dialogue scenes (same setup, different bubbles).
 
+## OpenArt / Roboverse Video Analysis (added 2026-09-30)
+
+Video: "How to Create AI Comic Books with Consistent Characters"
+https://www.youtube.com/watch?v=C1PEqmB5Ks8 (Roboverse channel, 8:32)
+
+### What OpenArt Does (confirmed from transcript + research)
+
+OpenArt is a hosted platform that wraps the same fundamental pipeline:
+1. **Character creation**: Describe a character once via text prompt.
+   Platform generates reference images. User picks the best one.
+   Character is SAVED and REUSABLE across all future generations.
+   
+2. **Panel generation**: Select saved character + write scene prompt.
+   Platform generates the character IN that scene, maintaining identity
+   from the saved reference.
+   
+3. **Pose editor**: A 3D mannequin model that user can manipulate
+   (adjust arms, legs, torso position). Under the hood this generates
+   an OpenPose skeleton that feeds into ControlNet. The user clicks
+   "update pose" and generates — character appears in that exact pose
+   while maintaining identity.
+   
+4. **Multi-character scenes**: Select multiple saved characters,
+   write a prompt describing their interaction. Platform generates
+   both characters consistently in the same scene.
+
+5. **Assembly**: User exports images → assembles in Canva using
+   frames for panels, adds speech bubbles manually.
+
+### What This Confirms About Our Approach
+
+- OpenArt's "save character once, reuse everywhere" = our SVG reference
+- Their pose editor = 3D model → OpenPose skeleton → ControlNet
+  (exactly what we planned with DrawThings ControlNet)
+- Their character consistency = reference image + IP-Adapter style tech
+  (exactly what Flux Kontext does locally in DrawThings)
+- They still need Canva for final assembly (our HTML/CSS assembly is better)
+
+### Key Difference: OpenArt is a hosted service ($$$)
+We're building the same pipeline locally with:
+- SVG assembly (more accurate than their text-prompt character creation)
+- DrawThings Flux Kontext + ControlNet (same tech, runs locally)
+- Our own assembly system (no Canva dependency)
+
+### What We Should Steal From Their Workflow
+- The 3D pose mannequin idea is excellent. We could use a simple SVG
+  skeleton editor or pre-made pose library instead of a 3D model.
+- Their "one character, unlimited scenes" philosophy is exactly right.
+- The multi-character scene approach (select 2+ characters) needs
+  to be part of our pipeline.
+
 ## Sources
 - Dashtoon ID-consistent inpainting: https://insiders.dashtoon.com/a-road-towards-tuning-free-id-consistent-character-inpainting/
 - Training-free consistency tricks: https://dev.to/qcrao/character-consistency-in-ai-comics-3-tricks-that-beat-lora-training-for-me-3ad7
@@ -169,3 +220,7 @@ and reuse compositions for dialogue scenes (same setup, different bubbles).
 - AI comic panel generation guide: https://www.jenova.ai/en/resources/ai-comic-panel-creator
 - ControlNet pose guide: https://www.apatero.com/blog/comfyui-controlnet-pose-guide-2026
 - Flux Kontext review: https://www.flixly.ai/blog/flux-kontext-review-character-consistency-2026
+- OpenArt comic video (Roboverse): https://www.youtube.com/watch?v=C1PEqmB5Ks8
+- OpenArt Character Builder: https://openart.ai/characters/create
+- OpenArt comic generator: https://openart.ai/generator/comic-art/
+- 3D OpenPose Editor (open source): https://github.com/nonnonstop/sd-webui-3d-open-pose-editor
