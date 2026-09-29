@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <g id="mouth-grimace" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round" fill="none">
+    <!-- Wavy line — discomfort/disgust -->
+    <path d="M86,80 Q90,77 94,80 Q98,83 102,80 Q106,77 110,80 Q114,83 118,80"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Adult male body: average build, standing neutral -->
+  <g id="body-adult-male" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="var(--skin, #e8c39e)">
+    <!-- Neck -->
+    <rect x="88" y="95" width="24" height="30" rx="4"/>
+    <!-- Torso -->
+    <path d="M60,125 L60,250 Q60,260 70,260 L130,260 Q140,260 140,250 L140,125 Q140,115 130,115 L70,115 Q60,115 60,125 Z"/>
+    <!-- Left arm -->
+    <path d="M60,130 L40,135 Q30,138 28,148 L22,210 Q20,220 25,222 L35,222 Q40,220 42,210 L55,160" fill="var(--skin, #e8c39e)"/>
+    <!-- Right arm -->
+    <path d="M140,130 L160,135 Q170,138 172,148 L178,210 Q180,220 175,222 L165,222 Q160,220 158,210 L145,160" fill="var(--skin, #e8c39e)"/>
+    <!-- Left hand -->
+    <ellipse cx="28" cy="228" rx="10" ry="12"/>
+    <!-- Right hand -->
+    <ellipse cx="172" cy="228" rx="10" ry="12"/>
+    <!-- Left leg -->
+    <path d="M70,258 L68,340 Q67,355 72,358 L88,358 Q93,355 92,340 L95,258" fill="var(--skin, #e8c39e)"/>
+    <!-- Right leg -->
+    <path d="M105,258 L108,340 Q109,355 112,358 L128,358 Q133,355 132,340 L130,258" fill="var(--skin, #e8c39e)"/>
+    <!-- Left shoe -->
+    <path d="M65,355 L60,370 Q58,380 68,382 L90,382 Q98,380 96,370 L94,355 Z" fill="#333"/>
+    <!-- Right shoe -->
+    <path d="M106,355 L104,370 Q102,380 112,382 L132,382 Q142,380 140,370 L135,355 Z" fill="#333"/>
+  </g>
+</svg>

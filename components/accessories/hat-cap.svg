@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Baseball/casual cap -->
+  <g id="accessory-hat-cap" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Cap crown -->
+    <path d="M62,32 Q62,8 100,6 Q138,8 138,32 L140,28 Q140,2 100,0 Q60,2 60,28 Z" fill="var(--accessory-color, #333)"/>
+    <!-- Brim -->
+    <path d="M58,32 L52,38 Q50,42 58,42 L142,42 Q150,42 148,38 L142,32 Z" fill="var(--accessory-color, #333)"/>
+  </g>
+</svg>

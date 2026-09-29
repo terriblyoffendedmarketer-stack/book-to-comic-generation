@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Scarf: wrapped around neck area -->
+  <g id="accessory-scarf" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Scarf wrap around neck -->
+    <path d="M78,100 Q78,108 85,112 L115,112 Q122,108 122,100 Q122,94 115,92 L85,92 Q78,94 78,100 Z" fill="var(--accessory-color, #c0392b)"/>
+    <!-- Hanging end -->
+    <path d="M85,112 L82,145 Q80,152 86,152 L94,152 Q98,150 96,142 L92,112" fill="var(--accessory-color, #c0392b)"/>
+  </g>
+</svg>

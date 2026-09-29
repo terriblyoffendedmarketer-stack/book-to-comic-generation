@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Simple t-shirt / button shirt -->
+  <g id="clothing-shirt" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Shirt body -->
+    <path d="M60,120 L60,258 Q60,265 70,265 L130,265 Q140,265 140,258 L140,120 Z" fill="var(--clothing-primary, #4a90d9)"/>
+    <!-- Collar (V-neck) -->
+    <path d="M82,115 L100,130 L118,115" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    <!-- Sleeves -->
+    <path d="M60,125 L40,132 Q32,135 30,142 L28,170 Q26,178 32,178 L44,175 Q48,172 50,165 L58,142 Z" fill="var(--clothing-primary, #4a90d9)"/>
+    <path d="M140,125 L160,132 Q168,135 170,142 L172,170 Q174,178 168,178 L156,175 Q152,172 150,165 L142,142 Z" fill="var(--clothing-primary, #4a90d9)"/>
+  </g>
+</svg>

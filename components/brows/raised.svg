@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <g id="brows-raised" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="none">
+    <!-- Both brows raised — surprise/concern -->
+    <path d="M72,42 Q82,38 92,40"/>
+    <path d="M108,40 Q118,38 128,42"/>
+  </g>
+</svg>

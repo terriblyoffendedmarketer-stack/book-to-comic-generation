@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <g id="mouth-smirk" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round" fill="none">
+    <!-- One side up, other flat — asymmetric -->
+    <path d="M88,80 L100,80 Q108,78 112,76"/>
+  </g>
+</svg>

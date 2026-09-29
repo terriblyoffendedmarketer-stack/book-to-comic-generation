@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Wide eyes: big, round, surprised or innocent look -->
+  <g id="eyes-wide" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Left eye (large round) -->
+    <ellipse cx="82" cy="55" rx="12" ry="10" fill="white"/>
+    <circle cx="83" cy="55" r="5" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="84" cy="53" r="2" fill="#1a1a1a"/>
+    <!-- Highlight -->
+    <circle cx="86" cy="52" r="1.5" fill="white" stroke="none"/>
+    <!-- Right eye (large round) -->
+    <ellipse cx="118" cy="55" rx="12" ry="10" fill="white"/>
+    <circle cx="117" cy="55" r="5" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="116" cy="53" r="2" fill="#1a1a1a"/>
+    <!-- Highlight -->
+    <circle cx="114" cy="52" r="1.5" fill="white" stroke="none"/>
+  </g>
+</svg>

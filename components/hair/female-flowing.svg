@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Flowing hair: long, voluminous, dramatic waves -->
+  <g id="hair-female-flowing" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Top volume -->
+    <path d="M54,48 Q50,10 100,6 Q150,10 146,48 L148,38 Q148,2 100,0 Q52,2 52,38 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Left side: dramatic flowing waves -->
+    <path d="M52,38 Q46,55 44,75 Q42,95 46,115 Q44,130 48,150 Q46,165 50,175
+      Q54,180 58,175 Q56,162 58,148 Q54,132 56,115 Q52,98 54,78 Q56,60 56,48 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Right side -->
+    <path d="M148,38 Q154,55 156,75 Q158,95 154,115 Q156,130 152,150 Q154,165 150,175
+      Q146,180 142,175 Q144,162 142,148 Q146,132 144,115 Q148,98 146,78 Q144,60 144,48 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Wave detail lines -->
+    <path d="M48,90 Q52,85 50,80" stroke="#1a1a1a" fill="none" stroke-width="1.5" opacity="0.4"/>
+    <path d="M152,90 Q148,85 150,80" stroke="#1a1a1a" fill="none" stroke-width="1.5" opacity="0.4"/>
+    <path d="M50,130 Q54,125 52,120" stroke="#1a1a1a" fill="none" stroke-width="1.5" opacity="0.4"/>
+    <path d="M150,130 Q146,125 148,120" stroke="#1a1a1a" fill="none" stroke-width="1.5" opacity="0.4"/>
+  </g>
+</svg>

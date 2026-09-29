@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Simple dress: peter-pan collar, A-line, knee length -->
+  <g id="clothing-dress-simple" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Dress body -->
+    <path d="M70,120 L65,280 Q62,290 75,292 L125,292 Q138,290 135,280 L130,120 Z" fill="var(--clothing-primary, #d4838f)"/>
+    <!-- Peter pan collar -->
+    <ellipse cx="86" cy="118" rx="12" ry="6" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+    <ellipse cx="114" cy="118" rx="12" ry="6" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+    <!-- Short sleeves (puffy) -->
+    <path d="M70,122 L52,128 Q44,132 44,140 Q44,150 52,152 L62,148 Q66,142 68,135 Z" fill="var(--clothing-primary, #d4838f)"/>
+    <path d="M130,122 L148,128 Q156,132 156,140 Q156,150 148,152 L138,148 Q134,142 132,135 Z" fill="var(--clothing-primary, #d4838f)"/>
+    <!-- Waist seam -->
+    <path d="M68,185 Q100,180 132,185" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  </g>
+</svg>

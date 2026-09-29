@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Long/narrow head shape: stretched vertical, elegant or gaunt -->
+  <g id="head-long" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <ellipse cx="100" cy="55" rx="30" ry="48" fill="var(--skin, #e8c39e)"/>
+    <!-- Ears -->
+    <ellipse cx="68" cy="58" rx="7" ry="10" fill="var(--skin, #e8c39e)"/>
+    <ellipse cx="132" cy="58" rx="7" ry="10" fill="var(--skin, #e8c39e)"/>
+  </g>
+</svg>

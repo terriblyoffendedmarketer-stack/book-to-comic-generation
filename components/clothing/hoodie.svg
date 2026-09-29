@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Hoodie: casual, hood visible behind head, front pocket -->
+  <g id="clothing-hoodie" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Hoodie body -->
+    <path d="M58,120 L58,258 Q58,265 68,265 L132,265 Q142,265 142,258 L142,120 Z" fill="var(--clothing-primary, #666)"/>
+    <!-- Hood (behind head, visible as bump) -->
+    <path d="M68,115 Q68,95 80,88 L82,90 Q72,100 72,115 Z" fill="var(--clothing-primary, #666)"/>
+    <path d="M132,115 Q132,95 120,88 L118,90 Q128,100 128,115 Z" fill="var(--clothing-primary, #666)"/>
+    <!-- Front pocket -->
+    <path d="M74,195 L74,230 Q74,235 80,235 L120,235 Q126,235 126,230 L126,195 Z" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Center seam/zipper -->
+    <line x1="100" y1="122" x2="100" y2="195" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Drawstrings -->
+    <line x1="94" y1="122" x2="92" y2="145" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="106" y1="122" x2="108" y2="145" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- Sleeves -->
+    <path d="M58,125 L40,132 Q30,136 28,146 L22,212 Q20,220 26,220 L38,220 Q44,218 46,210 L56,155 Z" fill="var(--clothing-primary, #666)"/>
+    <path d="M142,125 L160,132 Q170,136 172,146 L178,212 Q180,220 174,220 L162,220 Q156,218 154,210 L144,155 Z" fill="var(--clothing-primary, #666)"/>
+  </g>
+</svg>

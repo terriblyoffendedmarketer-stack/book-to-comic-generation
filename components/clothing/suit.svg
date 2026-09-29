@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Suit: formal jacket with visible shirt and tie area -->
+  <g id="clothing-suit" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Suit jacket -->
+    <path d="M56,120 L56,258 Q56,265 66,265 L94,265 L94,120 Z" fill="var(--clothing-primary, #2c3e50)"/>
+    <path d="M144,120 L144,258 Q144,265 134,265 L106,265 L106,120 Z" fill="var(--clothing-primary, #2c3e50)"/>
+    <!-- Lapels -->
+    <path d="M80,115 L88,135 L94,120" fill="var(--clothing-primary, #2c3e50)"/>
+    <path d="M120,115 L112,135 L106,120" fill="var(--clothing-primary, #2c3e50)"/>
+    <!-- Shirt front visible -->
+    <rect x="94" y="120" width="12" height="145" fill="white"/>
+    <!-- Tie -->
+    <path d="M98,122 L100,125 L102,122 L100,118 Z" fill="var(--clothing-secondary, #8B0000)"/>
+    <path d="M98,125 L100,195 L102,125 Z" fill="var(--clothing-secondary, #8B0000)"/>
+    <!-- Sleeves -->
+    <path d="M56,125 L38,132 Q28,136 26,146 L20,215 Q18,222 24,222 L36,222 Q42,220 44,212 L54,155 Z" fill="var(--clothing-primary, #2c3e50)"/>
+    <path d="M144,125 L162,132 Q172,136 174,146 L180,215 Q182,222 176,222 L164,222 Q158,220 156,212 L146,155 Z" fill="var(--clothing-primary, #2c3e50)"/>
+  </g>
+</svg>

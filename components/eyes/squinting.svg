@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Squinting eyes: narrow slits, suspicious/tough look -->
+  <g id="eyes-squinting" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Left eye (narrow) -->
+    <path d="M72,55 Q82,50 92,55 Q82,58 72,55 Z" fill="white"/>
+    <circle cx="82" cy="55" r="3" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="83" cy="54.5" r="1.5" fill="#1a1a1a"/>
+    <!-- Right eye (narrow) -->
+    <path d="M108,55 Q118,50 128,55 Q118,58 108,55 Z" fill="white"/>
+    <circle cx="118" cy="55" r="3" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="117" cy="54.5" r="1.5" fill="#1a1a1a"/>
+  </g>
+</svg>

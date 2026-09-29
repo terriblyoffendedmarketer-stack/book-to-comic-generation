@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Adult female body: average build, standing neutral -->
+  <g id="body-adult-female" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="var(--skin, #e8c39e)">
+    <!-- Neck (slightly thinner) -->
+    <rect x="90" y="95" width="20" height="28" rx="4"/>
+    <!-- Torso (narrower shoulders, waist curve) -->
+    <path d="M65,123 L65,175 Q65,190 75,195 L75,250 Q75,260 85,260 L115,260 Q125,260 125,250 L125,195 Q135,190 135,175 L135,123 Q135,115 125,115 L75,115 Q65,115 65,123 Z"/>
+    <!-- Left arm -->
+    <path d="M65,128 L45,133 Q36,136 34,145 L28,200 Q26,210 30,212 L38,212 Q42,210 44,200 L58,155" fill="var(--skin, #e8c39e)"/>
+    <!-- Right arm -->
+    <path d="M135,128 L155,133 Q164,136 166,145 L172,200 Q174,210 170,212 L162,212 Q158,210 156,200 L142,155" fill="var(--skin, #e8c39e)"/>
+    <!-- Left hand -->
+    <ellipse cx="33" cy="218" rx="9" ry="11"/>
+    <!-- Right hand -->
+    <ellipse cx="167" cy="218" rx="9" ry="11"/>
+    <!-- Left leg -->
+    <path d="M82,258 L78,340 Q77,355 82,358 L96,358 Q101,355 100,340 L100,258" fill="var(--skin, #e8c39e)"/>
+    <!-- Right leg -->
+    <path d="M100,258 L100,340 Q99,355 104,358 L118,358 Q123,355 122,340 L118,258" fill="var(--skin, #e8c39e)"/>
+    <!-- Left shoe -->
+    <path d="M75,355 L72,370 Q70,380 78,382 L98,382 Q104,380 102,370 L100,355 Z" fill="#333"/>
+    <!-- Right shoe -->
+    <path d="M100,355 L98,370 Q96,380 104,382 L124,382 Q130,380 128,370 L125,355 Z" fill="#333"/>
+  </g>
+</svg>

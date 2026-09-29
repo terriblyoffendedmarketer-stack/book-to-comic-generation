@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Bob cut: chin-length, neat sides, clean fringe -->
+  <g id="hair-female-bob" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Top -->
+    <path d="M56,48 Q54,10 100,6 Q146,10 144,48 L146,40 Q146,2 100,0 Q54,2 54,40 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Left side to chin -->
+    <path d="M54,40 Q50,55 50,72 Q50,90 55,98 Q60,102 64,98 Q62,85 62,72 Q62,55 58,48 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Right side to chin -->
+    <path d="M146,40 Q150,55 150,72 Q150,90 145,98 Q140,102 136,98 Q138,85 138,72 Q138,55 142,48 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Fringe/bangs -->
+    <path d="M68,38 Q72,28 84,25 Q92,23 100,24 Q108,23 116,25 Q128,28 132,38 L130,34 Q126,26 116,22 Q108,20 100,21 Q92,20 84,22 Q74,26 70,34 Z" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

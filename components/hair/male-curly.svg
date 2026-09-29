@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Curly male hair: rounded bumps forming a curly mass -->
+  <g id="hair-male-curly" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M56,50
+      Q54,38 62,28 Q58,22 66,14 Q72,6 82,4
+      Q88,0 96,2 Q102,0 110,2
+      Q118,4 126,10 Q134,16 138,24
+      Q144,30 144,42 Q146,50 144,55
+      Q144,18 100,12 Q56,18 56,50 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Curl details (bumpy outline) -->
+    <circle cx="62" cy="30" r="6" fill="var(--hair, #4a3728)"/>
+    <circle cx="78" cy="12" r="7" fill="var(--hair, #4a3728)"/>
+    <circle cx="96" cy="6" r="6" fill="var(--hair, #4a3728)"/>
+    <circle cx="114" cy="8" r="7" fill="var(--hair, #4a3728)"/>
+    <circle cx="132" cy="18" r="6" fill="var(--hair, #4a3728)"/>
+    <circle cx="140" cy="35" r="6" fill="var(--hair, #4a3728)"/>
+    <circle cx="56" cy="44" r="5" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

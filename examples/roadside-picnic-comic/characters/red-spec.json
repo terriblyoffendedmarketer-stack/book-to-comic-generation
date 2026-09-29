@@ -1,0 +1,22 @@
+{
+  "name": "Red Schuhart",
+  "body": "adult-male",
+  "head": "square",
+  "hair": "male-messy",
+  "eyes": "squinting",
+  "nose": "large",
+  "mouth": "smirk",
+  "brows": "furrowed",
+  "clothing": "jacket",
+  "facial_hair": "stubble",
+  "accessories": ["cigarette"],
+  "special": [],
+  "colors": {
+    "skin": "#e8c39e",
+    "hair": "#c0392b",
+    "eye_color": "#5a6e28",
+    "clothing_primary": "#3d6b4f",
+    "clothing_secondary": "#666",
+    "accessory_color": "#333"
+  }
+}

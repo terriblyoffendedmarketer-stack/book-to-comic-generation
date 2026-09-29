@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Hair up in a bun: pulled back with round bun on top -->
+  <g id="hair-female-bun" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Smooth pulled-back hair -->
+    <path d="M62,48 Q60,16 100,12 Q140,16 138,48 L140,40 Q140,8 100,6 Q60,8 60,40 Z" fill="var(--hair, #4a3728)"/>
+    <!-- The bun -->
+    <circle cx="100" cy="8" r="16" fill="var(--hair, #4a3728)"/>
+    <!-- Side smoothness -->
+    <path d="M60,40 Q58,50 58,60 L56,55 Q56,45 60,38" fill="var(--hair, #4a3728)"/>
+    <path d="M140,40 Q142,50 142,60 L144,55 Q144,45 140,38" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

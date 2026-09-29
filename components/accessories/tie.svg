@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Necktie -->
+  <g id="accessory-tie" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round">
+    <!-- Knot -->
+    <path d="M96,118 L100,124 L104,118 L100,115 Z" fill="var(--accessory-color, #c0392b)"/>
+    <!-- Tie body -->
+    <path d="M97,124 L94,200 L100,210 L106,200 L103,124 Z" fill="var(--accessory-color, #c0392b)"/>
+  </g>
+</svg>

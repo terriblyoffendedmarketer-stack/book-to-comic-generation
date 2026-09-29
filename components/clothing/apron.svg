@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Apron: worn over shirt, bartender/cook style -->
+  <g id="clothing-apron" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Shirt underneath -->
+    <path d="M60,120 L60,258 Q60,265 70,265 L130,265 Q140,265 140,258 L140,120 Z" fill="var(--clothing-secondary, #4a90d9)"/>
+    <!-- Sleeves (shirt) -->
+    <path d="M60,125 L42,132 Q34,135 32,142 L30,168 Q28,175 34,175 L46,172 Q50,168 52,162 L58,140 Z" fill="var(--clothing-secondary, #4a90d9)"/>
+    <path d="M140,125 L158,132 Q166,135 168,142 L170,168 Q172,175 166,175 L154,172 Q150,168 148,162 L142,140 Z" fill="var(--clothing-secondary, #4a90d9)"/>
+    <!-- Apron -->
+    <path d="M72,148 L72,265 L128,265 L128,148 Z" fill="var(--clothing-primary, white)"/>
+    <!-- Apron neck strap -->
+    <path d="M82,148 L90,130 L100,126 L110,130 L118,148" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    <!-- Apron pocket -->
+    <rect x="84" y="200" width="32" height="22" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Waist tie -->
+    <path d="M72,185 L60,190 L55,200" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    <path d="M128,185 L140,190 L145,200" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  </g>
+</svg>

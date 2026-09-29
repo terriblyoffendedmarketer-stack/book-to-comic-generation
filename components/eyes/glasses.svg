@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Eyes with glasses: normal eyes behind round frames -->
+  <g id="eyes-glasses" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Left eye -->
+    <ellipse cx="82" cy="55" rx="9" ry="7" fill="white"/>
+    <circle cx="83" cy="55" r="3.5" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="84" cy="54" r="1.5" fill="#1a1a1a"/>
+    <!-- Right eye -->
+    <ellipse cx="118" cy="55" rx="9" ry="7" fill="white"/>
+    <circle cx="117" cy="55" r="3.5" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="116" cy="54" r="1.5" fill="#1a1a1a"/>
+    <!-- Glasses frames (drawn on top) -->
+    <circle cx="82" cy="55" r="16" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    <circle cx="118" cy="55" r="16" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    <!-- Bridge -->
+    <path d="M98,55 L102,55" stroke="#1a1a1a" stroke-width="2.5" fill="none"/>
+    <!-- Temples (going to ears) -->
+    <path d="M66,52 L58,50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+    <path d="M134,52 L142,50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+  </g>
+</svg>

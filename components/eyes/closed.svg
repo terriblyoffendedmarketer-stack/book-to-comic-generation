@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Closed eyes: simple curved lines -->
+  <g id="eyes-closed" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="none">
+    <!-- Left eye (curved line, slightly smiling shape) -->
+    <path d="M72,55 Q82,60 92,55"/>
+    <!-- Right eye -->
+    <path d="M108,55 Q118,60 128,55"/>
+  </g>
+</svg>

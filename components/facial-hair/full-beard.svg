@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Full beard: covers jaw, chin, connects to ears -->
+  <g id="facial-hair-full-beard" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <path d="M66,68 Q66,80 72,90 Q80,102 100,106 Q120,102 128,90 Q134,80 134,68
+      L130,72 Q128,82 122,90 Q114,98 100,100 Q86,98 78,90 Q72,82 70,72 Z" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

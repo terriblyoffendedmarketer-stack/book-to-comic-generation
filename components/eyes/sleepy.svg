@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Sleepy eyes: half-lidded, droopy -->
+  <g id="eyes-sleepy" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Left eye (half-closed) -->
+    <path d="M72,56 Q82,52 92,56 Q82,60 72,56 Z" fill="white"/>
+    <!-- Heavy lid covering top half -->
+    <path d="M72,56 Q82,50 92,56 Q82,53 72,56 Z" fill="var(--skin, #e8c39e)"/>
+    <circle cx="82" cy="56" r="3" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="83" cy="55.5" r="1.5" fill="#1a1a1a"/>
+    <!-- Right eye -->
+    <path d="M108,56 Q118,52 128,56 Q118,60 108,56 Z" fill="white"/>
+    <path d="M108,56 Q118,50 128,56 Q118,53 108,56 Z" fill="var(--skin, #e8c39e)"/>
+    <circle cx="118" cy="56" r="3" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="117" cy="55.5" r="1.5" fill="#1a1a1a"/>
+  </g>
+</svg>

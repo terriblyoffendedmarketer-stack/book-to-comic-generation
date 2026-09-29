@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <g id="mouth-gritted" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Gritted teeth: rectangle with tooth lines -->
+    <rect x="90" y="77" width="20" height="8" rx="2" fill="white"/>
+    <!-- Tooth lines -->
+    <line x1="95" y1="77" x2="95" y2="85" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="100" y1="77" x2="100" y2="85" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="105" y1="77" x2="105" y2="85" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+</svg>

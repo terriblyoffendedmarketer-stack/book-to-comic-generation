@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Bald: no hair on top, maybe slight hairline hint at sides -->
+  <g id="hair-male-bald" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round">
+    <!-- Very subtle side fringe to distinguish from "no hair component" -->
+    <path d="M62,55 Q62,48 65,44 L63,48 Q62,52 62,55 Z" fill="var(--hair, #4a3728)" opacity="0.6"/>
+    <path d="M138,55 Q138,48 135,44 L137,48 Q138,52 138,55 Z" fill="var(--hair, #4a3728)" opacity="0.6"/>
+  </g>
+</svg>

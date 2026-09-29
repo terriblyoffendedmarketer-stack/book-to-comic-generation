@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Child body: small, stubby proportions, big head area -->
+  <g id="body-child" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="var(--skin, #e8c39e)">
+    <!-- Neck (short, wide for child proportions) -->
+    <rect x="90" y="110" width="20" height="15" rx="4"/>
+    <!-- Torso (shorter, rounder) -->
+    <path d="M72,125 L72,210 Q72,225 82,225 L118,225 Q128,225 128,210 L128,125 Q128,118 120,118 L80,118 Q72,118 72,125 Z"/>
+    <!-- Left arm (shorter, chubbier) -->
+    <path d="M72,130 L55,135 Q48,138 46,145 L42,185 Q40,193 44,195 L52,195 Q55,193 57,185 L65,150" fill="var(--skin, #e8c39e)"/>
+    <!-- Right arm -->
+    <path d="M128,130 L145,135 Q152,138 154,145 L158,185 Q160,193 156,195 L148,195 Q145,193 143,185 L135,150" fill="var(--skin, #e8c39e)"/>
+    <!-- Left hand -->
+    <ellipse cx="46" cy="200" rx="8" ry="10"/>
+    <!-- Right hand -->
+    <ellipse cx="154" cy="200" rx="8" ry="10"/>
+    <!-- Left leg (short, stubby) -->
+    <path d="M82,223 L80,290 Q79,302 84,305 L96,305 Q101,302 100,290 L100,223" fill="var(--skin, #e8c39e)"/>
+    <!-- Right leg -->
+    <path d="M100,223 L100,290 Q99,302 104,305 L116,305 Q121,302 120,290 L118,223" fill="var(--skin, #e8c39e)"/>
+    <!-- Left shoe -->
+    <path d="M77,302 L75,315 Q73,325 80,327 L98,327 Q104,325 102,315 L100,302 Z" fill="#333"/>
+    <!-- Right shoe -->
+    <path d="M100,302 L98,315 Q96,325 104,327 L122,327 Q128,325 126,315 L123,302 Z" fill="#333"/>
+  </g>
+</svg>

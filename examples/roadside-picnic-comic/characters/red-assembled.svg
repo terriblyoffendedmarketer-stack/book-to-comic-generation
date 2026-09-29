@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="400" height="800">
+  <!-- Character: Red Schuhart -->
+  <g style="--skin: #e8c39e; --hair: #c0392b; --eye-color: #5a6e28; --clothing-primary: #3d6b4f; --clothing-secondary: #666; --accessory-color: #333">
+    <!-- bodies/adult-male -->
+    <!-- Adult male body: average build, standing neutral -->
+  <g id="body-adult-male" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="var(--skin, #e8c39e)">
+    <!-- Neck -->
+    <rect x="88" y="95" width="24" height="30" rx="4"/>
+    <!-- Torso -->
+    <path d="M60,125 L60,250 Q60,260 70,260 L130,260 Q140,260 140,250 L140,125 Q140,115 130,115 L70,115 Q60,115 60,125 Z"/>
+    <!-- Left arm -->
+    <path d="M60,130 L40,135 Q30,138 28,148 L22,210 Q20,220 25,222 L35,222 Q40,220 42,210 L55,160" fill="var(--skin, #e8c39e)"/>
+    <!-- Right arm -->
+    <path d="M140,130 L160,135 Q170,138 172,148 L178,210 Q180,220 175,222 L165,222 Q160,220 158,210 L145,160" fill="var(--skin, #e8c39e)"/>
+    <!-- Left hand -->
+    <ellipse cx="28" cy="228" rx="10" ry="12"/>
+    <!-- Right hand -->
+    <ellipse cx="172" cy="228" rx="10" ry="12"/>
+    <!-- Left leg -->
+    <path d="M70,258 L68,340 Q67,355 72,358 L88,358 Q93,355 92,340 L95,258" fill="var(--skin, #e8c39e)"/>
+    <!-- Right leg -->
+    <path d="M105,258 L108,340 Q109,355 112,358 L128,358 Q133,355 132,340 L130,258" fill="var(--skin, #e8c39e)"/>
+    <!-- Left shoe -->
+    <path d="M65,355 L60,370 Q58,380 68,382 L90,382 Q98,380 96,370 L94,355 Z" fill="#333"/>
+    <!-- Right shoe -->
+    <path d="M106,355 L104,370 Q102,380 112,382 L132,382 Q142,380 140,370 L135,355 Z" fill="#333"/>
+  </g>
+    <!-- clothing/jacket -->
+    <!-- Jacket: casual zip/button jacket, layered over torso -->
+  <g id="clothing-jacket" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Jacket body (covers torso area) -->
+    <path d="M58,120 L58,255 Q58,262 68,262 L96,262 L96,120 Z" fill="var(--clothing-primary, #3d6b4f)"/>
+    <path d="M142,120 L142,255 Q142,262 132,262 L104,262 L104,120 Z" fill="var(--clothing-primary, #3d6b4f)"/>
+    <!-- Collar -->
+    <path d="M82,115 L88,128 L96,120 L100,122 L104,120 L112,128 L118,115" fill="var(--clothing-primary, #3d6b4f)"/>
+    <!-- Center line (zipper/buttons) -->
+    <line x1="100" y1="122" x2="100" y2="262" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Left sleeve -->
+    <path d="M58,125 L38,132 Q28,136 26,146 L20,210 Q18,218 24,220 L36,220 Q42,218 44,210 L54,155 L58,140 Z" fill="var(--clothing-primary, #3d6b4f)"/>
+    <!-- Right sleeve -->
+    <path d="M142,125 L162,132 Q172,136 174,146 L180,210 Q182,218 176,220 L164,220 Q158,218 156,210 L146,155 L142,140 Z" fill="var(--clothing-primary, #3d6b4f)"/>
+    <!-- T-shirt visible underneath -->
+    <path d="M96,120 L96,262 L104,262 L104,120 Z" fill="var(--clothing-secondary, #888)"/>
+  </g>
+    <!-- heads/square -->
+    <!-- Square head shape: blocky, wide jaw, tough look -->
+  <g id="head-square" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <rect x="62" y="18" width="76" height="82" rx="12" fill="var(--skin, #e8c39e)"/>
+    <!-- Ears -->
+    <ellipse cx="60" cy="60" rx="7" ry="12" fill="var(--skin, #e8c39e)"/>
+    <ellipse cx="140" cy="60" rx="7" ry="12" fill="var(--skin, #e8c39e)"/>
+  </g>
+    <!-- hair/male-messy -->
+    <!-- Messy male hair: spiky, unkempt, tufts sticking out -->
+  <g id="hair-male-messy" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M58,50 Q55,20 70,8 L65,2 Q80,12 85,5 L90,10 Q95,0 105,2 L108,8 Q115,0 125,5 L130,10 Q135,3 140,12 L142,6 Q148,20 144,50 Q144,14 100,12 Q58,14 58,50 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Side tufts -->
+    <path d="M56,40 L48,32 Q52,42 56,45" fill="var(--hair, #4a3728)"/>
+    <path d="M144,40 L152,32 Q148,42 144,45" fill="var(--hair, #4a3728)"/>
+  </g>
+    <!-- facial-hair/stubble -->
+    <!-- Stubble: dot pattern on jaw/chin area -->
+  <g id="facial-hair-stubble" fill="var(--hair, #4a3728)" stroke="none" opacity="0.4">
+    <!-- Jaw dots -->
+    <circle cx="78" cy="78" r="1"/>  <circle cx="82" cy="82" r="1"/>
+    <circle cx="86" cy="84" r="1"/>  <circle cx="90" cy="82" r="1"/>
+    <circle cx="94" cy="86" r="1"/>  <circle cx="98" cy="84" r="1"/>
+    <circle cx="102" cy="86" r="1"/> <circle cx="106" cy="82" r="1"/>
+    <circle cx="110" cy="84" r="1"/> <circle cx="114" cy="82" r="1"/>
+    <circle cx="118" cy="82" r="1"/> <circle cx="122" cy="78" r="1"/>
+    <!-- Chin -->
+    <circle cx="96" cy="90" r="1"/>  <circle cx="100" cy="92" r="1"/>
+    <circle cx="104" cy="90" r="1"/> <circle cx="100" cy="88" r="1"/>
+    <!-- Cheek area -->
+    <circle cx="74" cy="72" r="1"/>  <circle cx="126" cy="72" r="1"/>
+    <circle cx="76" cy="76" r="1"/>  <circle cx="124" cy="76" r="1"/>
+  </g>
+    <!-- eyes/squinting -->
+    <!-- Squinting eyes: narrow slits, suspicious/tough look -->
+  <g id="eyes-squinting" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Left eye (narrow) -->
+    <path d="M72,55 Q82,50 92,55 Q82,58 72,55 Z" fill="white"/>
+    <circle cx="82" cy="55" r="3" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="83" cy="54.5" r="1.5" fill="#1a1a1a"/>
+    <!-- Right eye (narrow) -->
+    <path d="M108,55 Q118,50 128,55 Q118,58 108,55 Z" fill="white"/>
+    <circle cx="118" cy="55" r="3" fill="var(--eye-color, #5a3e28)"/>
+    <circle cx="117" cy="54.5" r="1.5" fill="#1a1a1a"/>
+  </g>
+    <!-- noses/large -->
+    <g id="nose-large" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round" fill="none">
+    <path d="M98,60 L95,70 Q92,74 97,75 L100,76 L103,75 Q108,74 105,70 L102,60"/>
+  </g>
+    <!-- mouths/smirk -->
+    <g id="mouth-smirk" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round" fill="none">
+    <!-- One side up, other flat — asymmetric -->
+    <path d="M88,80 L100,80 Q108,78 112,76"/>
+  </g>
+    <!-- brows/furrowed -->
+    <g id="brows-furrowed" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round" fill="none">
+    <!-- Both brows angled inward and down — anger/determination -->
+    <path d="M72,44 L92,48"/>
+    <path d="M108,48 L128,44"/>
+  </g>
+    <!-- accessories/cigarette -->
+    <!-- Cigarette: sticking from mouth area, with smoke wisp -->
+  <g id="accessory-cigarette" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round">
+    <!-- Cigarette -->
+    <rect x="112" y="78" width="22" height="4" rx="1" fill="#f5f0e0" transform="rotate(-5, 112, 80)"/>
+    <!-- Lit end -->
+    <circle cx="134" cy="78" r="2.5" fill="#ff6600" stroke="none"/>
+    <!-- Smoke wisp -->
+    <path d="M136,76 Q138,70 136,64 Q134,58 137,52" fill="none" stroke="#999" stroke-width="1" opacity="0.5"/>
+  </g>
+  </g>
+</svg>

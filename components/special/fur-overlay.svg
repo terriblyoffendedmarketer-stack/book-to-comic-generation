@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Fur texture overlay: placed on face/body for non-human characters -->
+  <g id="special-fur-overlay" stroke="var(--fur-color, #c8a050)" stroke-width="1" fill="none" opacity="0.7">
+    <!-- Cheek fur (left) -->
+    <path d="M68,62 L66,58 M70,66 L67,63 M72,70 L69,67 M74,58 L72,55 M76,64 L73,61"/>
+    <path d="M66,60 Q64,62 66,65 M68,56 Q66,58 68,62 M72,64 Q70,66 72,70"/>
+    <!-- Cheek fur (right) -->
+    <path d="M132,62 L134,58 M130,66 L133,63 M128,70 L131,67 M126,58 L128,55 M124,64 L127,61"/>
+    <path d="M134,60 Q136,62 134,65 M132,56 Q134,58 132,62 M128,64 Q130,66 128,70"/>
+    <!-- Forehead fur hints -->
+    <path d="M88,38 L86,35 M96,36 L94,33 M104,36 L106,33 M112,38 L114,35"/>
+  </g>
+</svg>

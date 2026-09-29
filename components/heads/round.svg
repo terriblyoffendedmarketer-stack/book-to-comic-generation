@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Round head shape: classic cartoon, wide and circular -->
+  <g id="head-round" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <circle cx="100" cy="60" r="42" fill="var(--skin, #e8c39e)"/>
+    <!-- Ears -->
+    <ellipse cx="56" cy="62" rx="8" ry="12" fill="var(--skin, #e8c39e)"/>
+    <ellipse cx="144" cy="62" rx="8" ry="12" fill="var(--skin, #e8c39e)"/>
+  </g>
+</svg>

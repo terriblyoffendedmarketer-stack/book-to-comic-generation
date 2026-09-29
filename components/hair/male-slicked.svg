@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Slicked-back male hair: smooth, swept back, professional -->
+  <g id="hair-male-slicked" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M60,48 Q60,12 100,10 Q140,12 140,48 L142,40 Q142,6 100,4 Q58,6 58,40 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Swept-back line details -->
+    <path d="M72,20 Q90,16 100,15" stroke="var(--hair, #4a3728)" fill="none" stroke-width="1.5" opacity="0.5"/>
+    <path d="M128,20 Q110,16 100,15" stroke="var(--hair, #4a3728)" fill="none" stroke-width="1.5" opacity="0.5"/>
+    <!-- Back of head hair -->
+    <path d="M60,48 Q58,58 58,65 L56,60 Q56,48 60,38" fill="var(--hair, #4a3728)"/>
+    <path d="M140,48 Q142,58 142,65 L144,60 Q144,48 140,38" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

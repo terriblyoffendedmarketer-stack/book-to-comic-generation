@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Mustache: handlebar style above mouth -->
+  <g id="facial-hair-mustache" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <path d="M84,74 Q88,70 100,72 Q112,70 116,74 Q118,76 114,76 Q108,74 100,75 Q92,74 86,76 Q82,76 84,74 Z" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

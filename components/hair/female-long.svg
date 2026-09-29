@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Long female hair: falls past shoulders, flowing -->
+  <g id="hair-female-long" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Top of hair -->
+    <path d="M58,50 Q56,12 100,8 Q144,12 142,50 L144,42 Q144,4 100,2 Q56,4 56,42 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Left side flowing down -->
+    <path d="M56,42 Q52,60 50,80 Q48,110 50,140 Q52,155 58,155 Q60,145 60,130 Q60,100 58,72 Q58,55 60,48 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Right side flowing down -->
+    <path d="M144,42 Q148,60 150,80 Q152,110 150,140 Q148,155 142,155 Q140,145 140,130 Q140,100 142,72 Q142,55 140,48 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Back hair visible at sides -->
+    <path d="M60,48 L58,52 Q56,58 56,66" fill="var(--hair, #4a3728)" stroke-width="2"/>
+    <path d="M140,48 L142,52 Q144,58 144,66" fill="var(--hair, #4a3728)" stroke-width="2"/>
+  </g>
+</svg>

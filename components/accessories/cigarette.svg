@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Cigarette: sticking from mouth area, with smoke wisp -->
+  <g id="accessory-cigarette" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round">
+    <!-- Cigarette -->
+    <rect x="112" y="78" width="22" height="4" rx="1" fill="#f5f0e0" transform="rotate(-5, 112, 80)"/>
+    <!-- Lit end -->
+    <circle cx="134" cy="78" r="2.5" fill="#ff6600" stroke="none"/>
+    <!-- Smoke wisp -->
+    <path d="M136,76 Q138,70 136,64 Q134,58 137,52" fill="none" stroke="#999" stroke-width="1" opacity="0.5"/>
+  </g>
+</svg>

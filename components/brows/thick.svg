@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <g id="brows-thick" stroke="#1a1a1a" stroke-width="4.5" stroke-linejoin="round" fill="none" stroke-linecap="round">
+    <!-- Thick bushy brows — intense/imposing -->
+    <path d="M70,44 L94,43"/>
+    <path d="M106,43 L130,44"/>
+  </g>
+</svg>

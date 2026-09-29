@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Jacket: casual zip/button jacket, layered over torso -->
+  <g id="clothing-jacket" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Jacket body (covers torso area) -->
+    <path d="M58,120 L58,255 Q58,262 68,262 L96,262 L96,120 Z" fill="var(--clothing-primary, #3d6b4f)"/>
+    <path d="M142,120 L142,255 Q142,262 132,262 L104,262 L104,120 Z" fill="var(--clothing-primary, #3d6b4f)"/>
+    <!-- Collar -->
+    <path d="M82,115 L88,128 L96,120 L100,122 L104,120 L112,128 L118,115" fill="var(--clothing-primary, #3d6b4f)"/>
+    <!-- Center line (zipper/buttons) -->
+    <line x1="100" y1="122" x2="100" y2="262" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Left sleeve -->
+    <path d="M58,125 L38,132 Q28,136 26,146 L20,210 Q18,218 24,220 L36,220 Q42,218 44,210 L54,155 L58,140 Z" fill="var(--clothing-primary, #3d6b4f)"/>
+    <!-- Right sleeve -->
+    <path d="M142,125 L162,132 Q172,136 174,146 L180,210 Q182,218 176,220 L164,220 Q158,218 156,210 L146,155 L142,140 Z" fill="var(--clothing-primary, #3d6b4f)"/>
+    <!-- T-shirt visible underneath -->
+    <path d="M96,120 L96,262 L104,262 L104,120 Z" fill="var(--clothing-secondary, #888)"/>
+  </g>
+</svg>

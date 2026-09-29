@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Scar on cheek: visible facial scar for character differentiation -->
+  <g id="special-scar-cheek" stroke="#c4756e" stroke-width="2" stroke-linejoin="round" fill="none" stroke-linecap="round">
+    <!-- Right cheek scar -->
+    <path d="M125,62 L132,70 L128,75"/>
+    <!-- Cross-hatch stitch marks -->
+    <path d="M127,64 L130,66" stroke-width="1"/>
+    <path d="M129,68 L132,70" stroke-width="1"/>
+    <path d="M128,72 L131,74" stroke-width="1"/>
+  </g>
+</svg>

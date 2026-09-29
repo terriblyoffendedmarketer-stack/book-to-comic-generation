@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Large/heavy body: wide torso, thick limbs -->
+  <g id="body-large-heavy" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="var(--skin, #e8c39e)">
+    <!-- Neck (thick) -->
+    <rect x="84" y="95" width="32" height="28" rx="5"/>
+    <!-- Torso (wide, barrel-shaped) -->
+    <path d="M45,123 L45,260 Q45,272 58,272 L142,272 Q155,272 155,260 L155,123 Q155,113 142,113 L58,113 Q45,113 45,123 Z"/>
+    <!-- Left arm (thick) -->
+    <path d="M45,128 L28,135 Q18,140 16,152 L10,218 Q8,228 14,230 L26,230 Q32,228 34,218 L44,160" fill="var(--skin, #e8c39e)"/>
+    <!-- Right arm -->
+    <path d="M155,128 L172,135 Q182,140 184,152 L190,218 Q192,228 186,230 L174,230 Q168,228 166,218 L156,160" fill="var(--skin, #e8c39e)"/>
+    <!-- Left hand -->
+    <ellipse cx="16" cy="236" rx="12" ry="13"/>
+    <!-- Right hand -->
+    <ellipse cx="184" cy="236" rx="12" ry="13"/>
+    <!-- Left leg (thick) -->
+    <path d="M62,270 L58,342 Q57,356 64,358 L90,358 Q97,356 96,342 L98,270" fill="var(--skin, #e8c39e)"/>
+    <!-- Right leg -->
+    <path d="M102,270 L104,342 Q105,356 110,358 L136,358 Q143,356 142,342 L138,270" fill="var(--skin, #e8c39e)"/>
+    <!-- Left shoe -->
+    <path d="M54,355 L50,372 Q48,382 58,384 L92,384 Q100,382 98,372 L96,355 Z" fill="#333"/>
+    <!-- Right shoe -->
+    <path d="M104,355 L102,372 Q100,382 110,384 L144,384 Q152,382 150,372 L146,355 Z" fill="#333"/>
+  </g>
+</svg>

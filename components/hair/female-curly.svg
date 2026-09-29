@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Curly female hair: voluminous curls framing face, shoulder length -->
+  <g id="hair-female-curly" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Volume on top -->
+    <path d="M52,50 Q48,20 68,6 Q82,-2 100,0 Q118,-2 132,6 Q152,20 148,50
+      Q148,14 100,8 Q52,14 52,50 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Left curls cascading -->
+    <path d="M50,50 Q44,55 42,68 Q40,80 44,92 Q42,100 46,112 Q44,120 48,130 Q52,136 56,130 Q54,120 56,112 Q52,102 54,92 Q52,82 54,70 Q56,58 54,50 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Right curls cascading -->
+    <path d="M150,50 Q156,55 158,68 Q160,80 156,92 Q158,100 154,112 Q156,120 152,130 Q148,136 144,130 Q146,120 144,112 Q148,102 146,92 Q148,82 146,70 Q144,58 146,50 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Curl detail bumps -->
+    <circle cx="46" cy="75" r="5" fill="var(--hair, #4a3728)"/>
+    <circle cx="44" cy="108" r="5" fill="var(--hair, #4a3728)"/>
+    <circle cx="154" cy="75" r="5" fill="var(--hair, #4a3728)"/>
+    <circle cx="156" cy="108" r="5" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Messy male hair: spiky, unkempt, tufts sticking out -->
+  <g id="hair-male-messy" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M58,50 Q55,20 70,8 L65,2 Q80,12 85,5 L90,10 Q95,0 105,2 L108,8 Q115,0 125,5 L130,10 Q135,3 140,12 L142,6 Q148,20 144,50 Q144,14 100,12 Q58,14 58,50 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Side tufts -->
+    <path d="M56,40 L48,32 Q52,42 56,45" fill="var(--hair, #4a3728)"/>
+    <path d="M144,40 L152,32 Q148,42 144,45" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

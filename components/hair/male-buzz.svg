@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Buzz cut: very short, uniform, military-style -->
+  <g id="hair-male-buzz" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Thin layer covering top of head -->
+    <path d="M62,50 Q62,18 100,14 Q138,18 138,50 L140,44 Q140,12 100,8 Q60,12 60,44 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Stubble texture dots -->
+    <circle cx="80" cy="22" r="1.5" fill="var(--hair, #4a3728)" stroke="none"/>
+    <circle cx="92" cy="18" r="1.5" fill="var(--hair, #4a3728)" stroke="none"/>
+    <circle cx="108" cy="18" r="1.5" fill="var(--hair, #4a3728)" stroke="none"/>
+    <circle cx="120" cy="22" r="1.5" fill="var(--hair, #4a3728)" stroke="none"/>
+    <circle cx="100" cy="14" r="1.5" fill="var(--hair, #4a3728)" stroke="none"/>
+    <circle cx="72" cy="30" r="1.5" fill="var(--hair, #4a3728)" stroke="none"/>
+    <circle cx="128" cy="30" r="1.5" fill="var(--hair, #4a3728)" stroke="none"/>
+  </g>
+</svg>

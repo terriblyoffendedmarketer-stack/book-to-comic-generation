@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <g id="nose-upturned" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round" fill="none">
+    <path d="M98,68 Q96,72 98,73 L100,72 L102,73 Q104,72 102,68"/>
+    <!-- Upturn flick -->
+    <path d="M100,68 Q100,65 102,64" stroke-width="1.5"/>
+  </g>
+</svg>

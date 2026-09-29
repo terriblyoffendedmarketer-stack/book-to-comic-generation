@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <g id="brows-furrowed" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round" fill="none">
+    <!-- Both brows angled inward and down — anger/determination -->
+    <path d="M72,44 L92,48"/>
+    <path d="M108,48 L128,44"/>
+  </g>
+</svg>

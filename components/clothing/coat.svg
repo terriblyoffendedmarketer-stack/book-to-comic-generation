@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Long coat: overcoat/trench style, extends to knees -->
+  <g id="clothing-coat" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Coat body (extends past waist to knees) -->
+    <path d="M54,120 L52,310 Q52,318 62,318 L94,318 L94,120 Z" fill="var(--clothing-primary, #5c4033)"/>
+    <path d="M146,120 L148,310 Q148,318 138,318 L106,318 L106,120 Z" fill="var(--clothing-primary, #5c4033)"/>
+    <!-- Lapels -->
+    <path d="M78,112 L88,138 L94,120" fill="var(--clothing-primary, #5c4033)"/>
+    <path d="M122,112 L112,138 L106,120" fill="var(--clothing-primary, #5c4033)"/>
+    <!-- Inner shirt visible -->
+    <rect x="94" y="120" width="12" height="198" fill="var(--clothing-secondary, #888)"/>
+    <!-- Buttons -->
+    <circle cx="100" cy="155" r="3" fill="#1a1a1a"/>
+    <circle cx="100" cy="190" r="3" fill="#1a1a1a"/>
+    <circle cx="100" cy="225" r="3" fill="#1a1a1a"/>
+    <!-- Belt -->
+    <rect x="54" y="200" width="92" height="6" rx="2" fill="var(--clothing-primary, #5c4033)" stroke="#1a1a1a" stroke-width="2"/>
+    <!-- Sleeves (long) -->
+    <path d="M54,125 L36,132 Q26,136 24,146 L18,218 Q16,225 22,225 L34,225 Q40,223 42,215 L52,155 Z" fill="var(--clothing-primary, #5c4033)"/>
+    <path d="M146,125 L164,132 Q174,136 176,146 L182,218 Q184,225 178,225 L166,225 Q160,223 158,215 L148,155 Z" fill="var(--clothing-primary, #5c4033)"/>
+  </g>
+</svg>

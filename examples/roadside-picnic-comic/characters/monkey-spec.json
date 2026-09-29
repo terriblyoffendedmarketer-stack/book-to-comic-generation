@@ -1,0 +1,22 @@
+{
+  "name": "Monkey (Maria Schuhart)",
+  "body": "child",
+  "head": "round",
+  "hair": "child-messy",
+  "eyes": "all-dark",
+  "nose": "small",
+  "mouth": "neutral",
+  "brows": "neutral",
+  "clothing": "dress-simple",
+  "facial_hair": null,
+  "accessories": [],
+  "special": ["fur-overlay"],
+  "colors": {
+    "skin": "#f0d5a8",
+    "hair": "#c8a050",
+    "eye_color": "#1a1a1a",
+    "clothing_primary": "#e8a0b0",
+    "clothing_secondary": "#fff",
+    "fur_color": "#c8a050"
+  }
+}

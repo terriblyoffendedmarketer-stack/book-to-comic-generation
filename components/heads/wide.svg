@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Wide head shape: broad, flat-topped, sturdy -->
+  <g id="head-wide" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <ellipse cx="100" cy="58" rx="46" ry="38" fill="var(--skin, #e8c39e)"/>
+    <!-- Ears -->
+    <ellipse cx="52" cy="60" rx="8" ry="12" fill="var(--skin, #e8c39e)"/>
+    <ellipse cx="148" cy="60" rx="8" ry="12" fill="var(--skin, #e8c39e)"/>
+  </g>
+</svg>

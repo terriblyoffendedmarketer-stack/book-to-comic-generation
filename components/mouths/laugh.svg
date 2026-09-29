@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <g id="mouth-laugh" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Wide open laughing mouth -->
+    <path d="M86,78 Q100,92 114,78 Q100,86 86,78 Z" fill="#8B0000"/>
+    <!-- Top teeth -->
+    <path d="M90,78 L92,81 L96,78 L100,81 L104,78 L108,81 L110,78" fill="white" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+</svg>

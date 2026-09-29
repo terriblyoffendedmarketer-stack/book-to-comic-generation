@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- All-dark eyes: no whites, entirely dark orbs — alien/supernatural -->
+  <g id="eyes-all-dark" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Left eye: solid dark, no white sclera -->
+    <ellipse cx="82" cy="55" rx="11" ry="9" fill="#1a1a1a"/>
+    <!-- Subtle shine to read as eye, not hole -->
+    <ellipse cx="85" cy="53" rx="3" ry="2" fill="#333" stroke="none"/>
+    <!-- Right eye -->
+    <ellipse cx="118" cy="55" rx="11" ry="9" fill="#1a1a1a"/>
+    <ellipse cx="115" cy="53" rx="3" ry="2" fill="#333" stroke="none"/>
+  </g>
+</svg>

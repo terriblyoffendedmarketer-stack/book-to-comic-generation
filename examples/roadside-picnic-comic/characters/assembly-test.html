@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Component Assembly Test</title>
+<style>
+  body { background: #f5f5f0; font-family: system-ui; margin: 20px; }
+  h1 { text-align: center; color: #333; }
+  .gallery { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; }
+  .card { background: white; border: 2px solid #333; border-radius: 8px; padding: 20px; text-align: center; }
+  .card h2 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0 0 12px; color: #666; font-size: 13px; }
+  .card img, .card object { width: 200px; height: 400px; }
+  .traits { text-align: left; font-size: 12px; color: #444; margin-top: 12px; line-height: 1.6; }
+  .traits strong { color: #222; }
+</style>
+</head>
+<body>
+<h1>Parametric SVG Assembly — Test</h1>
+<div class="gallery">
+  <div class="card">
+    <h2>Red Schuhart</h2>
+    <p>Stalker, tough, stocky, squinting</p>
+    <object data="red-assembled.svg" type="image/svg+xml"></object>
+    <div class="traits">
+      <strong>Hair:</strong> messy red<br>
+      <strong>Head:</strong> square (tough)<br>
+      <strong>Eyes:</strong> squinting<br>
+      <strong>Brows:</strong> furrowed<br>
+      <strong>Mouth:</strong> smirk<br>
+      <strong>Clothing:</strong> green jacket<br>
+      <strong>Extras:</strong> stubble, cigarette
+    </div>
+  </div>
+  <div class="card">
+    <h2>Monkey (Maria)</h2>
+    <p>Red's daughter, mutant child, eerie</p>
+    <object data="monkey-assembled.svg" type="image/svg+xml"></object>
+    <div class="traits">
+      <strong>Hair:</strong> golden messy<br>
+      <strong>Head:</strong> round (childish)<br>
+      <strong>Eyes:</strong> all-dark (no whites!)<br>
+      <strong>Brows:</strong> neutral<br>
+      <strong>Mouth:</strong> neutral<br>
+      <strong>Clothing:</strong> pink dress<br>
+      <strong>Extras:</strong> fur overlay on cheeks
+    </div>
+  </div>
+</div>
+</body>
+</html>

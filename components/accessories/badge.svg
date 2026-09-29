@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Badge/pin on chest -->
+  <g id="accessory-badge" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M112,140 L118,134 L124,140 L122,148 L118,152 L114,148 Z" fill="#C0A000"/>
+  </g>
+</svg>

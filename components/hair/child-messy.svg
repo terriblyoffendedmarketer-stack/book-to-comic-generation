@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Child messy hair: soft, tousled, sits higher for larger child head -->
+  <g id="hair-child-messy" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Soft tousled mass -->
+    <path d="M55,52 Q50,25 65,12 L60,8 Q72,14 80,6 Q90,0 100,2 Q110,0 120,6
+      Q128,14 140,8 L135,12 Q150,25 145,52
+      Q145,16 100,10 Q55,16 55,52 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Soft tufts (rounder than adult messy) -->
+    <path d="M54,42 L48,34 Q52,40 54,46" fill="var(--hair, #4a3728)"/>
+    <path d="M146,42 L152,34 Q148,40 146,46" fill="var(--hair, #4a3728)"/>
+    <circle cx="90" cy="4" r="5" fill="var(--hair, #4a3728)"/>
+    <circle cx="110" cy="4" r="5" fill="var(--hair, #4a3728)"/>
+  </g>
+</svg>

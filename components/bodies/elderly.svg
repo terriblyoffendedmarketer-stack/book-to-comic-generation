@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <!-- Elderly body: slightly stooped, average frame -->
+  <g id="body-elderly" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="var(--skin, #e8c39e)">
+    <!-- Neck (angled forward slightly for stoop) -->
+    <path d="M88,100 L86,125 L114,125 L112,100 Z" rx="4" fill="var(--skin, #e8c39e)"/>
+    <!-- Torso (slightly hunched, shoulders forward) -->
+    <path d="M58,125 L62,252 Q62,262 72,262 L128,262 Q138,262 138,252 L142,125 Q142,115 132,118 L68,118 Q58,115 58,125 Z"/>
+    <!-- Left arm (slightly bent) -->
+    <path d="M58,132 L42,140 Q34,144 32,152 L30,205 Q28,215 33,217 L42,217 Q46,215 48,205 L55,158" fill="var(--skin, #e8c39e)"/>
+    <!-- Right arm -->
+    <path d="M142,132 L158,140 Q166,144 168,152 L170,205 Q172,215 167,217 L158,217 Q154,215 152,205 L145,158" fill="var(--skin, #e8c39e)"/>
+    <!-- Left hand -->
+    <ellipse cx="35" cy="223" rx="10" ry="11"/>
+    <!-- Right hand -->
+    <ellipse cx="165" cy="223" rx="10" ry="11"/>
+    <!-- Left leg -->
+    <path d="M74,260 L72,338 Q71,352 76,355 L92,355 Q97,352 96,338 L96,260" fill="var(--skin, #e8c39e)"/>
+    <!-- Right leg -->
+    <path d="M104,260 L104,338 Q103,352 108,355 L124,355 Q129,352 128,338 L126,260" fill="var(--skin, #e8c39e)"/>
+    <!-- Left shoe -->
+    <path d="M68,352 L66,368 Q64,377 72,379 L94,379 Q100,377 98,368 L96,352 Z" fill="#333"/>
+    <!-- Right shoe -->
+    <path d="M102,352 L100,368 Q98,377 106,379 L128,379 Q134,377 132,368 L130,352 Z" fill="#333"/>
+  </g>
+</svg>

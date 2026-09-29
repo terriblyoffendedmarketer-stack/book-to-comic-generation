@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="400" height="800">
+  <!-- Character: Monkey (Maria Schuhart) -->
+  <g style="--skin: #f0d5a8; --hair: #c8a050; --eye-color: #1a1a1a; --clothing-primary: #e8a0b0; --clothing-secondary: #fff; --fur-color: #c8a050">
+    <!-- bodies/child -->
+    <!-- Child body: small, stubby proportions, big head area -->
+  <g id="body-child" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="var(--skin, #e8c39e)">
+    <!-- Neck (short, wide for child proportions) -->
+    <rect x="90" y="110" width="20" height="15" rx="4"/>
+    <!-- Torso (shorter, rounder) -->
+    <path d="M72,125 L72,210 Q72,225 82,225 L118,225 Q128,225 128,210 L128,125 Q128,118 120,118 L80,118 Q72,118 72,125 Z"/>
+    <!-- Left arm (shorter, chubbier) -->
+    <path d="M72,130 L55,135 Q48,138 46,145 L42,185 Q40,193 44,195 L52,195 Q55,193 57,185 L65,150" fill="var(--skin, #e8c39e)"/>
+    <!-- Right arm -->
+    <path d="M128,130 L145,135 Q152,138 154,145 L158,185 Q160,193 156,195 L148,195 Q145,193 143,185 L135,150" fill="var(--skin, #e8c39e)"/>
+    <!-- Left hand -->
+    <ellipse cx="46" cy="200" rx="8" ry="10"/>
+    <!-- Right hand -->
+    <ellipse cx="154" cy="200" rx="8" ry="10"/>
+    <!-- Left leg (short, stubby) -->
+    <path d="M82,223 L80,290 Q79,302 84,305 L96,305 Q101,302 100,290 L100,223" fill="var(--skin, #e8c39e)"/>
+    <!-- Right leg -->
+    <path d="M100,223 L100,290 Q99,302 104,305 L116,305 Q121,302 120,290 L118,223" fill="var(--skin, #e8c39e)"/>
+    <!-- Left shoe -->
+    <path d="M77,302 L75,315 Q73,325 80,327 L98,327 Q104,325 102,315 L100,302 Z" fill="#333"/>
+    <!-- Right shoe -->
+    <path d="M100,302 L98,315 Q96,325 104,327 L122,327 Q128,325 126,315 L123,302 Z" fill="#333"/>
+  </g>
+    <!-- clothing/dress-simple -->
+    <!-- Simple dress: peter-pan collar, A-line, knee length -->
+  <g id="clothing-dress-simple" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Dress body -->
+    <path d="M70,120 L65,280 Q62,290 75,292 L125,292 Q138,290 135,280 L130,120 Z" fill="var(--clothing-primary, #d4838f)"/>
+    <!-- Peter pan collar -->
+    <ellipse cx="86" cy="118" rx="12" ry="6" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+    <ellipse cx="114" cy="118" rx="12" ry="6" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+    <!-- Short sleeves (puffy) -->
+    <path d="M70,122 L52,128 Q44,132 44,140 Q44,150 52,152 L62,148 Q66,142 68,135 Z" fill="var(--clothing-primary, #d4838f)"/>
+    <path d="M130,122 L148,128 Q156,132 156,140 Q156,150 148,152 L138,148 Q134,142 132,135 Z" fill="var(--clothing-primary, #d4838f)"/>
+    <!-- Waist seam -->
+    <path d="M68,185 Q100,180 132,185" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  </g>
+    <!-- heads/round -->
+    <!-- Round head shape: classic cartoon, wide and circular -->
+  <g id="head-round" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <circle cx="100" cy="60" r="42" fill="var(--skin, #e8c39e)"/>
+    <!-- Ears -->
+    <ellipse cx="56" cy="62" rx="8" ry="12" fill="var(--skin, #e8c39e)"/>
+    <ellipse cx="144" cy="62" rx="8" ry="12" fill="var(--skin, #e8c39e)"/>
+  </g>
+    <!-- hair/child-messy -->
+    <!-- Child messy hair: soft, tousled, sits higher for larger child head -->
+  <g id="hair-child-messy" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Soft tousled mass -->
+    <path d="M55,52 Q50,25 65,12 L60,8 Q72,14 80,6 Q90,0 100,2 Q110,0 120,6
+      Q128,14 140,8 L135,12 Q150,25 145,52
+      Q145,16 100,10 Q55,16 55,52 Z" fill="var(--hair, #4a3728)"/>
+    <!-- Soft tufts (rounder than adult messy) -->
+    <path d="M54,42 L48,34 Q52,40 54,46" fill="var(--hair, #4a3728)"/>
+    <path d="M146,42 L152,34 Q148,40 146,46" fill="var(--hair, #4a3728)"/>
+    <circle cx="90" cy="4" r="5" fill="var(--hair, #4a3728)"/>
+    <circle cx="110" cy="4" r="5" fill="var(--hair, #4a3728)"/>
+  </g>
+    <!-- eyes/all-dark -->
+    <!-- All-dark eyes: no whites, entirely dark orbs — alien/supernatural -->
+  <g id="eyes-all-dark" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round">
+    <!-- Left eye: solid dark, no white sclera -->
+    <ellipse cx="82" cy="55" rx="11" ry="9" fill="#1a1a1a"/>
+    <!-- Subtle shine to read as eye, not hole -->
+    <ellipse cx="85" cy="53" rx="3" ry="2" fill="#333" stroke="none"/>
+    <!-- Right eye -->
+    <ellipse cx="118" cy="55" rx="11" ry="9" fill="#1a1a1a"/>
+    <ellipse cx="115" cy="53" rx="3" ry="2" fill="#333" stroke="none"/>
+  </g>
+    <!-- noses/small -->
+    <g id="nose-small" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round" fill="none">
+    <path d="M97,66 Q100,70 103,66"/>
+  </g>
+    <!-- mouths/neutral -->
+    <g id="mouth-neutral" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round" fill="none">
+    <path d="M90,80 L110,80"/>
+  </g>
+    <!-- brows/neutral -->
+    <g id="brows-neutral" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round" fill="none">
+    <path d="M72,45 L92,44"/>
+    <path d="M108,44 L128,45"/>
+  </g>
+    <!-- special/fur-overlay -->
+    <!-- Fur texture overlay: placed on face/body for non-human characters -->
+  <g id="special-fur-overlay" stroke="var(--fur-color, #c8a050)" stroke-width="1" fill="none" opacity="0.7">
+    <!-- Cheek fur (left) -->
+    <path d="M68,62 L66,58 M70,66 L67,63 M72,70 L69,67 M74,58 L72,55 M76,64 L73,61"/>
+    <path d="M66,60 Q64,62 66,65 M68,56 Q66,58 68,62 M72,64 Q70,66 72,70"/>
+    <!-- Cheek fur (right) -->
+    <path d="M132,62 L134,58 M130,66 L133,63 M128,70 L131,67 M126,58 L128,55 M124,64 L127,61"/>
+    <path d="M134,60 Q136,62 134,65 M132,56 Q134,58 132,62 M128,64 Q130,66 128,70"/>
+    <!-- Forehead fur hints -->
+    <path d="M88,38 L86,35 M96,36 L94,33 M104,36 L106,33 M112,38 L114,35"/>
+  </g>
+  </g>
+</svg>
