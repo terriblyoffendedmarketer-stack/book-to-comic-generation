@@ -1,10 +1,10 @@
 # Book to Comic Generation
 
 ## Status
-**Phase:** Parametric character system — designing component library
-**Current:** DrawThings AI generation tested and FAILED (3 attempts, prompt adherence too low). Pivoted to parametric SVG assembly approach after deep research. Architecture designed, component library spec written.
-**Blocking:** Component library needs to be built (~60-80 core SVG components)
-**Next:** Build core component library → test-assemble 2 characters → validate quality
+**Phase:** Parametric character system — library built, test assemblies validated
+**Current:** 76 SVG components built across 12 categories. Assembler script working. Red Schuhart + Monkey test-assembled — all traits correct (including the 3 that SDXL failed on).
+**Blocking:** Nothing — ready for next phase
+**Next:** Assemble remaining 18 Roadside Picnic characters → silhouette test → differentiation validation
 **GitHub:** https://github.com/terriblyoffendedmarketer-stack/book-to-comic-generation
 
 ## CRITICAL: Read Before Working
@@ -27,9 +27,9 @@
   - [x] 7b: VTracer vectorization pipeline working (Python 3.12 bindings)
   - [x] 7c: Deep research → designed parametric SVG assembly approach
 - [~] Phase 8: Parametric character system
-  - [ ] 8a: Build core component library (~60-80 SVGs: bodies, heads, hair, eyes, clothing)
+  - [x] 8a: Build core component library (76 SVGs across 12 categories)
   - [ ] 8b: Build differentiation algorithm (similar-character detection + color coding)
-  - [ ] 8c: Test-assemble Red Schuhart + Monkey from components (the easy + hard case)
+  - [x] 8c: Test-assemble Red Schuhart + Monkey from components — PASSED
   - [ ] 8d: Silhouette test — are all 20 characters distinguishable as black shapes?
   - [ ] 8e: Optional: test AI enhancement layer (DrawThings img2img, low denoising)
 - [ ] Phase 9: Template system (zone-based layout, composition types, reuse patterns)
